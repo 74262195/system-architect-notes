@@ -1,0 +1,167 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.25.3",
+  "elements": [
+    {
+      "id": "stage-a", "type": "rectangle", "x": 40, "y": 40, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#94a3b8", "backgroundColor": "#f8fafc", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-a"], "frameId": null, "roundness": {"type": 3}, "seed": 101, "version": 1, "versionNonce": 1001,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "a0"
+    },
+    {
+      "id": "text-a", "type": "text", "x": 106, "y": 61, "width": 48, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-a"], "frameId": null, "roundness": null, "seed": 102, "version": 1, "versionNonce": 1002,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "规划", "originalText": "规划", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "a1", "rawText": "规划"
+    },
+    {
+      "id": "stage-b", "type": "rectangle", "x": 300, "y": 40, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#94a3b8", "backgroundColor": "#f8fafc", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-b"], "frameId": null, "roundness": {"type": 3}, "seed": 103, "version": 1, "versionNonce": 1003,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "a2"
+    },
+    {
+      "id": "text-b", "type": "text", "x": 342, "y": 61, "width": 96, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-b"], "frameId": null, "roundness": null, "seed": 104, "version": 1, "versionNonce": 1004,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "拟定方案", "originalText": "拟定方案", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "a3", "rawText": "拟定方案"
+    },
+    {
+      "id": "stage-c", "type": "rectangle", "x": 560, "y": 40, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#94a3b8", "backgroundColor": "#f8fafc", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-c"], "frameId": null, "roundness": {"type": 3}, "seed": 105, "version": 1, "versionNonce": 1005,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "a4"
+    },
+    {
+      "id": "text-c", "type": "text", "x": 626, "y": 61, "width": 48, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-c"], "frameId": null, "roundness": null, "seed": 106, "version": 1, "versionNonce": 1006,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "研制", "originalText": "研制", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "a5", "rawText": "研制"
+    },
+    {
+      "id": "stage-d", "type": "rectangle", "x": 820, "y": 40, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#94a3b8", "backgroundColor": "#f8fafc", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-d"], "frameId": null, "roundness": {"type": 3}, "seed": 107, "version": 1, "versionNonce": 1007,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "a6"
+    },
+    {
+      "id": "text-d", "type": "text", "x": 886, "y": 61, "width": 48, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-d"], "frameId": null, "roundness": null, "seed": 108, "version": 1, "versionNonce": 1008,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "生产", "originalText": "生产", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "a7", "rawText": "生产"
+    },
+    {
+      "id": "stage-g", "type": "rectangle", "x": 300, "y": 220, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#94a3b8", "backgroundColor": "#f8fafc", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-g"], "frameId": null, "roundness": {"type": 3}, "seed": 109, "version": 1, "versionNonce": 1009,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "a8"
+    },
+    {
+      "id": "text-g", "type": "text", "x": 366, "y": 241, "width": 48, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-g"], "frameId": null, "roundness": null, "seed": 110, "version": 1, "versionNonce": 1010,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "更新", "originalText": "更新", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "a9", "rawText": "更新"
+    },
+    {
+      "id": "stage-f", "type": "rectangle", "x": 560, "y": 220, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#94a3b8", "backgroundColor": "#f8fafc", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-f"], "frameId": null, "roundness": {"type": 3}, "seed": 111, "version": 1, "versionNonce": 1011,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "b0"
+    },
+    {
+      "id": "text-f", "type": "text", "x": 626, "y": 241, "width": 48, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-f"], "frameId": null, "roundness": null, "seed": 112, "version": 1, "versionNonce": 1012,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "运行", "originalText": "运行", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "b1", "rawText": "运行"
+    },
+    {
+      "id": "stage-e", "type": "rectangle", "x": 820, "y": 220, "width": 180, "height": 72, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "#f1f5f9", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-e"], "frameId": null, "roundness": {"type": 3}, "seed": 113, "version": 1, "versionNonce": 1013,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true, "index": "b2"
+    },
+    {
+      "id": "text-e", "type": "text", "x": 886, "y": 241, "width": 48, "height": 30, "angle": 0,
+      "strokeColor": "#1f2937", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 1, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": ["group-e"], "frameId": null, "roundness": null, "seed": 114, "version": 1, "versionNonce": 1014,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "text": "安装", "originalText": "安装", "fontSize": 24, "fontFamily": 2, "textAlign": "center", "verticalAlign": "middle", "containerId": null, "autoResize": false, "lineHeight": 1.25, "index": "b3", "rawText": "安装"
+    },
+    {
+      "id": "arrow-ab", "type": "arrow", "x": 220, "y": 76, "width": 80, "height": 0, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": [], "frameId": null, "roundness": {"type": 2}, "seed": 201, "version": 1, "versionNonce": 2001,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "points": [[0, 0], [80, 0]], "lastCommittedPoint": null, "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow", "elbowed": false, "index": "b4"
+    },
+    {
+      "id": "arrow-bc", "type": "arrow", "x": 480, "y": 76, "width": 80, "height": 0, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": [], "frameId": null, "roundness": {"type": 2}, "seed": 202, "version": 1, "versionNonce": 2002,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "points": [[0, 0], [80, 0]], "lastCommittedPoint": null, "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow", "elbowed": false, "index": "b5"
+    },
+    {
+      "id": "arrow-cd", "type": "arrow", "x": 740, "y": 76, "width": 80, "height": 0, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": [], "frameId": null, "roundness": {"type": 2}, "seed": 203, "version": 1, "versionNonce": 2003,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "points": [[0, 0], [80, 0]], "lastCommittedPoint": null, "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow", "elbowed": false, "index": "b6"
+    },
+    {
+      "id": "arrow-de", "type": "arrow", "x": 910, "y": 112, "width": 0, "height": 108, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": [], "frameId": null, "roundness": {"type": 2}, "seed": 204, "version": 1, "versionNonce": 2004,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "points": [[0, 0], [0, 108]], "lastCommittedPoint": null, "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow", "elbowed": false, "index": "b7"
+    },
+    {
+      "id": "arrow-ef", "type": "arrow", "x": 740, "y": 256, "width": 80, "height": 0, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": [], "frameId": null, "roundness": {"type": 2}, "seed": 205, "version": 1, "versionNonce": 2005,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "points": [[80, 0], [0, 0]], "lastCommittedPoint": null, "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow", "elbowed": false, "index": "b8"
+    },
+    {
+      "id": "arrow-fg", "type": "arrow", "x": 480, "y": 256, "width": 80, "height": 0, "angle": 0,
+      "strokeColor": "#64748b", "backgroundColor": "transparent", "fillStyle": "solid", "strokeWidth": 2, "strokeStyle": "solid", "roughness": 0, "opacity": 100,
+      "groupIds": [], "frameId": null, "roundness": {"type": 2}, "seed": 206, "version": 1, "versionNonce": 2006,
+      "isDeleted": false, "boundElements": [], "updated": 1787900000000, "link": null, "locked": true,
+      "points": [[80, 0], [0, 0]], "lastCommittedPoint": null, "startBinding": null, "endBinding": null, "startArrowhead": null, "endArrowhead": "arrow", "elbowed": false, "index": "b9"
+    }
+  ],
+  "appState": {
+    "theme": "light",
+    "viewBackgroundColor": "#ffffff",
+    "currentItemStrokeColor": "#64748b",
+    "currentItemBackgroundColor": "#f8fafc",
+    "currentItemFillStyle": "solid",
+    "currentItemStrokeWidthKey": "thin",
+    "currentItemStrokeVariability": "constant",
+    "currentItemStrokeStyle": "solid",
+    "currentItemRoughness": 0,
+    "currentItemOpacity": 100,
+    "currentItemFontFamily": 2,
+    "currentItemFontSize": 24,
+    "currentItemTextAlign": "center",
+    "currentItemStartArrowhead": null,
+    "currentItemEndArrowhead": "arrow",
+    "currentItemArrowType": "round",
+    "scrollX": 0,
+    "scrollY": 0,
+    "zoom": {"value": 1},
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "objectsSnapModeEnabled": false,
+    "viewModeEnabled": true
+  },
+  "files": {}
+}
