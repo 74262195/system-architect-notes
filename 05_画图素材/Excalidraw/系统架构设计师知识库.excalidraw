@@ -100,7 +100,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础知识看板.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -129,7 +129,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础知识看板.excalidraw]]",
       "locked": false,
       "text": "第2章 · 计算机系统基础",
       "originalText": "第2章 · 计算机系统基础",
@@ -207,7 +207,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[01_综合知识/02_系统工程与信息系统基础/系统工程与信息系统基础索引]]",
+      "link": null,
       "locked": false
     },
     {
@@ -236,7 +236,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[01_综合知识/02_系统工程与信息系统基础/系统工程与信息系统基础索引]]",
       "locked": false,
       "text": "系统工程与信息系统基础",
       "originalText": "系统工程与信息系统基础",
@@ -314,7 +314,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[01_综合知识/03_信息安全技术/信息安全技术索引]]",
+      "link": null,
       "locked": false
     },
     {
@@ -343,7 +343,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[01_综合知识/03_信息安全技术/信息安全技术索引]]",
       "locked": false,
       "text": "信息安全技术",
       "originalText": "信息安全技术",
@@ -421,7 +421,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[02_案例分析/案例分析索引]]",
+      "link": null,
       "locked": false
     },
     {
@@ -450,7 +450,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[02_案例分析/案例分析索引]]",
       "locked": false,
       "text": "案例分析",
       "originalText": "案例分析",
@@ -528,7 +528,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[03_论文素材/论文素材索引]]",
+      "link": null,
       "locked": false
     },
     {
@@ -557,7 +557,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[03_论文素材/论文素材索引]]",
       "locked": false,
       "text": "论文素材",
       "originalText": "论文素材",
@@ -635,7 +635,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[04_真题错题/真题错题索引]]",
+      "link": null,
       "locked": false
     },
     {
@@ -664,7 +664,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[04_真题错题/真题错题索引]]",
       "locked": false,
       "text": "真题错题",
       "originalText": "真题错题",
@@ -719,7 +719,8 @@
     "gridSize": 20,
     "gridStep": 5,
     "gridModeEnabled": false,
-    "viewBackgroundColor": "#ffffff"
+    "viewBackgroundColor": "#ffffff",
+    "viewModeEnabled": true
   },
   "files": {}
 }
