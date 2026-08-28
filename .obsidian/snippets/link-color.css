@@ -1,0 +1,206 @@
+/* ============================================================
+   Obsidian 自定义样式 —— 稳定美化版
+   ============================================================ */
+
+
+/* ---------- 正文排版 ---------- */
+.markdown-preview-view {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.75 !important;
+  letter-spacing: 0.01em;
+}
+
+.markdown-source-view .cm-content {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ---------- 标题 ---------- */
+.markdown-preview-view h1 {
+  font-size: 2.2em;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 8px;
+}
+.markdown-preview-view h2 {
+  font-size: 1.8em;
+  border-bottom: 1px solid var(--text-muted);
+  padding-bottom: 4px;
+}
+.markdown-preview-view h3 { font-size: 1.5em; }
+.markdown-preview-view h4 { font-size: 1.2em; }
+
+
+/* ---------- 引用块 ---------- */
+.markdown-preview-view blockquote {
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+  color: var(--text-muted);
+}
+
+
+/* ---------- Callout ---------- */
+.callout {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  padding: 12px 16px !important;
+  transition: box-shadow 0.2s;
+}
+.callout:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* ---------- 内部链接 ---------- */
+.cm-hmd-internal-link,
+.internal-link {
+  color: #e06c75 !important;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(224, 108, 117, 0.3);
+}
+.cm-hmd-internal-link.is-unresolved,
+.internal-link.is-unresolved {
+  color: #d19a66 !important;
+  border-bottom: 1px dashed rgba(209, 154, 102, 0.3);
+}
+.external-link {
+  color: #61afef !important;
+  border-bottom: 1px dotted rgba(97, 175, 239, 0.4);
+}
+
+
+/* ---------- 高亮文本 ---------- */
+.markdown-preview-view mark {
+  background: #e5c07b;
+  color: #000;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+
+/* ---------- 代码块 ---------- */
+.markdown-preview-view pre,
+.cm-s-obsidian .HyperMD-codeblock {
+  background: #282c34 !important;
+  border-radius: 8px !important;
+  padding: 16px 20px !important;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code:not(.hljs):not(.language-) {
+  background: rgba(97, 175, 239, 0.15);
+  color: #e06c75;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+
+/* ---------- 表格 ---------- */
+.markdown-preview-view table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+  font-size: 0.95em;
+}
+.markdown-preview-view th {
+  background: var(--background-primary-alt);
+  font-weight: 600;
+  padding: 10px 14px;
+  border: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view td {
+  padding: 8px 14px;
+  border: 1px solid var(--background-modifier-border);
+}
+.markdown-preview-view tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+
+/* ---------- Dataview 表格 ---------- */
+.dataview.table-view-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.dataview.table-view-table thead {
+  background: var(--background-primary-alt);
+  font-weight: 600;
+}
+.dataview.table-view-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+/* 修改 Mermaid 图表的背景为白色，并调整字体颜色为深色，方便阅读 */
+.mermaid svg {
+    background-color: #ffffff !important;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* 针对 Obsidian 暗色主题，确保节点文字是深色，便于阅读 */
+.mermaid .label {
+    color: #333333 !important;
+}
+
+.mermaid .cluster-label span {
+    color: #333333 !important;
+}
+
+/* 如果节点内有矩形背景，也统一调整 */
+.mermaid .node rect,
+.mermaid .node polygon {
+    fill: #f9f9f9 !important;
+    stroke: #666666 !important;
+}
+
+/* 对于源码模式下的代码块 */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-codeblock {
+    background-color: #1e1e1e !important; /* 或浅灰色，视用户偏好而定 */
+    color: #d4d4d4 !important; /* 使文本可见 */
+}
+/* 或者使用更浅的背景以便阅读 */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-codeblock {
+    background-color: #f0f0f0 !important; /* 浅色背景，深色文本 */
+    color: #333333 !important;
+}
+
+/* ========================================
+   强制所有选中文字显示为亮色高亮
+   （适用于编辑模式 + 阅读模式 + 侧边栏）
+   ======================================== */
+
+/* 1. 全局选中高亮（最通用） */
+::selection {
+    background-color: #ffaa00 !important;  /* 亮橙色，非常醒目 */
+    color: #1e1e1e !important;             /* 选中文字变深色，保证对比度 */
+}
+
+/* 2. Obsidian 阅读模式下的选中 */
+.markdown-preview-view ::selection {
+    background-color: #ffaa00 !important;
+    color: #1e1e1e !important;
+}
+
+/* 3. Obsidian 编辑模式（CodeMirror）下的选中 */
+.cm-s-obsidian .cm-selectionBackground,
+.cm-s-obsidian .cm-content ::selection {
+    background-color: #ffaa00 !important;
+    color: #1e1e1e !important;
+}
+
+/* 4. 侧边栏、文件列表、设置界面等所有区域 */
+.workspace ::selection {
+    background-color: #ffaa00 !important;
+    color: #1e1e1e !important;
+}
+.mermaid svg {
+    max-width: 100%;
+    height: auto;
+}

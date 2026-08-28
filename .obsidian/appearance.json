@@ -1,1 +1,15 @@
-{}
+{
+  "theme": "moonstone",
+  "translucency": false,
+  "cssTheme": "",
+  "accentColor": "",
+  "nativeMenus": true,
+  "enabledCssSnippets": [
+    "link-color"
+  ],
+  "showRibbon": true,
+  "textFontFamily": "",
+  "baseFontSize": 16,
+  "showViewHeader": true,
+  "interfaceFontFamily": ""
+}
