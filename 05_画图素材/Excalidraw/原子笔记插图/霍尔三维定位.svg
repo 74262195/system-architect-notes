@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="450" viewBox="0 0 1040 450" role="img" aria-labelledby="title desc">
+  <title id="title">用霍尔三维结构定位抢课系统高峰卡顿</title>
+  <desc id="desc">同一任务分别从时间维、逻辑维、知识维定位，再汇聚成霍尔三维结构</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .task { fill: #f1f5f9; stroke: #64748b; stroke-width: 1.5; }
+      .card { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.5; }
+      .result { fill: #eef2f7; stroke: #64748b; stroke-width: 1.5; }
+      .title { fill: #1f2937; font: 600 23px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .sub { fill: #475569; font: 400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .flow { fill: none; stroke: #64748b; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="task" x="280" y="24" width="480" height="74" rx="16"/>
+  <text class="title" x="520" y="61">当前任务：解决抢课系统高峰卡顿</text>
+
+  <rect class="card" x="40" y="164" width="280" height="96" rx="16"/>
+  <text class="title" x="180" y="198">时间维</text><text class="sub" x="180" y="232">运行阶段</text>
+  <rect class="card" x="380" y="164" width="280" height="96" rx="16"/>
+  <text class="title" x="520" y="198">逻辑维</text><text class="sub" x="520" y="232">系统分析阶段</text>
+  <rect class="card" x="720" y="164" width="280" height="96" rx="16"/>
+  <text class="title" x="860" y="198">知识维</text><text class="sub" x="860" y="232">软件 · 数据库 · 网络 · 运维 · 教务</text>
+
+  <rect class="result" x="250" y="352" width="540" height="74" rx="16"/>
+  <text class="title" x="520" y="380">霍尔三维结构</text><text class="sub" x="520" y="407">同时回答：现在在哪 · 怎么分析 · 需要谁</text>
+
+  <path class="flow" d="M520 98 V128 H180 V156"/>
+  <path class="flow" d="M520 98 V156"/>
+  <path class="flow" d="M520 98 V128 H860 V156"/>
+  <path class="flow" d="M180 260 V300 H350 V344"/>
+  <path class="flow" d="M520 260 V344"/>
+  <path class="flow" d="M860 260 V300 H690 V344"/>
+</svg>
