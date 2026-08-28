@@ -100,7 +100,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础知识看板.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -129,7 +129,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础知识看板.excalidraw]]",
       "locked": false,
       "text": "↩ 返回计算机系统基础",
       "originalText": "↩ 返回计算机系统基础",
@@ -238,7 +238,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[01_综合知识/01_计算机基础知识/04_计算机软件与语言/计算机软件基础-分类、中间件与构件]]",
+      "link": null,
       "locked": false
     },
     {
@@ -267,10 +267,10 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[01_综合知识/01_计算机基础知识/04_计算机软件与语言/计算机软件基础-分类、中间件与构件]]",
       "locked": false,
-      "text": "↗ 软件分类、中间件与构件",
-      "originalText": "↗ 软件分类、中间件与构件",
+      "text": "软件分类、中间件与构件",
+      "originalText": "软件分类、中间件与构件",
       "fontSize": 18,
       "fontFamily": 2,
       "textAlign": "left",
@@ -414,7 +414,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[01_综合知识/01_计算机基础知识/04_计算机软件与语言/计算机语言-编译与解释]]",
+      "link": null,
       "locked": false
     },
     {
@@ -443,10 +443,10 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[01_综合知识/01_计算机基础知识/04_计算机软件与语言/计算机语言-编译与解释]]",
       "locked": false,
-      "text": "↗ 编译与解释",
-      "originalText": "↗ 编译与解释",
+      "text": "编译与解释",
+      "originalText": "编译与解释",
       "fontSize": 18,
       "fontFamily": 2,
       "textAlign": "left",
@@ -498,7 +498,8 @@
     "gridSize": 20,
     "gridStep": 5,
     "gridModeEnabled": false,
-    "viewBackgroundColor": "#ffffff"
+    "viewBackgroundColor": "#ffffff",
+    "viewModeEnabled": true
   },
   "files": {}
 }
