@@ -202,12 +202,17 @@
 }
 .mermaid svg {
     /* 使用自然尺寸；只有超出正文宽度时才缩小 */
-    max-width: 100% !important;
-    width: auto !important;
+    max-width: 100%;
     min-width: 0;
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* block-beta 的内建宽度很窄：适度放大到可读尺寸，但不铺满正文栏 */
+.mermaid svg[aria-roledescription="block"] {
+    width: min(420px, 100%) !important;
+    max-width: 100% !important;
 }
 
 /* Mermaid 容器裁切溢出并保持图表完整落在正文宽度内 */
