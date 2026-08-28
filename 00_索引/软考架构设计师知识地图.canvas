@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"foundation","type":"text","text":"## 综合知识\n\n- 计算机基础\n- 操作系统\n- 网络\n- 数据库\n- 安全\n- 项目管理","x":-360,"y":160,"width":220,"height":300},
+		{"id":"case","type":"text","text":"## 案例分析\n\n- 架构方案选择\n- 数据库设计\n- 安全设计\n- 可靠性设计\n- 性能分析","x":-80,"y":160,"width":160,"height":300},
+		{"id":"paper","type":"text","text":"## 论文素材\n\n- 项目背景\n- 我的职责\n- 架构方案\n- 实施过程\n- 效果数据","x":200,"y":160,"width":220,"height":300},
+		{"id":"diagram","type":"text","text":"## 画图素材\n\n- Mermaid 简单图\n- Excalidraw 复杂图\n- Canvas 总览图","x":480,"y":160,"width":220,"height":300},
+		{"id":"review","type":"text","text":"## 复习闭环\n\n每日复习 → 错题复盘 → 论文素材 → 画图复述","x":20,"y":540,"width":240,"height":160},
+		{"id":"root","type":"text","text":"# 软考系统架构设计师知识地图\n\n目标：把综合知识、案例分析、论文素材和画图素材串起来。","x":0,"y":-60,"width":240,"height":160}
+	],
+	"edges":[
+		{"id":"edge-root-foundation","fromNode":"root","fromSide":"bottom","toNode":"foundation","toSide":"right"},
+		{"id":"edge-root-case","fromNode":"root","fromSide":"bottom","toNode":"case","toSide":"top"},
+		{"id":"edge-root-paper","fromNode":"root","fromSide":"bottom","toNode":"paper","toSide":"top"},
+		{"id":"edge-root-diagram","fromNode":"root","fromSide":"bottom","toNode":"diagram","toSide":"left"},
+		{"id":"edge-foundation-review","fromNode":"foundation","fromSide":"right","toNode":"review","toSide":"top"},
+		{"id":"edge-case-review","fromNode":"case","fromSide":"bottom","toNode":"review","toSide":"top"},
+		{"id":"edge-paper-review","fromNode":"paper","fromSide":"bottom","toNode":"review","toSide":"top"},
+		{"id":"edge-diagram-review","fromNode":"diagram","fromSide":"left","toNode":"review","toSide":"top"}
+	],
+	"groups":[]
+}

@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"root0001","type":"file","file":"01_综合知识/01_计算机基础知识/计算机基础知识索引.md","x":0,"y":0,"width":360,"height":160,"color":"6"},
+		{"id":"grpcomp1","type":"group","label":"组成与体系结构","x":-920,"y":-520,"width":760,"height":850,"color":"1"},
+		{"id":"comp0001","type":"file","file":"01_综合知识/01_计算机基础知识/01_计算机组成与体系结构/计算机系统组成.md","x":-880,"y":-460,"width":260,"height":120},
+		{"id":"comp0002","type":"text","text":"数据表示\n进制 → 原反补移 → 定点浮点 → 字符编码","x":-590,"y":-460,"width":360,"height":120},
+		{"id":"comp0003","type":"text","text":"CPU\n部件 → 寄存器 → 指令周期 → CISC/RISC → 寻址 → 流水线 → Flynn","x":-880,"y":-290,"width":650,"height":150},
+		{"id":"comp0004","type":"text","text":"存储\n局部性 → Cache → 主存 → 外存 RAID","x":-880,"y":-90,"width":310,"height":130},
+		{"id":"comp0005","type":"text","text":"总线与 I/O\n总线 → 查询/中断/DMA/通道 → 中断处理","x":-540,"y":-90,"width":310,"height":130},
+		{"id":"comp0006","type":"text","text":"校验与性能\n奇偶/CRC → 海明码 → MIPS/Amdahl/性能评价","x":-880,"y":90,"width":650,"height":150},
+		{"id":"grpos001","type":"group","label":"操作系统与嵌入式","x":-920,"y":390,"width":760,"height":650,"color":"2"},
+		{"id":"os000001","type":"file","file":"01_综合知识/01_计算机基础知识/02_操作系统/02_操作系统索引.md","x":-880,"y":450,"width":260,"height":120},
+		{"id":"os000002","type":"text","text":"进程与并发\n进程线程 → 调度 → PV → 死锁/银行家","x":-590,"y":450,"width":360,"height":120},
+		{"id":"os000003","type":"text","text":"存储管理\n分页分段 → 地址转换 → 虚拟存储/页面置换","x":-880,"y":620,"width":650,"height":120},
+		{"id":"os000004","type":"text","text":"持久化与设备\n文件索引 → 磁盘调度 → 嵌入式/RTOS/安全攸关","x":-880,"y":790,"width":650,"height":150},
+		{"id":"grpnet01","type":"group","label":"计算机网络","x":520,"y":-520,"width":760,"height":850,"color":"3"},
+		{"id":"net00001","type":"file","file":"01_综合知识/01_计算机基础知识/03_计算机网络/计算机网络索引.md","x":560,"y":-460,"width":260,"height":120},
+		{"id":"net00002","type":"text","text":"通信与链路\n发送/传播时延 → 电路/分组交换 → 以太网/交换机","x":850,"y":-460,"width":360,"height":130},
+		{"id":"net00003","type":"text","text":"网络层\n互联设备 → IP/子网 → IPv4 分片 → 路由","x":560,"y":-270,"width":650,"height":120},
+		{"id":"net00004","type":"text","text":"传输与应用\nTCP/UDP → 端口 → HTTP/DNS 等应用协议","x":560,"y":-100,"width":650,"height":120},
+		{"id":"net00005","type":"text","text":"组网与评价\n拓扑/网络工程 → WLAN/5G → 带宽/时延/非性能指标","x":560,"y":70,"width":650,"height":150},
+		{"id":"grpsoft1","type":"group","label":"软件、语言与多媒体","x":520,"y":390,"width":760,"height":650,"color":"4"},
+		{"id":"soft0001","type":"file","file":"01_综合知识/01_计算机基础知识/04_计算机软件与语言/计算机软件基础-分类、中间件与构件.md","x":560,"y":450,"width":300,"height":130},
+		{"id":"soft0002","type":"file","file":"01_综合知识/01_计算机基础知识/04_计算机软件与语言/计算机语言-编译与解释.md","x":900,"y":450,"width":300,"height":130},
+		{"id":"soft0003","type":"file","file":"01_综合知识/01_计算机基础知识/05_多媒体/多媒体基础与压缩技术.md","x":560,"y":640,"width":300,"height":130},
+		{"id":"soft0004","type":"text","text":"关键联系\n中间件/构件 → 软件架构\n多媒体码率 → 网络带宽/时延\n语言处理 → 指令集与运行环境","x":900,"y":640,"width":300,"height":210},
+		{"id":"cram0001","type":"file","file":"01_综合知识/01_计算机基础知识/计算机系统基础-考前速记.md","x":0,"y":300,"width":360,"height":160,"color":"5"}
+	],
+	"edges":[
+		{"id":"edge0001","fromNode":"root0001","fromSide":"left","toNode":"comp0001","toSide":"right","label":"硬件怎样工作"},
+		{"id":"edge0002","fromNode":"root0001","fromSide":"left","toNode":"os000001","toSide":"right","label":"软件怎样管资源"},
+		{"id":"edge0003","fromNode":"root0001","fromSide":"right","toNode":"net00001","toSide":"left","label":"机器怎样互联"},
+		{"id":"edge0004","fromNode":"root0001","fromSide":"right","toNode":"soft0001","toSide":"left","label":"能力怎样被使用"},
+		{"id":"edge0005","fromNode":"root0001","fromSide":"bottom","toNode":"cram0001","toSide":"top","label":"考前召回"},
+		{"id":"edge0006","fromNode":"comp0004","fromSide":"bottom","toNode":"os000003","toSide":"top","label":"局部性与地址空间"},
+		{"id":"edge0007","fromNode":"comp0005","fromSide":"bottom","toNode":"os000004","toSide":"top","label":"设备管理"},
+		{"id":"edge0008","fromNode":"comp0006","fromSide":"right","toNode":"net00002","toSide":"left","label":"CRC/FCS"},
+		{"id":"edge0009","fromNode":"os000002","fromSide":"right","toNode":"net00004","toSide":"left","label":"进程与端口"},
+		{"id":"edge0010","fromNode":"soft0003","fromSide":"top","toNode":"net00005","toSide":"bottom","label":"码率与带宽"},
+		{"id":"edge0011","fromNode":"soft0002","fromSide":"top","toNode":"comp0003","toSide":"right","label":"源程序到指令"}
+	]
+}
