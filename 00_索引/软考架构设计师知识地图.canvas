@@ -1,21 +1,31 @@
 {
-	"nodes":[
-		{"id":"foundation","type":"text","text":"## 综合知识\n\n- 计算机基础\n- 操作系统\n- 网络\n- 数据库\n- 安全\n- 项目管理","x":-360,"y":160,"width":220,"height":300},
-		{"id":"case","type":"text","text":"## 案例分析\n\n- 架构方案选择\n- 数据库设计\n- 安全设计\n- 可靠性设计\n- 性能分析","x":-80,"y":160,"width":160,"height":300},
-		{"id":"paper","type":"text","text":"## 论文素材\n\n- 项目背景\n- 我的职责\n- 架构方案\n- 实施过程\n- 效果数据","x":200,"y":160,"width":220,"height":300},
-		{"id":"diagram","type":"text","text":"## 画图素材\n\n- Mermaid 简单图\n- Excalidraw 复杂图\n- Canvas 总览图","x":480,"y":160,"width":220,"height":300},
-		{"id":"review","type":"text","text":"## 复习闭环\n\n每日复习 → 错题复盘 → 论文素材 → 画图复述","x":20,"y":540,"width":240,"height":160},
-		{"id":"root","type":"text","text":"# 软考系统架构设计师知识地图\n\n目标：把综合知识、案例分析、论文素材和画图素材串起来。","x":0,"y":-60,"width":240,"height":160}
-	],
-	"edges":[
-		{"id":"edge-root-foundation","fromNode":"root","fromSide":"bottom","toNode":"foundation","toSide":"right"},
-		{"id":"edge-root-case","fromNode":"root","fromSide":"bottom","toNode":"case","toSide":"top"},
-		{"id":"edge-root-paper","fromNode":"root","fromSide":"bottom","toNode":"paper","toSide":"top"},
-		{"id":"edge-root-diagram","fromNode":"root","fromSide":"bottom","toNode":"diagram","toSide":"left"},
-		{"id":"edge-foundation-review","fromNode":"foundation","fromSide":"right","toNode":"review","toSide":"top"},
-		{"id":"edge-case-review","fromNode":"case","fromSide":"bottom","toNode":"review","toSide":"top"},
-		{"id":"edge-paper-review","fromNode":"paper","fromSide":"bottom","toNode":"review","toSide":"top"},
-		{"id":"edge-diagram-review","fromNode":"diagram","fromSide":"left","toNode":"review","toSide":"top"}
-	],
-	"groups":[]
+  "nodes": [
+    {"id":"root","type":"text","text":"# 系统架构设计师知识库\n\n从这里进入学习闭环\n[[知识库首页]]","x":0,"y":0,"width":360,"height":180},
+    {"id":"foundation","type":"text","text":"## ① 综合知识\n\n[[软考架构设计师索引]]\n\n建立概念、机制、计算、对比","x":-900,"y":320,"width":360,"height":220},
+    {"id":"computer","type":"text","text":"## 计算机系统基础\n\n[[计算机系统基础知识地图]]\n[[学习路线]]\n\n数据 → CPU → 存储 → I/O → OS → 网络 → 软件 → 性能","x":-900,"y":650,"width":460,"height":280},
+    {"id":"systems","type":"text","text":"## 系统工程与信息系统\n\n系统工程方法\n生命周期与开发模型\n信息系统基础\n企业信息化","x":-400,"y":650,"width":360,"height":260},
+    {"id":"security","type":"text","text":"## 信息安全技术\n\n[[信息安全技术索引]]\n\n密码 → 认证 → 访问控制 → 网络安全 → 应用安全 → 安全架构","x":0,"y":650,"width":400,"height":260},
+    {"id":"case","type":"text","text":"## ② 案例分析\n\n[[案例分析索引]]\n\n把知识点变成方案判断、问题定位和答题模板","x":-420,"y":320,"width":360,"height":220},
+    {"id":"paper","type":"text","text":"## ③ 论文素材\n\n[[论文素材索引]]\n\n背景 → 职责 → 架构 → 实施 → 效果 → 复盘","x":60,"y":320,"width":360,"height":220},
+    {"id":"diagram","type":"text","text":"## ④ 画图表达\n\n[[软考画图规范]]\n\n结构图 / 部署图 / 流程图 / 时序关系","x":540,"y":320,"width":360,"height":220},
+    {"id":"wrong","type":"text","text":"## ⑤ 真题错题\n\n[[真题错题索引]]\n\n错题必须反链知识卡\n记录错因而不是只记答案","x":540,"y":650,"width":360,"height":240},
+    {"id":"review","type":"text","text":"## ⑥ 复习闭环\n\n[[软考每日复习]]\n[[软考系统架构师学习计划]]\n\n学习 → 做题 → 暴露薄弱点 → 回补 → 间隔复习 → 输出","x":60,"y":1020,"width":520,"height":260}
+  ],
+  "edges": [
+    {"id":"e1","fromNode":"root","fromSide":"bottom","toNode":"foundation","toSide":"top"},
+    {"id":"e2","fromNode":"root","fromSide":"bottom","toNode":"case","toSide":"top"},
+    {"id":"e3","fromNode":"root","fromSide":"bottom","toNode":"paper","toSide":"top"},
+    {"id":"e4","fromNode":"root","fromSide":"bottom","toNode":"diagram","toSide":"top"},
+    {"id":"e5","fromNode":"foundation","fromSide":"bottom","toNode":"computer","toSide":"top"},
+    {"id":"e6","fromNode":"foundation","fromSide":"bottom","toNode":"systems","toSide":"top"},
+    {"id":"e7","fromNode":"foundation","fromSide":"bottom","toNode":"security","toSide":"top"},
+    {"id":"e8","fromNode":"case","fromSide":"right","toNode":"wrong","toSide":"left"},
+    {"id":"e9","fromNode":"computer","fromSide":"bottom","toNode":"review","toSide":"left"},
+    {"id":"e10","fromNode":"systems","fromSide":"bottom","toNode":"review","toSide":"top"},
+    {"id":"e11","fromNode":"security","fromSide":"bottom","toNode":"review","toSide":"top"},
+    {"id":"e12","fromNode":"wrong","fromSide":"bottom","toNode":"review","toSide":"right"},
+    {"id":"e13","fromNode":"paper","fromSide":"bottom","toNode":"review","toSide":"top"},
+    {"id":"e14","fromNode":"diagram","fromSide":"bottom","toNode":"review","toSide":"right"}
+  ],
+  "groups": []
 }
