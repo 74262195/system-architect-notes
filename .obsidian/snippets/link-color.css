@@ -201,11 +201,13 @@
     color: #1e1e1e !important;
 }
 .mermaid svg {
-    /* 始终适配当前视口，不让用户必须横向滚动 */
+    /* 使用自然尺寸；只有超出正文宽度时才缩小 */
     max-width: 100% !important;
-    width: 100% !important;
+    width: auto !important;
     min-width: 0;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Mermaid 容器裁切溢出并保持图表完整落在正文宽度内 */
@@ -247,8 +249,6 @@
 .mermaid foreignObject span {
     background: transparent !important;
     color: #24292f !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere;
 }
 
 /* 纯文本/ plaintext 代码块用于阶段清单时，不使用深色代码背景 */
