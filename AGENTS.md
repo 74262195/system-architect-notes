@@ -48,7 +48,7 @@
 | Excalidraw 看板 | `30-Excalidraw章节知识看板.md` |
 | 考前速记 | `50-考前速记生成.md` + 全局规范 |
 
-Obsidian Copilot 的 `prompts/system-prompts/` 与 `prompts/copilot-custom-prompts/` 是**Copilot 内手动选择/调用**的提示词，不是 Codex/ChatGPT 自动任务规则。
+Obsidian Copilot 只保留与软考直接相关的提示词：`prompts/system-prompts/软考系统架构设计师.md` 与 `prompts/copilot-custom-prompts/软考/`。它们仅在 Copilot 内手动选择/调用，不是 Codex/ChatGPT 自动任务规则。仓库不再保存通用网页抓取、通用改写或跨工具 skill 目录。
 
 ## Git 与交付
 
