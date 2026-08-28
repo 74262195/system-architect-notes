@@ -1,4 +1,11 @@
 ---
+type: 考点
+subject: 系统架构设计师
+chapter: 信息安全技术
+topic: VPN
+difficulty: 2
+source: 教材
+updated: 2026-08-28
 tags:
   - 系统架构师
   - 系统架构师/信息安全
@@ -62,3 +69,9 @@ created: 2026-08-03 星期一
 
 > **IPSec 拉专线（网络层、ESP加密、隧道互联），SSL 开小门（应用层、浏览器免装）。**
 
+---
+
+## 下一站
+
+- 上一篇：[[IDS与IPS]]
+- 下一篇：[[TLS与HTTPS]]
