@@ -1,21 +1,64 @@
 {
-	"nodes":[
-		{"id":"foundation","type":"text","text":"## 综合知识\n\n- 计算机基础\n- 操作系统\n- 网络\n- 数据库\n- 安全\n- 项目管理","x":-360,"y":160,"width":220,"height":300},
-		{"id":"case","type":"text","text":"## 案例分析\n\n- 架构方案选择\n- 数据库设计\n- 安全设计\n- 可靠性设计\n- 性能分析","x":-80,"y":160,"width":160,"height":300},
-		{"id":"paper","type":"text","text":"## 论文素材\n\n- 项目背景\n- 我的职责\n- 架构方案\n- 实施过程\n- 效果数据","x":200,"y":160,"width":220,"height":300},
-		{"id":"diagram","type":"text","text":"## 画图素材\n\n- Mermaid 简单图\n- Excalidraw 复杂图\n- Canvas 总览图","x":480,"y":160,"width":220,"height":300},
-		{"id":"review","type":"text","text":"## 复习闭环\n\n每日复习 → 错题复盘 → 论文素材 → 画图复述","x":20,"y":540,"width":240,"height":160},
-		{"id":"root","type":"text","text":"# 软考系统架构设计师知识地图\n\n目标：把综合知识、案例分析、论文素材和画图素材串起来。","x":0,"y":-60,"width":240,"height":160}
-	],
-	"edges":[
-		{"id":"edge-root-foundation","fromNode":"root","fromSide":"bottom","toNode":"foundation","toSide":"right"},
-		{"id":"edge-root-case","fromNode":"root","fromSide":"bottom","toNode":"case","toSide":"top"},
-		{"id":"edge-root-paper","fromNode":"root","fromSide":"bottom","toNode":"paper","toSide":"top"},
-		{"id":"edge-root-diagram","fromNode":"root","fromSide":"bottom","toNode":"diagram","toSide":"left"},
-		{"id":"edge-foundation-review","fromNode":"foundation","fromSide":"right","toNode":"review","toSide":"top"},
-		{"id":"edge-case-review","fromNode":"case","fromSide":"bottom","toNode":"review","toSide":"top"},
-		{"id":"edge-paper-review","fromNode":"paper","fromSide":"bottom","toNode":"review","toSide":"top"},
-		{"id":"edge-diagram-review","fromNode":"diagram","fromSide":"left","toNode":"review","toSide":"top"}
-	],
-	"groups":[]
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "text": "# 系统架构设计师知识库\n\n**章节卡片看板**\n\n[[软考架构设计师索引|打开 Markdown 总知识库]]",
+      "x": -250,
+      "y": -250,
+      "width": 700,
+      "height": 200
+    },
+    {
+      "id": "ch2",
+      "type": "text",
+      "text": "## 第2章 · 计算机系统基础\n\n[[计算机基础知识索引|章节知识库]]\n\n[[计算机系统基础知识树.canvas|卡片式知识看板]]\n\n组成与体系结构 · 操作系统 · 网络 · 软件/语言 · 多媒体",
+      "x": -1150,
+      "y": 100,
+      "width": 620,
+      "height": 330,
+      "color": "1"
+    },
+    {
+      "id": "sys",
+      "type": "text",
+      "text": "## 系统工程与信息系统基础\n\n[[系统工程与信息系统基础索引|章节知识库]]\n\n系统工程方法 · 生命周期 · 开发模型 · 信息系统 · 企业信息化",
+      "x": -450,
+      "y": 100,
+      "width": 620,
+      "height": 300,
+      "color": "2"
+    },
+    {
+      "id": "sec",
+      "type": "text",
+      "text": "## 信息安全技术\n\n[[信息安全技术索引|章节知识库]]\n\n密码 · 认证 · 访问控制 · 网络安全 · 应用安全 · 安全架构",
+      "x": 250,
+      "y": 100,
+      "width": 620,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "future",
+      "type": "text",
+      "text": "## 待建设章节\n\n- 软件架构设计\n- 系统质量属性与架构评估\n- 数据库系统\n- 软件工程\n- 中间件与企业集成",
+      "x": 950,
+      "y": 100,
+      "width": 560,
+      "height": 340,
+      "color": "4"
+    },
+    {
+      "id": "output",
+      "type": "text",
+      "text": "## 考试输出与复习\n\n[[案例分析索引]] · [[论文素材索引]]\n\n[[真题错题索引]] · [[软考每日复习]]\n\n[[软考系统架构师学习计划]]",
+      "x": -450,
+      "y": 560,
+      "width": 850,
+      "height": 300,
+      "color": "5"
+    }
+  ],
+  "edges": []
 }
