@@ -201,21 +201,20 @@
     color: #1e1e1e !important;
 }
 .mermaid svg {
-    /* 保留图表的可读尺寸，超宽时由外层容器滚动查看 */
-    max-width: none !important;
-    width: max-content;
-    min-width: 100%;
+    /* 始终适配当前视口，不让用户必须横向滚动 */
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0;
     height: auto;
 }
 
-/* Mermaid 容器不强行压缩大图，避免节点文字缩成一团 */
+/* Mermaid 容器裁切溢出并保持图表完整落在正文宽度内 */
 .markdown-rendered .mermaid,
 .markdown-preview-view .mermaid {
     max-width: 100%;
-    overflow-x: auto !important;
+    overflow: hidden !important;
     overflow-y: hidden;
     text-align: center;
-    -webkit-overflow-scrolling: touch;
 }
 
 /* Mermaid 在暗色主题下的节点、边标签统一使用浅色高对比 */
@@ -248,6 +247,8 @@
 .mermaid foreignObject span {
     background: transparent !important;
     color: #24292f !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
 }
 
 /* 纯文本/ plaintext 代码块用于阶段清单时，不使用深色代码背景 */
