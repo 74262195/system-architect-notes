@@ -201,6 +201,66 @@
     color: #1e1e1e !important;
 }
 .mermaid svg {
-    max-width: 100%;
+    /* 保留图表的可读尺寸，超宽时由外层容器滚动查看 */
+    max-width: none !important;
+    width: max-content;
+    min-width: 100%;
     height: auto;
+}
+
+/* Mermaid 容器不强行压缩大图，避免节点文字缩成一团 */
+.markdown-rendered .mermaid,
+.markdown-preview-view .mermaid {
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mermaid 在暗色主题下的节点、边标签统一使用浅色高对比 */
+.mermaid .nodeLabel,
+.mermaid .edgeLabel,
+.mermaid .cluster-label,
+.mermaid .label,
+.mermaid text {
+    color: #24292f !important;
+    fill: #24292f !important;
+}
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node path {
+    fill: #f6f8fa !important;
+    stroke: #57606a !important;
+}
+.mermaid .edgeLabel rect,
+.mermaid .labelBkg {
+    fill: #ffffff !important;
+    background: #ffffff !important;
+}
+.mermaid .edgePath path,
+.mermaid .flowchart-link {
+    stroke: #57606a !important;
+}
+.mermaid foreignObject div,
+.mermaid foreignObject span {
+    background: transparent !important;
+    color: #24292f !important;
+}
+
+/* 纯文本/ plaintext 代码块用于阶段清单时，不使用深色代码背景 */
+.markdown-preview-view pre:has(> code.language-text),
+.markdown-preview-view pre:has(> code.language-plaintext),
+.markdown-preview-view pre:has(> code.language-txt) {
+    background: #f6f8fa !important;
+    color: #24292f !important;
+    border: 1px solid var(--background-modifier-border) !important;
+}
+.markdown-preview-view pre:has(> code.language-text) code,
+.markdown-preview-view pre:has(> code.language-plaintext) code,
+.markdown-preview-view pre:has(> code.language-txt) code {
+    background: transparent !important;
+    color: #24292f !important;
 }
