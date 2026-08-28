@@ -1,4 +1,11 @@
 ---
+type: 考点
+subject: 系统架构设计师
+chapter: 信息安全技术
+topic: IDS与IPS
+difficulty: 1
+source: 教材
+updated: 2026-08-28
 tags:
   - 系统架构师
   - 系统架构师/信息安全
@@ -58,3 +65,9 @@ created: 2026-08-03 星期一
 
 > **IDS 看不说，IPS 看就说、说就做。**
 
+---
+
+## 下一站
+
+- 上一篇：[[防火墙]]
+- 下一篇：[[VPN]]
