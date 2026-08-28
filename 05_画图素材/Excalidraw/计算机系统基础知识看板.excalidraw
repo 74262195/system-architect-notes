@@ -100,7 +100,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础/01_计算机组成与体系结构.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -129,7 +129,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础/01_计算机组成与体系结构.excalidraw]]",
       "locked": false,
       "text": "01 · 计算机组成与体系结构",
       "originalText": "01 · 计算机组成与体系结构",
@@ -207,7 +207,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础/02_操作系统.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -236,7 +236,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础/02_操作系统.excalidraw]]",
       "locked": false,
       "text": "02 · 操作系统",
       "originalText": "02 · 操作系统",
@@ -314,7 +314,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础/03_计算机网络.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -343,7 +343,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础/03_计算机网络.excalidraw]]",
       "locked": false,
       "text": "03 · 计算机网络",
       "originalText": "03 · 计算机网络",
@@ -421,7 +421,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础/04_计算机软件与语言.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -450,7 +450,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础/04_计算机软件与语言.excalidraw]]",
       "locked": false,
       "text": "04 · 计算机软件与语言",
       "originalText": "04 · 计算机软件与语言",
@@ -528,7 +528,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[05_画图素材/Excalidraw/计算机系统基础/05_多媒体.excalidraw]]",
+      "link": null,
       "locked": false
     },
     {
@@ -557,7 +557,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[05_画图素材/Excalidraw/计算机系统基础/05_多媒体.excalidraw]]",
       "locked": false,
       "text": "05 · 多媒体",
       "originalText": "05 · 多媒体",
@@ -635,7 +635,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": "[[01_综合知识/01_计算机基础知识/计算机基础知识索引]]",
+      "link": null,
       "locked": false
     },
     {
@@ -664,7 +664,7 @@
       "isDeleted": false,
       "boundElements": null,
       "updated": 1724820000000,
-      "link": null,
+      "link": "[[01_综合知识/01_计算机基础知识/计算机基础知识索引]]",
       "locked": false,
       "text": "↩ 返回章节知识库",
       "originalText": "↩ 返回章节知识库",
@@ -681,7 +681,8 @@
     "gridSize": 20,
     "gridStep": 5,
     "gridModeEnabled": false,
-    "viewBackgroundColor": "#ffffff"
+    "viewBackgroundColor": "#ffffff",
+    "viewModeEnabled": true
   },
   "files": {}
 }
