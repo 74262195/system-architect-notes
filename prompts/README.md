@@ -7,5 +7,13 @@
 - `20-章节检查与重构.md`：查漏、纠错、合并和补链。
 - `30-Excalidraw章节知识看板.md`：生成/维护卡片式章节视觉看板。
 - `50-考前速记生成.md`：从已审核笔记生成速记版。
+- `提示词索引.md`：汇总系统提示词、软考专用提示词、网页剪藏和通用处理提示词。
+
+从旧笔记仓库迁移的可复用 Copilot 提示词位于：
+
+- `system-prompts/`：系统提示词
+- `copilot-custom-prompts/软考/`：软考专用提示词
+- `copilot-custom-prompts/网页剪藏/`：网页和 YouTube 剪藏
+- `copilot-custom-prompts/通用/`：通用文字处理
 
 手动模式只输出完整 Markdown；PR 模式才修改文件并更新索引。视觉看板任务必须以 Markdown 章节知识库为事实源。
