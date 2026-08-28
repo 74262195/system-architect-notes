@@ -215,6 +215,19 @@
     max-width: 100% !important;
 }
 
+/* block-beta 默认箭头大于节点间距，缩成细小指向符，避免箭头压住文字和边框 */
+.mermaid svg[aria-roledescription="block"] marker.block {
+    marker-width: 5px !important;
+    marker-height: 5px !important;
+}
+.mermaid svg[aria-roledescription="block"] marker.block path.arrowMarkerPath {
+    transform: translate(2.5px, 2.5px) scale(0.5);
+    transform-origin: 0 0;
+}
+.mermaid svg[aria-roledescription="block"] .flowchart-link {
+    stroke-width: 0.8px !important;
+}
+
 /* Mermaid 容器裁切溢出并保持图表完整落在正文宽度内 */
 .markdown-rendered .mermaid,
 .markdown-preview-view .mermaid {
