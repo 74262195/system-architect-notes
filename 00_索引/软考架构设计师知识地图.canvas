@@ -1,31 +1,111 @@
 {
   "nodes": [
-    {"id":"root","type":"text","text":"# 系统架构设计师知识库\n\n从这里进入学习闭环\n[[知识库首页]]","x":0,"y":0,"width":360,"height":180},
-    {"id":"foundation","type":"text","text":"## ① 综合知识\n\n[[软考架构设计师索引]]\n\n建立概念、机制、计算、对比","x":-900,"y":320,"width":360,"height":220},
-    {"id":"computer","type":"text","text":"## 计算机系统基础\n\n[[计算机系统基础知识地图]]\n[[学习路线]]\n\n数据 → CPU → 存储 → I/O → OS → 网络 → 软件 → 性能","x":-900,"y":650,"width":460,"height":280},
-    {"id":"systems","type":"text","text":"## 系统工程与信息系统\n\n系统工程方法\n生命周期与开发模型\n信息系统基础\n企业信息化","x":-400,"y":650,"width":360,"height":260},
-    {"id":"security","type":"text","text":"## 信息安全技术\n\n[[信息安全技术索引]]\n\n密码 → 认证 → 访问控制 → 网络安全 → 应用安全 → 安全架构","x":0,"y":650,"width":400,"height":260},
-    {"id":"case","type":"text","text":"## ② 案例分析\n\n[[案例分析索引]]\n\n把知识点变成方案判断、问题定位和答题模板","x":-420,"y":320,"width":360,"height":220},
-    {"id":"paper","type":"text","text":"## ③ 论文素材\n\n[[论文素材索引]]\n\n背景 → 职责 → 架构 → 实施 → 效果 → 复盘","x":60,"y":320,"width":360,"height":220},
-    {"id":"diagram","type":"text","text":"## ④ 画图表达\n\n[[软考画图规范]]\n\n结构图 / 部署图 / 流程图 / 时序关系","x":540,"y":320,"width":360,"height":220},
-    {"id":"wrong","type":"text","text":"## ⑤ 真题错题\n\n[[真题错题索引]]\n\n错题必须反链知识卡\n记录错因而不是只记答案","x":540,"y":650,"width":360,"height":240},
-    {"id":"review","type":"text","text":"## ⑥ 复习闭环\n\n[[软考每日复习]]\n[[软考系统架构师学习计划]]\n\n学习 → 做题 → 暴露薄弱点 → 回补 → 间隔复习 → 输出","x":60,"y":1020,"width":520,"height":260}
+    {
+      "id": "root",
+      "type": "file",
+      "file": "00_索引/软考架构设计师索引.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "ch2",
+      "type": "file",
+      "file": "01_综合知识/01_计算机基础知识/计算机基础知识索引.md",
+      "x": -950,
+      "y": 360,
+      "width": 380,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "ch2tree",
+      "type": "file",
+      "file": "05_画图素材/Canvas/计算机系统基础知识树.canvas",
+      "x": -950,
+      "y": 600,
+      "width": 380,
+      "height": 160
+    },
+    {
+      "id": "sys",
+      "type": "file",
+      "file": "01_综合知识/02_系统工程与信息系统基础/系统工程与信息系统基础索引.md",
+      "x": -320,
+      "y": 360,
+      "width": 420,
+      "height": 160,
+      "color": "2"
+    },
+    {
+      "id": "sec",
+      "type": "file",
+      "file": "01_综合知识/03_信息安全技术/信息安全技术索引.md",
+      "x": 330,
+      "y": 360,
+      "width": 380,
+      "height": 160,
+      "color": "3"
+    },
+    {
+      "id": "future",
+      "type": "text",
+      "text": "## 待建设章节\\n\\n- 软件架构设计\\n- 质量属性与架构评估\\n- 数据库系统\\n- 软件工程\\n- 中间件与企业集成",
+      "x": 900,
+      "y": 360,
+      "width": 420,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "out",
+      "type": "text",
+      "text": "## 考试输出区\\n\\n[[案例分析索引]]\\n[[论文素材索引]]\\n[[真题错题索引]]\\n[[软考每日复习]]",
+      "x": 0,
+      "y": 850,
+      "width": 420,
+      "height": 260,
+      "color": "5"
+    }
   ],
   "edges": [
-    {"id":"e1","fromNode":"root","fromSide":"bottom","toNode":"foundation","toSide":"top"},
-    {"id":"e2","fromNode":"root","fromSide":"bottom","toNode":"case","toSide":"top"},
-    {"id":"e3","fromNode":"root","fromSide":"bottom","toNode":"paper","toSide":"top"},
-    {"id":"e4","fromNode":"root","fromSide":"bottom","toNode":"diagram","toSide":"top"},
-    {"id":"e5","fromNode":"foundation","fromSide":"bottom","toNode":"computer","toSide":"top"},
-    {"id":"e6","fromNode":"foundation","fromSide":"bottom","toNode":"systems","toSide":"top"},
-    {"id":"e7","fromNode":"foundation","fromSide":"bottom","toNode":"security","toSide":"top"},
-    {"id":"e8","fromNode":"case","fromSide":"right","toNode":"wrong","toSide":"left"},
-    {"id":"e9","fromNode":"computer","fromSide":"bottom","toNode":"review","toSide":"left"},
-    {"id":"e10","fromNode":"systems","fromSide":"bottom","toNode":"review","toSide":"top"},
-    {"id":"e11","fromNode":"security","fromSide":"bottom","toNode":"review","toSide":"top"},
-    {"id":"e12","fromNode":"wrong","fromSide":"bottom","toNode":"review","toSide":"right"},
-    {"id":"e13","fromNode":"paper","fromSide":"bottom","toNode":"review","toSide":"top"},
-    {"id":"e14","fromNode":"diagram","fromSide":"bottom","toNode":"review","toSide":"right"}
-  ],
-  "groups": []
+    {
+      "id": "g1",
+      "fromNode": "root",
+      "toNode": "ch2",
+      "label": "第2章"
+    },
+    {
+      "id": "g2",
+      "fromNode": "ch2",
+      "toNode": "ch2tree",
+      "label": "知识树"
+    },
+    {
+      "id": "g3",
+      "fromNode": "root",
+      "toNode": "sys",
+      "label": "章节"
+    },
+    {
+      "id": "g4",
+      "fromNode": "root",
+      "toNode": "sec",
+      "label": "章节"
+    },
+    {
+      "id": "g5",
+      "fromNode": "root",
+      "toNode": "future",
+      "label": "后续章节"
+    },
+    {
+      "id": "g6",
+      "fromNode": "root",
+      "toNode": "out",
+      "label": "练习与输出"
+    }
+  ]
 }
