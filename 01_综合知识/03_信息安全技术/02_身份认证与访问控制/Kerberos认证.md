@@ -1,4 +1,11 @@
 ---
+type: 考点
+subject: 系统架构设计师
+chapter: 信息安全技术
+topic: Kerberos认证
+difficulty: 1
+source: 教材
+updated: 2026-08-28
 tags:
   - 系统架构师
   - 系统架构师/信息安全
@@ -65,3 +72,9 @@ flowchart LR
 
 > **KDC发通行证，TGT换门票，时间戳防重放——对称密钥体系里的单点登录大师。**
 
+---
+
+## 下一站
+
+- 上一篇：[[身份认证]]
+- 下一篇：[[单点登录SSO]]
