@@ -10,9 +10,13 @@
 - 使用 Obsidian wikilink；新建或移动笔记必须检查链接、附件和前后“下一站”。
 - 不杜撰真题出处、分值、项目数据或教材原文；缺失信息标记“待补充”。
 
-## Git 交付
+## Inbox 自动整理与 Git 交付
 
-- `main` 保持可用；AI 修改必须创建 `ai/<topic>-YYYYMMDD` 分支并提交 PR。
+- `00_Inbox/AI草稿/` 是网页 ChatGPT 的唯一落点。Codex App 读取 [[prompts/00-Inbox自动整理]] 后整理到正式目录。
+- `main` 保持可用；自动整理前必须先检查是否有未提交改动。若本地已有未提交改动，暂停并报告，不覆盖用户编辑。
+- 同一台 Mac 上 Obsidian 与 Codex App 使用同一目录，Codex 写入后 Obsidian 会立即看到；GitHub 只负责备份、历史和多设备同步。
+- 自动整理完成后运行校验、`git diff --check`，再提交并推送；不使用强制 push。
+- 若使用网页 Codex 的分支/PR 模式，AI 修改必须创建 `ai/<topic>-YYYYMMDD` 分支并提交 PR。
 - 一个 PR 只处理一个知识点或一个明确章节。
 - 修改前读取对应 MOC、模板、上一篇和下一篇；修改后运行 `node scripts/check-vault.mjs`。
 - 不提交认证、Token、私钥、插件数据、工作资料或整本教材扫描件。
