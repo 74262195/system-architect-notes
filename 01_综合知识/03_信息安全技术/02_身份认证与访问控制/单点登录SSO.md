@@ -1,4 +1,11 @@
 ---
+type: 考点
+subject: 系统架构设计师
+chapter: 信息安全技术
+topic: 单点登录SSO
+difficulty: 1
+source: 教材
+updated: 2026-08-28
 tags:
   - 系统架构师
   - 系统架构师/信息安全
@@ -35,7 +42,7 @@ created: 2026-08-03 星期一
 | **集中认证中心（CAS）** | 所有系统跳转到统一登录页 |
 | **令牌（Token）** | 登录后发令牌，各系统凭令牌验证（JWT等） |
 | **Kerberos 票据** | 见 [[Kerberos认证]] |
-| 企业级 | OAuth2/OIDC（授权+认证协议） |
+| OAuth 2.0 + OIDC | OAuth 2.0 是授权框架；OIDC 在其上增加身份认证能力 |
 
 ---
 
@@ -59,3 +66,9 @@ created: 2026-08-03 星期一
 
 > **一次登录处处走，令牌票据在后头；SSO是目标，Kerberos/OAuth是手段。**
 
+---
+
+## 下一站
+
+- 上一篇：[[Kerberos认证]]
+- 下一篇：[[DAC自主访问控制]]
