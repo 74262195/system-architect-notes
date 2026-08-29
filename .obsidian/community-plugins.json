@@ -8,5 +8,6 @@
   "obsidian-linter",
   "recent-files-obsidian",
   "commander",
-  "cmdr"
+  "cmdr",
+  "obsidian-graphviz"
 ]
