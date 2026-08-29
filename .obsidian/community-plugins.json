@@ -6,5 +6,7 @@
   "excalidraw-extras",
   "obsidian-git",
   "obsidian-linter",
-  "recent-files-obsidian"
+  "recent-files-obsidian",
+  "commander",
+  "cmdr"
 ]
