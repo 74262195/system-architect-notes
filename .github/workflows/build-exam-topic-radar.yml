@@ -1,0 +1,52 @@
+name: Build exam topic radar
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "历年真题/AI题库/标准化题库/**/*.md"
+      - "历年真题/AI题库/原始文本/**/*.md"
+      - "scripts/build-exam-topic-radar.py"
+      - ".github/workflows/build-exam-topic-radar.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-exam-topic-radar-main
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build topic mapping and radar
+        run: python3 scripts/build-exam-topic-radar.py
+
+      - name: Validate generated Markdown
+        shell: bash
+        run: |
+          node scripts/check-vault.mjs
+          git diff --check
+
+      - name: Commit generated radar
+        shell: bash
+        run: |
+          git add -A -- "历年真题/AI题库/知识点索引"
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh exam topic radar"
+          git pull --rebase origin main
+          git push origin HEAD:main
