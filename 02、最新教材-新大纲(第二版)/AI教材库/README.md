@@ -20,7 +20,7 @@ GitHub 连接器直接读取 Git LFS 文件时只能看到 LFS pointer，无法�
 
 1. Git LFS 保存 PDF 原件；
 2. GitHub Actions 拉取教材 LFS；
-3. scripts/extract-textbook-text.py 抽取 PDF 文字层；
+3. scripts/extract-textbook-text.py 优先抽取 PDF 文字层；文字层不足时可对扫描页做简体中文+英文 OCR；
 4. 按 12 个 PDF 页切成一个 Markdown 块；
 5. 普通 Git 保存这些 Markdown；
 6. ChatGPT / Codex 后续直接读取 Markdown，并通过 source_file + PDF 页码回溯原件。
@@ -122,9 +122,9 @@ pdftotext 只能稳定抽取文字层。
 
 ## 本地运行
 
-macOS 首次需要安装 Poppler：
+macOS 首次建议安装 Poppler 和 Tesseract：
 
-brew install poppler
+brew install poppler tesseract tesseract-lang
 
 拉取教材 LFS：
 
@@ -133,6 +133,10 @@ git lfs pull --include="02、最新教材-新大纲(第二版)/*.pdf"
 执行：
 
 python3 scripts/extract-textbook-text.py
+
+需要同时处理扫描版 PDF 时使用：
+
+python3 scripts/extract-textbook-text.py --ocr-fallback --ocr-workers 2 --ocr-dpi 180
 
 默认每 12 页生成一个 Markdown；需要调整时可以使用：
 
@@ -151,7 +155,7 @@ python3 scripts/extract-textbook-text.py --chunk-pages 20
 - 工作流自身更新；
 - 手动触发。
 
-工作流只拉取教材目录的 LFS PDF，不主动下载历年真题 LFS，避免两套任务互相影响。
+工作流只拉取教材目录的 LFS PDF，不主动下载历年真题 LFS，避免两套任务互相影响。工作流默认启用 OCR 回退，并安装简体中文与英文 Tesseract 语言包；已有可靠文字层的教材不会重复 OCR。
 
 ## 与真题解析的关系
 
