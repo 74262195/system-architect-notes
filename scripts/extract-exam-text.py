@@ -94,6 +94,7 @@ def run_tesseract(image: Path) -> str:
             "chi_sim+eng",
             "--psm",
             "6",
+            "-c",
             "preserve_interword_spaces=1",
         ],
         stdout=subprocess.PIPE,
@@ -121,7 +122,10 @@ def ocr_pdf(path: Path) -> str:
             err = proc.stderr.decode("utf-8", errors="replace").strip()
             raise RuntimeError(err or f"pdftoppm 退出码 {proc.returncode}")
 
-        images = sorted(Path(tmp).glob("page-*.jpg"))
+        images = sorted(
+            Path(tmp).glob("page-*.jpg"),
+            key=lambda p: int(re.search(r"(\d+)$", p.stem).group(1)),
+        )
         if not images:
             raise RuntimeError("PDF 未生成可 OCR 的页面图像")
 
