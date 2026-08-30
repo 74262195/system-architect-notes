@@ -1,0 +1,62 @@
+name: Extract exam text
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "历年真题/**/*.pdf"
+      - "历年真题/**/*.docx"
+      - "scripts/extract-exam-text.py"
+      - ".github/workflows/extract-exam-text.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extract-exam-text-main
+  cancel-in-progress: true
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+
+      - name: Install extraction tools and pull exam LFS files
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-lfs poppler-utils
+          git lfs install --local
+          git lfs pull --include="历年真题/**" --exclude=""
+
+      - name: Extract PDF and DOCX text
+        run: python3 scripts/extract-exam-text.py
+
+      - name: Validate generated Markdown
+        shell: bash
+        run: |
+          node scripts/check-vault.mjs
+          git diff --check
+
+      - name: Commit generated AI-readable exam text
+        shell: bash
+        run: |
+          git add -A -- "历年真题/AI题库"
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh AI-readable exam text"
+          git pull --rebase origin main
+          git push origin HEAD:main
