@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - '02、最新教材-新大纲(第二版)/*.pdf'
-      - 'scripts/extract-textbook-text.py'
-      - '.github/workflows/extract-textbook-text.yml'
+      - "02、最新教材-新大纲(第二版)/*.pdf"
+      - "scripts/extract-textbook-text.py"
+      - ".github/workflows/extract-textbook-text.yml"
   workflow_dispatch:
 
 permissions:
@@ -29,17 +29,17 @@ jobs:
           fetch-depth: 0
           lfs: false
 
+      - name: Install extraction tools
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-lfs poppler-utils
+
       - name: Pull textbook LFS objects only
         shell: bash
         run: |
           git lfs install --local
           git lfs pull --include="02、最新教材-新大纲(第二版)/*.pdf" --exclude=""
-
-      - name: Install PDF text tools
-        shell: bash
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils
 
       - name: Extract textbooks into AI-readable Markdown
         id: extract
@@ -51,13 +51,19 @@ jobs:
           set -e
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
 
+      - name: Validate generated Markdown
+        shell: bash
+        run: |
+          node scripts/check-vault.mjs
+          git diff --check
+
       - name: Commit generated textbook layer
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add "02、最新教材-新大纲(第二版)/AI教材库/原始文本"                   "02、最新教材-新大纲(第二版)/AI教材库/教材索引.md"                   "02、最新教材-新大纲(第二版)/AI教材库/抽取报告.md"
+          git add -A -- "02、最新教材-新大纲(第二版)/AI教材库"
 
           if git diff --cached --quiet; then
             echo "No generated textbook changes."
