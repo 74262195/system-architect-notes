@@ -20,6 +20,16 @@ REPORT_PATH = AI_ROOT / "抽取报告.md"
 LFS_SIGNATURE = b"version https://git-lfs.github.com/spec/v1"
 SUPPORTED_SUFFIXES = {".pdf", ".docx"}
 MIN_USEFUL_TEXT = 500
+OCR_MIN_USEFUL_TEXT = 300
+
+BOILERPLATE_PATTERNS = [
+    r"<!--\s*PDF_PAGE_BREAK\s*-->",
+    r"手机端题库：微信搜索「软考达人」\s*/?\s*PC端题库：[^\n]*",
+    r"软考达人：软考专业备考平台[^\n]*",
+    r"全国计算机技术与软件专业技术资格[^\n]*",
+    r"系统架构设计师\s+上午试卷\s+第\s*\d+\s*页",
+    r"系统架构设计师\s+下午试卷\s+第\s*\d+\s*页",
+]
 
 
 def yaml_value(value: object) -> str:
@@ -55,6 +65,98 @@ def extract_pdf(path: Path) -> str:
         err = proc.stderr.decode("utf-8", errors="replace").strip()
         raise RuntimeError(err or f"pdftotext 退出码 {proc.returncode}")
     return proc.stdout.decode("utf-8", errors="replace")
+
+
+def useful_text_length(text: str) -> int:
+    cleaned = text
+    for pattern in BOILERPLATE_PATTERNS:
+        cleaned = re.sub(pattern, "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"[_\W]+", "", cleaned, flags=re.UNICODE)
+    return len(cleaned)
+
+
+def require_tool(name: str, install_hint: str) -> None:
+    if shutil.which(name) is None:
+        raise RuntimeError(f"未找到 {name}。{install_hint}")
+
+
+def run_tesseract(image: Path) -> str:
+    require_tool(
+        "tesseract",
+        "GitHub Actions 会安装 tesseract-ocr、tesseract-ocr-chi-sim 和 tesseract-ocr-eng。",
+    )
+    proc = subprocess.run(
+        [
+            "tesseract",
+            str(image),
+            "stdout",
+            "-l",
+            "chi_sim+eng",
+            "--psm",
+            "6",
+            "preserve_interword_spaces=1",
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if proc.returncode != 0:
+        err = proc.stderr.decode("utf-8", errors="replace").strip()
+        raise RuntimeError(err or f"tesseract 退出码 {proc.returncode}")
+    return proc.stdout.decode("utf-8", errors="replace")
+
+
+def ocr_pdf(path: Path) -> str:
+    require_tool("pdftoppm", "GitHub Actions 会安装 poppler-utils。")
+    import tempfile
+    with tempfile.TemporaryDirectory(prefix="exam-ocr-") as tmp:
+        prefix = Path(tmp) / "page"
+        proc = subprocess.run(
+            ["pdftoppm", "-jpeg", "-r", "220", str(path), str(prefix)],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        if proc.returncode != 0:
+            err = proc.stderr.decode("utf-8", errors="replace").strip()
+            raise RuntimeError(err or f"pdftoppm 退出码 {proc.returncode}")
+
+        images = sorted(Path(tmp).glob("page-*.jpg"))
+        if not images:
+            raise RuntimeError("PDF 未生成可 OCR 的页面图像")
+
+        pages: list[str] = []
+        for index, image in enumerate(images, start=1):
+            text = run_tesseract(image).strip()
+            pages.append(text)
+            if index != len(images):
+                pages.append("\n\n<!-- PDF_PAGE_BREAK -->\n\n")
+        return "\n".join(pages)
+
+
+def ocr_docx_images(path: Path) -> str:
+    import tempfile
+    with tempfile.TemporaryDirectory(prefix="docx-ocr-") as tmp:
+        tmp_path = Path(tmp)
+        with zipfile.ZipFile(path) as zf:
+            media = sorted(
+                name for name in zf.namelist()
+                if name.startswith("word/media/") and not name.endswith("/")
+            )
+            if not media:
+                raise RuntimeError("DOCX 中没有可 OCR 的内嵌图片")
+
+            chunks: list[str] = []
+            for i, name in enumerate(media, start=1):
+                suffix = Path(name).suffix or ".png"
+                image = tmp_path / f"image-{i:04d}{suffix}"
+                image.write_bytes(zf.read(name))
+                text = run_tesseract(image).strip()
+                if text:
+                    chunks.append(text)
+            if not chunks:
+                raise RuntimeError("DOCX 内嵌图片 OCR 后未得到有效文字")
+            return "\n\n".join(chunks)
 
 
 def extract_docx(path: Path) -> str:
@@ -272,6 +374,11 @@ def write_report(rows: list[dict[str, str]], removed: list[Path]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="把历年真题 PDF/DOCX 抽取为 AI 可读 Markdown。")
     parser.add_argument(
+        "--ocr",
+        action="store_true",
+        help="当 PDF/DOCX 正文文字层不足时，自动对扫描页/内嵌图片执行中英文 OCR。",
+    )
+    parser.add_argument(
         "--no-prune",
         action="store_true",
         help="不清理已不存在来源所对应的自动生成 Markdown。",
@@ -304,12 +411,27 @@ def main() -> int:
                 else:
                     raw = extract_docx(source)
                 text = normalize_text(raw)
-                if len(re.sub(r"\s+", "", text)) < MIN_USEFUL_TEXT:
+                useful_chars = useful_text_length(text)
+                method = "文本层"
+
+                if useful_chars < MIN_USEFUL_TEXT and args.ocr:
+                    if source.suffix.lower() == ".pdf":
+                        ocr_raw = ocr_pdf(source)
+                    else:
+                        ocr_raw = ocr_docx_images(source)
+                    ocr_text = normalize_text(ocr_raw)
+                    ocr_chars = useful_text_length(ocr_text)
+                    if ocr_chars > useful_chars:
+                        text = ocr_text
+                        useful_chars = ocr_chars
+                        method = "OCR"
+
+                if useful_chars < (OCR_MIN_USEFUL_TEXT if method == "OCR" else MIN_USEFUL_TEXT):
                     status = "需OCR"
-                    note = "可提取文字过少，疑似扫描版或文字层异常。"
+                    note = f"有效正文仅 {useful_chars} 字符；已尝试方式：{method}。仍需人工检查或更高质量原件。"
                 else:
                     status = "可解析"
-                    note = ""
+                    note = f"{method} 可用正文约 {useful_chars} 字符。"
                 markdown = render_markdown(source, text, status)
             except Exception as exc:
                 status = "失败"
