@@ -33,12 +33,12 @@ jobs:
         shell: bash
         run: |
           sudo apt-get update
-          sudo apt-get install -y git-lfs poppler-utils
+          sudo apt-get install -y git-lfs poppler-utils tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-eng
           git lfs install --local
           git lfs pull --include="历年真题/**" --exclude=""
 
-      - name: Extract PDF and DOCX text
-        run: python3 scripts/extract-exam-text.py
+      - name: Extract PDF and DOCX text with OCR fallback
+        run: python3 scripts/extract-exam-text.py --ocr
 
       - name: Validate generated Markdown
         shell: bash
