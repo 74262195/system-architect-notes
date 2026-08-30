@@ -8,6 +8,8 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +21,8 @@ INDEX_PATH = AI_ROOT / "教材索引.md"
 
 LFS_SIGNATURE = b"version https://git-lfs.github.com/spec/v1"
 DEFAULT_CHUNK_PAGES = 12
+DEFAULT_OCR_WORKERS = 2
+DEFAULT_OCR_DPI = 180
 MIN_SOURCE_AVG_CHARS = 120
 MIN_PAGE_CHARS = 30
 
@@ -84,12 +88,38 @@ def is_lfs_pointer(path):
         return False
 
 
+def require_tool(name, install_hint):
+    if shutil.which(name) is None:
+        raise RuntimeError(f"未找到 {name}。{install_hint}")
+
+
+def pdf_page_count(path):
+    require_tool(
+        "pdfinfo",
+        "macOS 可执行 brew install poppler；GitHub Actions 会自动安装 poppler-utils。",
+    )
+    proc = subprocess.run(
+        ["pdfinfo", str(path)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if proc.returncode != 0:
+        err = proc.stderr.decode("utf-8", errors="replace").strip()
+        raise RuntimeError(err or f"pdfinfo 退出码 {proc.returncode}")
+    text = proc.stdout.decode("utf-8", errors="replace")
+    match = re.search(r"^Pages:\s+(\d+)\s*$", text, re.MULTILINE)
+    if not match:
+        raise RuntimeError("pdfinfo 未返回可识别的 Pages 字段。")
+    return int(match.group(1))
+
+
 def extract_pdf_pages(path):
-    if shutil.which("pdftotext") is None:
-        raise RuntimeError(
-            "未找到 pdftotext。macOS 可执行 brew install poppler；"
-            "GitHub Actions 会自动安装 poppler-utils。"
-        )
+    require_tool(
+        "pdftotext",
+        "macOS 可执行 brew install poppler；GitHub Actions 会自动安装 poppler-utils。",
+    )
+    page_count = pdf_page_count(path)
     proc = subprocess.run(
         ["pdftotext", "-layout", "-enc", "UTF-8", str(path), "-"],
         stdout=subprocess.PIPE,
@@ -99,11 +129,18 @@ def extract_pdf_pages(path):
     if proc.returncode != 0:
         err = proc.stderr.decode("utf-8", errors="replace").strip()
         raise RuntimeError(err or f"pdftotext 退出码 {proc.returncode}")
+
     raw = proc.stdout.decode("utf-8", errors="replace")
     pages = raw.split("\f")
     while pages and not pages[-1].strip():
         pages.pop()
-    return [normalize_page(page) for page in pages]
+    pages = [normalize_page(page) for page in pages]
+
+    if len(pages) < page_count:
+        pages.extend([""] * (page_count - len(pages)))
+    elif len(pages) > page_count:
+        pages = pages[:page_count]
+    return pages
 
 
 def normalize_page(text):
@@ -128,7 +165,7 @@ def useful_chars(text):
 
 def classify_extract_status(pages):
     if not pages:
-        return "失败", "未识别到 PDF 页面或文字输出为空。"
+        return "失败", "未识别到 PDF 页面。"
     char_counts = [useful_chars(page) for page in pages]
     avg_chars = sum(char_counts) / len(char_counts)
     weak_pages = sum(1 for count in char_counts if count < MIN_PAGE_CHARS)
@@ -138,6 +175,100 @@ def classify_extract_status(pages):
     if weak_ratio >= 0.30:
         return "部分可解析", f"约 {weak_ratio:.0%} 页面文字很少，图片/扫描页可能缺失。"
     return "可解析", ""
+
+
+def ocr_pdf_page(path, page_no, dpi):
+    require_tool(
+        "pdftoppm",
+        "macOS 可执行 brew install poppler；GitHub Actions 会自动安装 poppler-utils。",
+    )
+    require_tool(
+        "tesseract",
+        "macOS 可执行 brew install tesseract tesseract-lang；GitHub Actions 会安装中英文 OCR 语言包。",
+    )
+    with tempfile.TemporaryDirectory(prefix="textbook-ocr-") as tmpdir:
+        prefix = Path(tmpdir) / "page"
+        render = subprocess.run(
+            [
+                "pdftoppm",
+                "-f",
+                str(page_no),
+                "-l",
+                str(page_no),
+                "-singlefile",
+                "-r",
+                str(dpi),
+                "-png",
+                str(path),
+                str(prefix),
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        if render.returncode != 0:
+            err = render.stderr.decode("utf-8", errors="replace").strip()
+            raise RuntimeError(err or f"pdftoppm 第 {page_no} 页退出码 {render.returncode}")
+
+        image_path = prefix.with_suffix(".png")
+        if not image_path.exists():
+            raise RuntimeError(f"第 {page_no} 页 OCR 渲染图片未生成。")
+
+        ocr = subprocess.run(
+            [
+                "tesseract",
+                str(image_path),
+                "stdout",
+                "-l",
+                "chi_sim+eng",
+                "--psm",
+                "6",
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+        if ocr.returncode != 0:
+            err = ocr.stderr.decode("utf-8", errors="replace").strip()
+            raise RuntimeError(err or f"tesseract 第 {page_no} 页退出码 {ocr.returncode}")
+        return normalize_page(ocr.stdout.decode("utf-8", errors="replace"))
+
+
+def apply_ocr_fallback(path, pages, status, workers, dpi):
+    if status == "需OCR":
+        targets = list(range(len(pages)))
+    elif status == "部分可解析":
+        targets = [i for i, page in enumerate(pages) if useful_chars(page) < MIN_PAGE_CHARS]
+    else:
+        return pages, set(), 0, []
+
+    if not targets:
+        return pages, set(), 0, []
+
+    updated = list(pages)
+    replaced_pages = set()
+    errors = []
+
+    def task(index):
+        page_no = index + 1
+        try:
+            text = ocr_pdf_page(path, page_no, dpi)
+            return index, text, ""
+        except Exception as exc:
+            return index, "", str(exc)
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = [pool.submit(task, index) for index in targets]
+        for future in as_completed(futures):
+            index, text, error = future.result()
+            if error:
+                errors.append(f"第 {index + 1} 页：{error}")
+                continue
+            if useful_chars(text) > useful_chars(updated[index]):
+                updated[index] = text
+                replaced_pages.add(index + 1)
+
+    return updated, replaced_pages, len(targets), errors
 
 
 def scan_sources():
@@ -151,18 +282,20 @@ def scan_sources():
     return sorted(files, key=lambda p: (-int(profile_for(p)["priority"]), p.name))
 
 
-def render_chunk(source, pages, start_page, end_page, status):
+def render_chunk(source, pages, start_page, end_page, status, ocr_pages):
     profile = profile_for(source)
     rel_source = source.relative_to(ROOT).as_posix()
     digest = hashlib.sha256(
         ("\n\f\n".join(pages)).encode("utf-8", errors="replace")
     ).hexdigest()[:16]
+    chunk_has_ocr = any(start_page <= page_no <= end_page for page_no in ocr_pages)
     fields = {
         "type": "textbook-source-chunk",
         "subject": "系统架构设计师",
         "source_kind": profile["source_kind"],
         "source_priority": profile["priority"],
         "extract_status": status,
+        "ocr_fallback_used": chunk_has_ocr,
         "source_file": rel_source,
         "pdf_page_start": start_page,
         "pdf_page_end": end_page,
@@ -178,17 +311,19 @@ def render_chunk(source, pages, start_page, end_page, status):
         f"# {source.stem} · PDF 第 {start_page}–{end_page} 页",
         "",
         "> [!info] AI 教材原始文本层",
-        "> 本文件由脚本从 PDF 文字层自动抽取并按页切分。它用于检索和校验，不替代 PDF 原件；版式、图片、公式位置和表格结构可能丢失。",
+        "> 本文件由脚本从 PDF 文字层自动抽取并按页切分；文字层不足时可使用中文 OCR 回退。它用于检索和校验，不替代 PDF 原件；版式、图片、公式位置和表格结构可能丢失。",
         "",
         f"- **资料角色：** {profile['source_kind']}",
         f"- **使用说明：** {profile['role']}",
         f"- **原始文件：** {rel_source}",
         f"- **PDF 页码：** {start_page}–{end_page}",
+        f"- **本块包含 OCR 补全：** {'是' if chunk_has_ocr else '否'}",
         "",
     ]
     for offset, page_text in enumerate(pages):
         page_no = start_page + offset
-        body += [f"## PDF 第 {page_no} 页", ""]
+        suffix = "（OCR 补全）" if page_no in ocr_pages else ""
+        body += [f"## PDF 第 {page_no} 页{suffix}", ""]
         if page_text:
             body += [page_text, ""]
         else:
@@ -222,22 +357,22 @@ def write_report(rows, chunk_pages):
         "# 教材抽取报告",
         "",
         "> [!info] 自动生成",
-        "> 原始 PDF 仍是证据源；这里记录 AI 可读 Markdown 的抽取状态。文字抽取不包含图片本身，因此遇到结构图、表格或公式异常时必须回看原 PDF。",
+        "> 原始 PDF 仍是证据源；这里记录 AI 可读 Markdown 的抽取状态。文字抽取和 OCR 都不包含图片本身，因此遇到结构图、表格或公式异常时必须回看原 PDF。",
         "",
         "## 汇总",
         "",
         f"- 原始 PDF：**{len(rows)}** 个",
         f"- 成功可解析：**{counts.get('可解析', 0)}** 个",
         f"- 部分可解析：**{counts.get('部分可解析', 0)}** 个",
-        f"- 可能需要 OCR：**{counts.get('需OCR', 0)}** 个",
+        f"- 仍需 OCR/人工处理：**{counts.get('需OCR', 0)}** 个",
         f"- LFS 原件未拉取：**{counts.get('LFS未拉取', 0)}** 个",
         f"- 抽取失败：**{counts.get('失败', 0)}** 个",
         f"- 分块大小：**{chunk_pages} 页/块**",
         "",
         "## 明细",
         "",
-        "| 原始文件 | 角色 | 优先级 | 状态 | 页数 | 分块数 | 备注 |",
-        "| --- | --- | ---: | --- | ---: | ---: | --- |",
+        "| 原始文件 | 角色 | 优先级 | 状态 | 页数 | OCR补全页 | 分块数 | 备注 |",
+        "| --- | --- | ---: | --- | ---: | ---: | ---: | --- |",
     ]
     for row in rows:
         source = str(row["source"]).replace("|", "\\|")
@@ -245,7 +380,7 @@ def write_report(rows, chunk_pages):
         note = str(row["note"]).replace("|", "\\|").replace("\n", " ")
         lines.append(
             f"| {source} | {kind} | {row['priority']} | {row['status']} | "
-            f"{row['pages']} | {row['chunks']} | {note} |"
+            f"{row['pages']} | {row['ocr_pages']} | {row['chunks']} | {note} |"
         )
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -293,7 +428,9 @@ def write_index(rows):
         "",
         "## 给 AI 的引用方式",
         "",
-        "教材结论尽量记录到“原始文件 + PDF 页码范围”。不要把自动抽取 Markdown 的行号当作原书页码；稳定定位依据是 source_file 与 pdf_page_start/pdf_page_end。",
+        "教材结论尽量记录到“原始文件 + PDF 页码范围”。不要把自动生成 Markdown 的行号当作原书页码；稳定定位依据是 source_file 与 pdf_page_start/pdf_page_end。",
+        "",
+        "ocr_fallback_used 为 true 时，说明该文本块至少有一页来自 OCR。OCR 文字仍可能存在错字，关键定义、公式和表格必须回看原 PDF。",
         "",
         "需要用教材检查或补全现有笔记时，显式读取 prompts/65-教材证据与笔记校验.md。",
     ]
@@ -311,9 +448,33 @@ def main():
         default=DEFAULT_CHUNK_PAGES,
         help=f"每个 Markdown 分块包含的 PDF 页数，默认 {DEFAULT_CHUNK_PAGES}。",
     )
+    parser.add_argument(
+        "--ocr-fallback",
+        action="store_true",
+        help="文字层不足时，对扫描页自动使用简体中文+英文 OCR。",
+    )
+    parser.add_argument(
+        "--ocr-workers",
+        type=int,
+        default=DEFAULT_OCR_WORKERS,
+        help=f"OCR 并发页数，默认 {DEFAULT_OCR_WORKERS}。",
+    )
+    parser.add_argument(
+        "--ocr-dpi",
+        type=int,
+        default=DEFAULT_OCR_DPI,
+        help=f"OCR 渲染分辨率，默认 {DEFAULT_OCR_DPI} DPI。",
+    )
     args = parser.parse_args()
+
     if args.chunk_pages < 1 or args.chunk_pages > 50:
         print("--chunk-pages 必须在 1 到 50 之间。", file=sys.stderr)
+        return 2
+    if args.ocr_workers < 1 or args.ocr_workers > 4:
+        print("--ocr-workers 必须在 1 到 4 之间。", file=sys.stderr)
+        return 2
+    if args.ocr_dpi < 120 or args.ocr_dpi > 300:
+        print("--ocr-dpi 必须在 120 到 300 之间。", file=sys.stderr)
         return 2
 
     sources = scan_sources()
@@ -323,6 +484,7 @@ def main():
 
     reset_generated_output()
     rows = []
+
     for source in sources:
         profile = profile_for(source)
         rel_source = source.relative_to(ROOT).as_posix()
@@ -332,21 +494,50 @@ def main():
             "priority": profile["priority"],
             "status": "",
             "pages": 0,
+            "ocr_pages": 0,
             "chunks": 0,
             "note": "",
         }
+
         if is_lfs_pointer(source):
             row["status"] = "LFS未拉取"
             row["note"] = "请先执行 git lfs pull；GitHub Actions 会只拉取教材目录中的 LFS PDF。"
             rows.append(row)
             print(f"[LFS未拉取] {rel_source}")
             continue
+
         try:
             pages = extract_pdf_pages(source)
-            status, note = classify_extract_status(pages)
+            initial_status, initial_note = classify_extract_status(pages)
+            ocr_pages = set()
+            attempted = 0
+            ocr_errors = []
+
+            if args.ocr_fallback and initial_status in {"需OCR", "部分可解析"}:
+                pages, ocr_pages, attempted, ocr_errors = apply_ocr_fallback(
+                    source,
+                    pages,
+                    initial_status,
+                    args.ocr_workers,
+                    args.ocr_dpi,
+                )
+
+            status, final_note = classify_extract_status(pages)
+            notes = []
+            if ocr_pages or attempted:
+                notes.append(f"OCR 尝试 {attempted} 页，采用 {len(ocr_pages)} 页结果")
+            if final_note:
+                notes.append(final_note)
+            elif not ocr_pages and initial_note:
+                notes.append(initial_note)
+            if ocr_errors:
+                notes.append(f"OCR 失败 {len(ocr_errors)} 页；示例：{ocr_errors[0]}")
+
             row["status"] = status
             row["pages"] = len(pages)
-            row["note"] = note
+            row["ocr_pages"] = len(ocr_pages)
+            row["note"] = "；".join(notes)
+
             out_dir = OUTPUT_ROOT / source.stem
             out_dir.mkdir(parents=True, exist_ok=True)
             chunk_count = 0
@@ -356,13 +547,24 @@ def main():
                 end_page = start_index + len(chunk)
                 out = out_dir / f"p{start_page:04d}-p{end_page:04d}.md"
                 out.write_text(
-                    render_chunk(source, chunk, start_page, end_page, status),
+                    render_chunk(
+                        source,
+                        chunk,
+                        start_page,
+                        end_page,
+                        status,
+                        ocr_pages,
+                    ),
                     encoding="utf-8",
                 )
                 chunk_count += 1
+
             row["chunks"] = chunk_count
             rows.append(row)
-            print(f"[{status}] {rel_source}: {len(pages)} 页，{chunk_count} 块")
+            print(
+                f"[{status}] {rel_source}: {len(pages)} 页，"
+                f"OCR {len(ocr_pages)} 页，{chunk_count} 块"
+            )
         except Exception as exc:
             row["status"] = "失败"
             row["note"] = str(exc)
@@ -371,13 +573,17 @@ def main():
 
     write_report(rows, args.chunk_pages)
     write_index(rows)
-    hard_failures = sum(1 for row in rows if row["status"] in {"失败", "LFS未拉取"})
+
+    hard_failures = sum(
+        1 for row in rows if row["status"] in {"失败", "LFS未拉取"}
+    )
     if hard_failures:
         print(
             f"完成，但有 {hard_failures} 个文件未成功抽取。详情见 {REPORT_PATH.relative_to(ROOT)}。",
             file=sys.stderr,
         )
         return 1
+
     print(f"完成。详情见 {REPORT_PATH.relative_to(ROOT)}。")
     return 0
 
