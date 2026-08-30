@@ -1,7 +1,7 @@
 ---
 type: 考点
 subject: 系统架构设计师
-chapter: 计算机基础知识
+chapter: 计算机网络
 topic: IPv4 报文与分片
 status: 学习中
 difficulty: 4
