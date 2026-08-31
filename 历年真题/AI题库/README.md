@@ -30,6 +30,12 @@ tags: [软考, 系统架构设计师, 历年真题, AI题库]
    - 由 AI 按 `prompts/60-历年真题解析与索引.md` 处理。
    - 作用：按年份、科目、题号整理题目、答案、解析、知识点、对应笔记和来源可信度。
 
+## OCR 并发策略
+
+- 全量 OCR 成本较高，工作流采用同一 concurrency group；
+- 现在设置为 `cancel-in-progress: false`：正在运行的一轮不会被后续原件提交取消；
+- workflow 文件自身修改不再自动触发全量 OCR，必要时使用 `workflow_dispatch` 手动测试。
+
 ## 自动抽取
 
 GitHub Actions 工作流：
