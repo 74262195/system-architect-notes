@@ -8,8 +8,9 @@ const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) =
   const p = path.join(dir, e.name);
   return e.isDirectory() ? walk(p) : [p];
 });
-const files = walk(root).filter((p) => p.endsWith('.md'));
-const names = new Set(files.map((p) => path.basename(p, '.md')));
+const allFiles = walk(root);
+const files = allFiles.filter((p) => p.endsWith('.md'));
+const names = new Set(allFiles.map((p) => path.basename(p).replace(/\.(md|excalidraw|pdf|docx|png|jpg|jpeg|svg)$/i, '')));
 const errors = [];
 const warnings = [];
 const aliases = new Map();
