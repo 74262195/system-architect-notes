@@ -1,4 +1,3 @@
-# exam-source refresh trigger: restored recent LFS sources
 name: Extract exam text
 
 on:
@@ -10,14 +9,13 @@ on:
       - "历年真题/**/*.pdf"
       - "历年真题/**/*.docx"
       - "scripts/extract-exam-text.py"
-      - ".github/workflows/extract-exam-text.yml"
 
 permissions:
   contents: write
 
 concurrency:
   group: extract-exam-text-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   extract:
