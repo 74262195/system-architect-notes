@@ -813,7 +813,7 @@
       "locked": false,
       "text": "2 个目录看板：质量属性 / 架构评估",
       "originalText": "2 个目录看板：质量属性 / 架构评估",
-      "fontSize": "16",
+      "fontSize": 16,
       "fontFamily": 2,
       "textAlign": "left",
       "verticalAlign": "top",
