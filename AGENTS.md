@@ -161,13 +161,16 @@
 | 新建/重写原子考点卡 | `10-原子考点卡生成.md` + 全局规范 + 黄金样例 |
 | 整章检查、拆目录、重构 | `20-章节检查与重构.md` + 全局规范 |
 | 正文图表选择、Mermaid/Excalidraw 修复 | `40-Mermaid与Obsidian样式修复.md` + 全局规范 |
+| Skill 驱动的画图/修图 | `skills/soft-exam-note-diagrams/SKILL.md`；Skill 仍必须运行时读取最新 `AGENTS.md` + `00-全局写作规范.md` + `40-Mermaid与Obsidian样式修复.md`，按任务再读 `30/10/20/65` |
 | Excalidraw 看板 | `30-Excalidraw章节知识看板.md` |
 | 考前速记 | `50-考前速记生成.md` + 全局规范 |
 | 模块复习总纲 | `55-模块复习总纲生成.md` + `50-考前速记生成.md` + 全局规范 |
 | 历年真题解析、去重、知识点映射 | `60-历年真题解析与索引.md` + 全局规范 |
 | 教材核验、教材驱动补全笔记 | `65-教材证据与笔记校验.md` + 全局规范；真正重写原子卡时继续读取 `10-原子考点卡生成.md` + 黄金样例 |
 
-Obsidian Copilot 只保留与软考直接相关的提示词：`prompts/system-prompts/软考系统架构师.md` 与 `prompts/copilot-custom-prompts/软考/`。它们仅在 Copilot 内手动选择/调用，不是 Codex/ChatGPT 自动任务规则。仓库不再保存通用网页抓取、通用改写或跨工具 skill 目录。
+Obsidian Copilot 只保留与软考直接相关的提示词：`prompts/system-prompts/软考系统架构师.md` 与 `prompts/copilot-custom-prompts/软考/`。它们仅在 Copilot 内手动选择/调用，不是 Codex/ChatGPT 自动任务规则。
+
+仓库原则上不保存通用网页抓取、通用改写或与本仓库无关的跨工具 Skill；**允许保存与本仓库强绑定、且以 GitHub 提示词为唯一事实源的轻量调度型 Skill**。当前画图 Skill 为 `skills/soft-exam-note-diagrams/SKILL.md`：它不得复制一套独立画图规范，必须每次运行时读取 `main` 最新提示词后再执行。
 
 ## Git 与交付
 
