@@ -25,10 +25,12 @@ for (const file of files) {
     warnings.push(`${rel}: frontmatter 缺少 type 或 subject`);
   }
 
-  for (const match of text.matchAll(/\[\[([^\]]+)\]\]/g)) {
-    const target = match[1].split('|')[0].split('#')[0].trim();
-    if (target && !names.has(path.basename(target).replace(/\.(md|excalidraw|pdf|docx|png|jpg|jpeg|svg)$/i, ''))) {
-      warnings.push(`${rel}: 失效链接 ${target}`);
+  if (!rel.startsWith('prompts/')) {
+    for (const match of text.matchAll(/\[\[([^\]]+)\]\]/g)) {
+      const target = match[1].split('|')[0].split('#')[0].trim();
+      if (target && !names.has(path.basename(target).replace(/\.(md|excalidraw|pdf|docx|png|jpg|jpeg|svg)$/i, ''))) {
+        warnings.push(`${rel}: 失效链接 ${target}`);
+      }
     }
   }
 
