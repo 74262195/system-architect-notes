@@ -6,7 +6,7 @@ topic: Cache替换算法
 status: 学习中
 difficulty: 3
 source: 教材
-aliases: [LRU, LFU, FIFO, OPT, Cache替换]
+aliases: [Cache LRU, Cache LFU, Cache FIFO, Cache OPT, Cache替换]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 ---
 
