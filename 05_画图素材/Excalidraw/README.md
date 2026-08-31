@@ -1,3 +1,10 @@
+---
+type: 说明
+subject: 系统架构设计师
+topic: Excalidraw 可视化目录
+status: 使用中
+---
+
 # Excalidraw 可视化
 
 本目录只保存知识库视觉导航和教学插图。
