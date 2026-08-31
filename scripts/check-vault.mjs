@@ -54,4 +54,4 @@ if (errors.length) {
 }
 
 console.log(`OK: ${files.length} 个 Markdown 文件通过检查`);
-if (warnings.length) console.warn(`WARN: ${warnings.length} 个历史资料问题未阻断提交`);
+if (warnings.length) {\n  console.warn(`WARN: ${warnings.length} 个历史资料问题未阻断提交`);\n  console.warn(warnings.join("\\n"));\n}
