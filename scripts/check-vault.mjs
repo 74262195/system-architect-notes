@@ -27,7 +27,7 @@ for (const file of files) {
 
   for (const match of text.matchAll(/\[\[([^\]]+)\]\]/g)) {
     const target = match[1].split('|')[0].split('#')[0].trim();
-    if (target && !names.has(path.basename(target).replace(/\.md$/, ''))) {
+    if (target && !names.has(path.basename(target).replace(/\.(md|excalidraw|pdf|docx|png|jpg|jpeg|svg)$/i, ''))) {
       warnings.push(`${rel}: 失效链接 ${target}`);
     }
   }
