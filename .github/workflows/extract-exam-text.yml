@@ -1,3 +1,4 @@
+# exam-source refresh trigger: restored recent LFS sources
 name: Extract exam text
 
 on:
