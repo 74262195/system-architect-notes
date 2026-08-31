@@ -10,7 +10,7 @@ tags: [软考, 系统架构设计师, 教材, AI教材库]
 
 这个目录是教材的 **AI 可读层**，不是 PDF 原件目录。
 
-原始 6 份 PDF 继续保留在 02、最新教材-新大纲(第二版)/ 根目录，并由 Git LFS 管理；AI教材库只保存脚本从 PDF 文字层抽取出的 Markdown、教材索引和抽取报告。
+原始 6 份 PDF 暂时继续保留在 `官方教材/` 根目录，并由 Git LFS 管理；AI教材库保存脚本抽取出的 Markdown、教材索引和抽取报告。只有在 OCR、图片、表格、公式和页码证据都已形成可独立核验的替代层后，才考虑删除 PDF 原件。
 
 ## 为什么要做这一层
 
@@ -128,7 +128,7 @@ brew install poppler tesseract tesseract-lang
 
 拉取教材 LFS：
 
-git lfs pull --include="02、最新教材-新大纲(第二版)/*.pdf"
+git lfs pull --include="官方教材/*.pdf"
 
 执行：
 

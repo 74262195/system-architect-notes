@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "02、最新教材-新大纲(第二版)/*.pdf"
+      - "官方教材/*.pdf"
       - "scripts/extract-textbook-text.py"
       - ".github/workflows/extract-textbook-text.yml"
   workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           git lfs install --local
-          git lfs pull --include="02、最新教材-新大纲(第二版)/*.pdf" --exclude=""
+          git lfs pull --include="官方教材/*.pdf" --exclude=""
 
       - name: Extract textbooks into AI-readable Markdown
         id: extract
@@ -63,7 +63,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A -- "02、最新教材-新大纲(第二版)/AI教材库"
+          git add -A -- "官方教材/AI教材库"
 
           if git diff --cached --quiet; then
             echo "No generated textbook changes."

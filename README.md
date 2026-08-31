@@ -1,36 +1,38 @@
 # 软考系统架构师笔记
 
-本仓库是一个可被 Obsidian 直接打开的 Vault，GitHub `main` 是唯一真源。
+本仓库是一个可被 Obsidian 直接打开的学习 Vault，GitHub `main` 是唯一真源。
 
-## 两种工作方式
+## 当前工作方式
 
-### 手动模式
+主要使用 **网页 ChatGPT + Codex** 维护知识库：
 
-在网页版 ChatGPT 中读取 `prompts/` 和相关笔记，生成完整 Markdown，保存到 `00_Inbox/AI草稿/`，人工检查后提交：
+1. 从最新 `main` 开始；
+2. 先读取 `AGENTS.md`；
+3. 按任务读取 `prompts/` 中对应提示词；
+4. 修改真实章节、索引、Excalidraw、教材库或真题库；
+5. 运行可用的仓库校验；
+6. 直接提交到 `main`。
 
-```bash
-git pull --rebase
-node scripts/check-vault.mjs
-git add .
-git commit -m "notes: <主题>"
-git push
-```
+Obsidian 主要作为本地阅读、复习、链接跳转和人工编辑界面，不再维护 Inbox、Copilot、固定笔记模板或 Canvas 工作流。
 
-### 自动模式
+## 核心目录
 
-使用网页版 Codex 从最新 `main` 创建 AI 分支，读取 `AGENTS.md`、任务提示词、索引和相邻笔记，生成后提交 PR。GitHub Actions 负责格式、链接和敏感文件检查，人工审核后合并。
+- `00_索引/`：知识库总入口
+- `01_综合知识/`：综合知识原子卡、章节索引和复习总纲
+- `02_案例分析/`：案例分析练习与索引
+- `03_论文素材/`：论文素材与索引
+- `04_真题错题/`：个人错题与复训记录
+- `05_画图素材/Excalidraw/`：章节看板和教学插图
+- `官方教材/`：教材 PDF 原件 + AI 可读教材层
+- `历年真题/`：真题原件 + AI 题库
+- `prompts/`：版本化任务提示词
+- `scripts/`：抽取与校验脚本
+- `.github/workflows/`：自动抽取和校验工作流
 
-## Obsidian 同步原则
+## 规则入口
 
-本地 Obsidian 使用 `main`；Codex 只写 AI 分支。合并 PR 后再执行 `git pull --ff-only`。Canvas、Excalidraw 和二进制附件避免并行修改。
+- 仓库总规则：`AGENTS.md`
+- 提示词说明：`prompts/README.md`
+- 总知识库：`00_索引/软考架构设计师索引.md`
 
-## 目录
-
-- `01_综合知识/`：综合知识原子卡和索引
-- `02_案例分析/`：案例分析卡
-- `03_论文素材/`：论文素材
-- `04_真题错题/`：错题卡
-- `05_画图素材/`：Canvas、Excalidraw、Mermaid
-- `06_模板/`：笔记模板
-- `prompts/`：版本化提示词
-- `scripts/`：本地和 CI 校验
+教材和真题的 AI 可读层是日常检索入口；PDF 原件保留用于 OCR、图片、表格、公式和页码证据核验。

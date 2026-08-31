@@ -10,8 +10,6 @@
 .claudian/
 .opencode/
 .makemd/
-.copilot/model-catalog-cache.json
-00_Inbox/AI草稿/*.tmp
 *.key
 *.pem
 *.env

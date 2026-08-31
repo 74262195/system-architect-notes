@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ROOT = ROOT / "02、最新教材-新大纲(第二版)"
+SOURCE_ROOT = ROOT / "官方教材"
 AI_ROOT = SOURCE_ROOT / "AI教材库"
 OUTPUT_ROOT = AI_ROOT / "原始文本"
 REPORT_PATH = AI_ROOT / "抽取报告.md"
@@ -419,7 +419,7 @@ def write_index(rows):
     for row in sorted(rows, key=lambda r: -int(r["priority"])):
         source_path = Path(str(row["source"]))
         stem = source_path.stem
-        ai_path = f"02、最新教材-新大纲(第二版)/AI教材库/原始文本/{stem}/"
+        ai_path = f"官方教材/AI教材库/原始文本/{stem}/"
         lines.append(
             f"| {source_path.name} | {row['source_kind']} | "
             f"{row['priority']} | {row['status']} | {ai_path} |"
