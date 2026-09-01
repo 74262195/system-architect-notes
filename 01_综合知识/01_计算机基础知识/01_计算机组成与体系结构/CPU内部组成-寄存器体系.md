@@ -204,13 +204,13 @@ MAR 已经装好了地址，但这个地址怎样送到主存？
 
 一次最简单的主存读取可以这样理解：
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
     CPU("CPU 发起读取") --> MAR("MAR<br/>保存地址")
     MAR -->|地址总线| MEM("主存")
     MEM -->|数据总线| MBR("MBR / MDR<br/>暂存数据")
     MBR --> CPU
-\`\`\`
+```
 
 假设 CPU 要读取地址 1000 中的 25：
 
