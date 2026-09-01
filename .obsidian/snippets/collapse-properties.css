@@ -1,0 +1,18 @@
+/* 笔记属性默认收缩；悬停或进入属性编辑时展开 */
+.metadata-container {
+  max-height: 2.25rem;
+  overflow: hidden;
+  transition: max-height 160ms ease;
+}
+
+.metadata-container:hover,
+.metadata-container:focus-within {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metadata-container {
+    transition: none;
+  }
+}
