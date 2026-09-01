@@ -12,6 +12,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年常考或核心前置"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-01
+quality_status: 已复核-无需扩写
 ---
 
 # Cache 替换算法：位置满了，新块进来该踢谁
