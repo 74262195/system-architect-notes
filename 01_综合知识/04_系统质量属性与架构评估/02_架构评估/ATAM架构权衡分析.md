@@ -12,6 +12,8 @@ exam_priority: P0
 review_level: 必读
 priority_reason: "历史高频且2026H1继续活跃"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-01
+quality_status: 已复核-无需扩写
 ---
 
 # ATAM：为什么架构评估不能只追求一个质量属性
