@@ -13,6 +13,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 软考/综合知识
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # I/O 控制技术：CPU 怎么伺候又慢又多的外设

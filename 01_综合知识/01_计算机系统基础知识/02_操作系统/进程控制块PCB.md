@@ -11,6 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统
+exam_priority: P0
+review_level: 必读
+priority_reason: "2026H1命中主题的原子子卡"
+priority_updated: 2026-09-01
 ---
 
 # PCB：操作系统靠什么记住“这个进程现在运行到哪了”

@@ -18,6 +18,10 @@ aliases:
   - IPv4编址
   - CIDR
   - VLSM
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # IP 编址与子网划分：给网络划出清晰的门牌边界

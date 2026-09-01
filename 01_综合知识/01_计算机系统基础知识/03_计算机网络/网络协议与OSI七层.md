@@ -17,6 +17,10 @@ aliases:
   - 网络协议
   - TCP/IP分层
   - 封装与解封装
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # 网络协议与 OSI 七层：网络通信的七道工序

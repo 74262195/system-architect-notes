@@ -8,6 +8,10 @@ difficulty: 4
 source: 教材+历年真题
 aliases: [ATAM, Architecture Tradeoff Analysis Method]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识, 软考/质量属性与架构评估]
+exam_priority: P0
+review_level: 必读
+priority_reason: "历史高频且2026H1继续活跃"
+priority_updated: 2026-09-01
 ---
 
 # ATAM：为什么架构评估不能只追求一个质量属性

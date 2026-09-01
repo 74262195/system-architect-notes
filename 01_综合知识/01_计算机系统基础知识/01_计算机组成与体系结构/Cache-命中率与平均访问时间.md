@@ -8,6 +8,10 @@ difficulty: 3
 source: 教材+历年真题
 aliases: [Cache命中率, Cache平均访问时间]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # Cache 命中率与平均访问时间：命中一次到底省了多少时间

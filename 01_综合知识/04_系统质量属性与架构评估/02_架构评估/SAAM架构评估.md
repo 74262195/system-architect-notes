@@ -8,6 +8,10 @@ difficulty: 3
 source: 教材+历年真题
 aliases: [SAAM, Software Architecture Analysis Method]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识, 软考/质量属性与架构评估]
+exam_priority: P0
+review_level: 必读
+priority_reason: "历史高频且2026H1继续活跃"
+priority_updated: 2026-09-01
 ---
 
 # SAAM：怎么用一组场景检查架构到底好不好改

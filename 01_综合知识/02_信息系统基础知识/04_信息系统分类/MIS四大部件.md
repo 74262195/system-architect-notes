@@ -6,6 +6,10 @@ tags:
   - 系统架构师/信息系统基础知识
 status: 学习中
 created: 2026-07-27 14:55
+exam_priority: P2
+review_level: 了解
+priority_reason: "大纲内低频或辅助知识"
+priority_updated: 2026-09-01
 ---
 # MIS 四大部件（详细版）
 

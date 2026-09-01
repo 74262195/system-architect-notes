@@ -13,6 +13,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 软考/综合知识
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "当前低信号，可暂不复习"
+priority_updated: 2026-09-01
 ---
 
 # CPU 指令集：CISC 与 RISC 两条路线

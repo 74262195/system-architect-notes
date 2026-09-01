@@ -6,6 +6,10 @@ tags:
   - 系统架构师/信息系统基础知识
 status: 学习中
 created: 2026-07-30 星期四
+exam_priority: P0
+review_level: 必读
+priority_reason: "历史高频且近年持续活跃"
+priority_updated: 2026-09-01
 ---
 # 企业应用集成（EAI）
 

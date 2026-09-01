@@ -8,6 +8,10 @@ difficulty: 2
 source: 第二版教材
 aliases: [图形处理器, Graphics Processing Unit]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "当前低信号，可暂不复习"
+priority_updated: 2026-09-01
 ---
 
 # GPU：为什么同样是处理器，它更擅长“一批数据一起算”

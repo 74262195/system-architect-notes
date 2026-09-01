@@ -30,6 +30,8 @@
 - 经典口诀、旧协议流程、设备类型比较只能作为相应考试/版本语境下的识别模型，不能写成现实世界绝对规律。
 - 计算、推导、公式使用 LaTeX；变量、单位和中间步骤按任务提示词要求写完整。
 - 保留并补齐 frontmatter：`type`、`subject`、`chapter`、`topic`、`status`、`difficulty`、`source`、`tags`。
+- 已完成考试优先级审查的原子卡同时维护：`exam_priority`、`review_level`、`priority_reason`、`priority_updated`；未审查的新卡使用 `exam_priority: 待评估`，不得凭印象标成高频。
+- 不得仅因某一年真题未出现就删除大纲内有正文笔记；删除仅限空壳/占位、确认重复、过时内容或证据明确的越界内容，并保留可追溯记录。
 - 使用 Obsidian wikilink；新建、移动、拆分笔记后检查索引、附件和前后学习主线。
 
 ## 四、可视化硬门禁

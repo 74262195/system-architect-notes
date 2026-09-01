@@ -8,6 +8,10 @@ difficulty: 2
 source: 第二版教材
 aliases: [Field Programmable Gate Array, 现场可编程门阵列]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "当前低信号，可暂不复习"
+priority_updated: 2026-09-01
 ---
 
 # FPGA：为什么它不像 CPU 那样“执行程序”，却也能做计算

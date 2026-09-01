@@ -8,6 +8,10 @@ difficulty: 4
 source: 教材+历年真题
 aliases: [CRC, 循环冗余校验, FCS, 模2除法]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P2
+review_level: 了解
+priority_reason: "大纲内低频或辅助知识"
+priority_updated: 2026-09-01
 ---
 
 # CRC：为什么“模 2 除法的余数”能当校验码

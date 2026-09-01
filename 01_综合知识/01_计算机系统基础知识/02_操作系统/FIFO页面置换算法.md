@@ -11,6 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统/虚拟存储
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # FIFO 页面置换：为什么“最早进来的页”即使刚访问过也可能被换掉

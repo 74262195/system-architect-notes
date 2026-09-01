@@ -8,6 +8,10 @@ difficulty: 2
 source: 教材
 aliases: [SRAM, DRAM, 静态RAM, 动态RAM]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P2
+review_level: 了解
+priority_reason: "大纲内低频或辅助知识"
+priority_updated: 2026-09-01
 ---
 
 # SRAM 与 DRAM：为什么 Cache 和主存不用同一种芯片

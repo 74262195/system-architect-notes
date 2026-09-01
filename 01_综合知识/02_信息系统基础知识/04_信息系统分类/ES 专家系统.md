@@ -6,6 +6,10 @@ tags:
   - 系统架构师/信息系统基础知识
 status: 学习中
 created: 2026-07-27 14:49
+exam_priority: P0
+review_level: 必读
+priority_reason: "2026H1回忆题直接命中"
+priority_updated: 2026-09-01
 ---
 # ES（专家系统）
 

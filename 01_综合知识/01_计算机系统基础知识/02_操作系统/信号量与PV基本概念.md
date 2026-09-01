@@ -11,6 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # 信号量与 PV：为什么多个并发进程不能只靠“大家自觉按顺序”

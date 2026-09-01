@@ -13,6 +13,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 软考/综合知识
+exam_priority: P2
+review_level: 了解
+priority_reason: "大纲内低频或辅助知识"
+priority_updated: 2026-09-01
 ---
 
 # 寄存器体系：CPU 为什么需要这么多“临时小格子”？

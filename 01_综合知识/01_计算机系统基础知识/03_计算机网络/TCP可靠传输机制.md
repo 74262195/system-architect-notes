@@ -11,6 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 计算机网络/TCP
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # TCP 可靠传输：IP 可能丢包、乱序，TCP 凭什么还能交付有序字节流

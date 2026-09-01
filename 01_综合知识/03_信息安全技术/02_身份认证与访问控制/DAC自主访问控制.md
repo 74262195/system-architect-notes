@@ -13,6 +13,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 # DAC 自主访问控制
 

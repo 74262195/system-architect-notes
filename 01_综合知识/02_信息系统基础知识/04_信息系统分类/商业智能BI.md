@@ -7,6 +7,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-04 星期二
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 # 商业智能（Business Intelligence, BI）
 

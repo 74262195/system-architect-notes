@@ -11,6 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 计算机网络/TCP
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # TCP 流量控制 vs 拥塞控制：都在限制发送速度，究竟分别怕谁撑不住

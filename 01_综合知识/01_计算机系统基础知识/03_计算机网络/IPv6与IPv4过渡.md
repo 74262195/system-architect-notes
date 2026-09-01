@@ -11,6 +11,10 @@ tags:
   - 软考/综合知识
   - 软考/计算机网络
 aliases: [IPv6, 双协议栈, 隧道技术, NAT-PT, 任播]
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # IPv6 与 IPv4 过渡：IPv4 地址不够以后怎么办

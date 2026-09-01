@@ -13,6 +13,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
+exam_priority: P0
+review_level: 必读
+priority_reason: "2026H1回忆题直接命中"
+priority_updated: 2026-09-01
 ---
 # TLS 与 HTTPS
 

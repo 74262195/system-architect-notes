@@ -11,6 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统/设备管理
+exam_priority: P2
+review_level: 了解
+priority_reason: "大纲内低频或辅助知识"
+priority_updated: 2026-09-01
 ---
 
 # SPOOLing：只有一台打印机，为什么多个程序看起来都能“同时打印”

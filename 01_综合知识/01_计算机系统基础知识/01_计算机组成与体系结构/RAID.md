@@ -8,6 +8,10 @@ difficulty: 3
 source: 教材+历年真题
 aliases: [RAID0, RAID1, RAID5, RAID10, 磁盘阵列]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "当前低信号，可暂不复习"
+priority_updated: 2026-09-01
 ---
 
 # RAID：多块盘怎么在容量、性能和容错之间取舍

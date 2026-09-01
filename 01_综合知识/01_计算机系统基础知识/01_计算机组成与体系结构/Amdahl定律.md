@@ -8,6 +8,10 @@ difficulty: 4
 source: 教材
 aliases: [Amdahl, Amdahl加速比, 阿姆达尔定律]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # Amdahl 定律：局部优化为什么总有天花板

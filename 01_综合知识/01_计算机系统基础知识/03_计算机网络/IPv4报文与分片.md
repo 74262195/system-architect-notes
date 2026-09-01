@@ -18,6 +18,10 @@ aliases:
   - 片偏移
   - MTU
   - TTL
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # IPv4 报文与分片：一封太大的信怎样过窄桥

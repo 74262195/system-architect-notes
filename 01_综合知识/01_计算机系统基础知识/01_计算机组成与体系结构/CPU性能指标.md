@@ -8,6 +8,10 @@ difficulty: 4
 source: 教材+历年真题
 aliases: [主频, 时钟周期, CPI, MIPS, CPU执行时间, 外频, 倍频]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
+exam_priority: P1
+review_level: 重点
+priority_reason: "历年常考或核心前置"
+priority_updated: 2026-09-01
 ---
 
 # CPU 性能指标：主频高为什么不等于程序一定快

@@ -9,6 +9,10 @@ tags:
   - 系统架构师
   - 系统架构师/计算机系统基础知识/系统工程/生命周期方法
 created: 2026-07-27 11:25
+exam_priority: P0
+review_level: 必读
+priority_reason: "2026H1回忆题直接命中"
+priority_updated: 2026-09-01
 ---
 # V模型（V-Model）
 
