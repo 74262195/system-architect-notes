@@ -11,10 +11,12 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 系统工程/MBSE
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "UML/SysML 聚合题频不能证明本卡单独高频；第二轮掌握其与 MBSE、UML 的边界"
+priority_updated: 2026-09-02
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # SysML：MBSE 需要共同语言时，系统工程师到底用什么来表达模型

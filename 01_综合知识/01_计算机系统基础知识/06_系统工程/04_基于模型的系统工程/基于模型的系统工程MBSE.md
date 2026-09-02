@@ -11,10 +11,12 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 系统工程/MBSE
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "主教材明确覆盖，但当前可追溯题库缺少独立重复命中；第二轮掌握三大支柱"
+priority_updated: 2026-09-02
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # MBSE：系统复杂到靠散落文档难以保持一致时，为什么要把“模型”变成工程核心
