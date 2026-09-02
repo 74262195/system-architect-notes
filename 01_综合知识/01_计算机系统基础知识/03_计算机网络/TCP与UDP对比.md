@@ -15,6 +15,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年常考或核心前置"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # TCP 与 UDP：传输层为什么要提供两种完全不同的服务风格

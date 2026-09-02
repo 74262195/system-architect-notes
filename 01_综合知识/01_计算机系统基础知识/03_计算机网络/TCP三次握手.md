@@ -15,6 +15,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年常考或核心前置"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # TCP 三次握手：为什么建立连接不是“两边各说一次你好”就够了
