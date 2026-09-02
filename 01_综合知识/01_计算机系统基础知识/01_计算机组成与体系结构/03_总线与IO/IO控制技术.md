@@ -15,8 +15,8 @@ tags:
   - 软考/综合知识
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "总线与 I/O 主题近年仍有信号；程序查询、中断、DMA 等控制方式是核心比较考法"
+priority_updated: 2026-09-02
 quality_reviewed: 2026-09-01
 quality_status: 已复核
 ---

@@ -8,10 +8,10 @@ difficulty: 3
 source: 教材+历年真题
 aliases: [I/O接口, IO接口, 接口电路, 状态寄存器, 移位寄存器]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "总线与 I/O 主题近年仍有信号；接口职责作为辅助知识第二轮掌握"
+priority_updated: 2026-09-02
 quality_reviewed: 2026-09-01
 quality_status: 已复核-无需扩写
 ---
