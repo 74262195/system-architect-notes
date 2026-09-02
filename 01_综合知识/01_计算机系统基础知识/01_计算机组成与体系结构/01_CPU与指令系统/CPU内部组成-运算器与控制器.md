@@ -13,10 +13,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 软考/综合知识
-exam_priority: P2
-review_level: 了解
-priority_reason: "大纲内低频或辅助知识"
-priority_updated: 2026-09-01
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "CPU 组成历史直接题频较低；部件细分主要用于建立基础结构，时间紧可跳过"
+priority_updated: 2026-09-02
 ---
 
 # 运算器与控制器：CPU 里的"打工人"和"指挥官"

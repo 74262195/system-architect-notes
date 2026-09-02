@@ -13,10 +13,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 软考/综合知识
-exam_priority: P2
-review_level: 了解
-priority_reason: "大纲内低频或辅助知识"
-priority_updated: 2026-09-01
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "CPU 组成历史直接题频较低；寄存器细分主要用于理解指令过程，时间紧可跳过"
+priority_updated: 2026-09-02
 ---
 
 # 寄存器体系：CPU 为什么需要这么多“临时小格子”？
