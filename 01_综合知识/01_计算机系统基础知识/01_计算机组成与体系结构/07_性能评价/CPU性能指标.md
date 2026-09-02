@@ -10,8 +10,8 @@ aliases: [主频, 时钟周期, CPI, MIPS, CPU执行时间, 外频, 倍频]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "性能主题历史题频较高且近年仍有信号；主频、CPI、执行时间属于核心计算与判断"
+priority_updated: 2026-09-02
 quality_reviewed: 2026-09-01
 quality_status: 已复核-无需扩写
 ---
