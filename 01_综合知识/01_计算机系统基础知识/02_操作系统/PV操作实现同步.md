@@ -15,6 +15,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年常考或核心前置"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # PV 实现同步：为什么“B 必须等 A 做完”也能用信号量

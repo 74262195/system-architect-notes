@@ -15,6 +15,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年常考或核心前置"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # OPT 页面置换：如果你能看到未来，应该淘汰哪一页

@@ -15,6 +15,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年常考或核心前置"
 priority_updated: 2026-09-01
+quality_reviewed: 2026-09-02
+quality_status: 已复核-无需扩写
 ---
 
 # PV 实现互斥：为什么一把二值“门锁”能保护共享资源
