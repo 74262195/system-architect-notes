@@ -11,10 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统/文件管理
-exam_priority: P0
-review_level: 必读
-priority_reason: "2026H1命中主题的原子子卡"
-priority_updated: 2026-09-01
+exam_priority: P1
+review_level: 重点
+priority_reason: "文件管理历年稳定考查；2022题直接涉及目录/FCB，2021直接考inode多级索引；本卡承担目录项、FCB/inode和数据块职责边界。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-01
 quality_status: 已复核
 ---
