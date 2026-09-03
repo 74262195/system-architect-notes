@@ -11,10 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统
-exam_priority: P0
-review_level: 必读
-priority_reason: "2026H1命中主题的原子子卡"
-priority_updated: 2026-09-01
+exam_priority: P1
+review_level: 重点
+priority_reason: "PCB是进程管理与上下文切换的核心基础，历史进程题频高；当前没有证据支持因2026上位主题命中就单独标P0，因此降为P1。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-01
 quality_status: 已复核
 ---
