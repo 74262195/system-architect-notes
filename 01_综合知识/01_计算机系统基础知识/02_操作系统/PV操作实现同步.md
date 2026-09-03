@@ -13,8 +13,8 @@ tags:
   - 操作系统
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "PV属于操作系统高频并发考法；同步直接考先后约束和P/V摆放，必须与互斥区分。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-02
 quality_status: 已复核-无需扩写
 ---
