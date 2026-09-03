@@ -13,8 +13,8 @@ tags:
   - 操作系统/虚拟存储
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "页面置换属于近年考查主题，LRU是最常见的历史访问型算法；需能与FIFO、OPT区分并按访问序列做题。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-02
 quality_status: 已复核
 ---
