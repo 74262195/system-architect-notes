@@ -13,8 +13,8 @@ tags:
   - 操作系统
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "PV属于操作系统高频并发考法；互斥是其核心直接应用，题目常要求识别临界资源、P/V位置和互斥信号量初值。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-02
 quality_status: 已复核-无需扩写
 ---
