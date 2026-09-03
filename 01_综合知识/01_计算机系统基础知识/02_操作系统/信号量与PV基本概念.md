@@ -13,8 +13,8 @@ tags:
   - 操作系统
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "历史标准化题库中PV/信号量重复出现，近年2019—2022仍有信号；本卡直接决定P/V含义、信号量值和互斥/同步初值判断。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-02
 quality_status: 已复核
 ---
