@@ -15,6 +15,8 @@ exam_priority: P2
 review_level: 了解
 priority_reason: "SPOOLing属于设备管理经典机制，用于识别假脱机/打印队列/虚拟设备；当前近年直接信号弱，保留P2。"
 priority_updated: 2026-09-03
+quality_reviewed: 2026-09-03
+quality_status: 已复核-机制完整
 ---
 
 # SPOOLing：只有一台打印机，为什么多个程序看起来都能“同时打印”

@@ -15,8 +15,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "PV属于操作系统高频并发考法；互斥是其核心直接应用，题目常要求识别临界资源、P/V位置和互斥信号量初值。"
 priority_updated: 2026-09-03
-quality_reviewed: 2026-09-02
-quality_status: 已复核-无需扩写
+quality_reviewed: 2026-09-03
+quality_status: 已复核-减负改写
 ---
 
 # PV 实现互斥：为什么一把二值“门锁”能保护共享资源
@@ -41,9 +41,7 @@ quality_status: 已复核-无需扩写
 
 设互斥信号量：
 
-$$
-mutex=1
-$$
+把 mutex 的初值设为 1。
 
 为什么是 1？
 
