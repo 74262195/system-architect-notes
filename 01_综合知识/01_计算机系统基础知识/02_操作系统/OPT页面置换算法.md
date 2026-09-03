@@ -11,10 +11,10 @@ tags:
   - 软考/架构设计师
   - 软考/考点
   - 操作系统/虚拟存储
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "OPT是理论比较基准，历史上用于页面置换算法辨析，但当前近年直接重复信号有限；会按未来最晚使用判断即可。"
+priority_updated: 2026-09-03
 quality_reviewed: 2026-09-02
 quality_status: 已复核-无需扩写
 ---
