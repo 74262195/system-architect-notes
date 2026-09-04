@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">分页：连续虚拟页如何映射到分散物理页框</title>
+  <desc id="desc">左侧是连续编号且等大的虚拟页，中间页表记录映射，右侧物理页框连续编号，但同一进程取得的页框可以不相邻。</desc>
+  <defs>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker><marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker><marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/></marker><marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="#ea580c"/></marker><marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="#7e22ce"/></marker><marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 Z" fill="#dc2626"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.13"/></filter>
+    <pattern id="holes" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#fff7ed"/><line x1="0" y1="0" x2="0" y2="10" stroke="#fdba74" stroke-width="3"/></pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="29" font-weight="700" text-anchor="middle"><tspan x="640" y="45.09">分页：逻辑上连续，物理上可以分散</tspan></text>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17" font-weight="400" text-anchor="middle"><tspan x="640" y="81.57000000000001">每个虚拟页与页框大小相同；页表负责记录它被放进了哪个页框</tspan></text>
+  <rect x="30" y="118" width="270" height="520" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="700" text-anchor="middle"><tspan x="165" y="157.61999999999998">① 进程虚拟地址空间</tspan></text>
+  <rect x="350" y="118" width="300" height="520" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="700" text-anchor="middle"><tspan x="500" y="157.61999999999998">② 该进程的页表</tspan></text>
+  <rect x="850" y="118" width="380" height="520" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="700" text-anchor="middle"><tspan x="1040" y="157.61999999999998">③ 物理内存页框</tspan></text>
+  <polygon points="80,210 89,201 259,201 250,210" fill="#e2f1ff" stroke="#2563eb" stroke-width="1.2"/>
+  <polygon points="250,210 259,201 259,265 250,274" fill="#b4c0d0" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="80" y="210" width="170" height="64" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="650" text-anchor="middle"><tspan x="165" y="246.2">虚拟页 0</tspan></text>
+  <polygon points="80,292 89,283 259,283 250,292" fill="#e3ffee" stroke="#16a34a" stroke-width="1.2"/>
+  <polygon points="250,292 259,283 259,347 250,356" fill="#b4cfbd" stroke="#16a34a" stroke-width="1.2"/>
+  <rect x="80" y="292" width="170" height="64" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="650" text-anchor="middle"><tspan x="165" y="328.2">虚拟页 1</tspan></text>
+  <polygon points="80,374 89,365 259,365 250,374" fill="#fff4db" stroke="#ea580c" stroke-width="1.2"/>
+  <polygon points="250,374 259,365 259,429 250,438" fill="#d1c2af" stroke="#ea580c" stroke-width="1.2"/>
+  <rect x="80" y="374" width="170" height="64" rx="5" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="650" text-anchor="middle"><tspan x="165" y="410.2">虚拟页 2</tspan></text>
+  <polygon points="80,456 89,447 259,447 250,456" fill="#faefff" stroke="#7e22ce" stroke-width="1.2"/>
+  <polygon points="250,456 259,447 259,511 250,520" fill="#c7bed1" stroke="#7e22ce" stroke-width="1.2"/>
+  <rect x="80" y="456" width="170" height="64" rx="5" fill="#f3e8ff" stroke="#7e22ce" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="650" text-anchor="middle"><tspan x="165" y="492.2">虚拟页 3</tspan></text>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17" font-weight="500" text-anchor="middle"><tspan x="165" y="565.52">连续编号</tspan><tspan x="165" y="587.62">每页大小相同</tspan></text>
+  <rect x="408" y="210" width="184" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" text-anchor="middle"><tspan x="500" y="245.78">页 0  →  页框 1</tspan></text>
+  <polyline points="260,242 398,242" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+  <rect x="408" y="292" width="184" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" text-anchor="middle"><tspan x="500" y="327.78000000000003">页 1  →  页框 3</tspan></text>
+  <polyline points="260,324 398,324" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+  <rect x="408" y="374" width="184" height="64" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" text-anchor="middle"><tspan x="500" y="409.78000000000003">页 2  →  页框 5</tspan></text>
+  <polyline points="260,406 398,406" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-orange)"/>
+  <rect x="408" y="456" width="184" height="64" rx="8" fill="#f3e8ff" stroke="#7e22ce" stroke-width="1.5" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="650" text-anchor="middle"><tspan x="500" y="491.78000000000003">页 3  →  页框 7</tspan></text>
+  <polyline points="260,488 398,488" fill="none" stroke="#7e22ce" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-purple)"/>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17" font-weight="500" text-anchor="middle"><tspan x="500" y="565.52">页号连续</tspan><tspan x="500" y="587.62">页框号不必连续</tspan></text>
+  <polygon points="970,184 979,175 1139,175 1130,184" fill="#e9eff7" stroke="#94a3b8" stroke-width="1.2"/>
+  <polygon points="1130,184 1139,175 1139,222 1130,231" fill="#b9bec5" stroke="#94a3b8" stroke-width="1.2"/>
+  <rect x="970" y="184" width="160" height="47" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="450" text-anchor="middle"><tspan x="1050" y="210.65">页框 0：空闲/其他</tspan></text>
+  <polygon points="970,234 979,225 1139,225 1130,234" fill="#e2f1ff" stroke="#2563eb" stroke-width="1.2"/>
+  <polygon points="1130,234 1139,225 1139,272 1130,281" fill="#b4c0d0" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="970" y="234" width="160" height="47" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="650" text-anchor="middle"><tspan x="1050" y="260.86">页框 1：虚拟页 0</tspan></text>
+  <polygon points="970,284 979,275 1139,275 1130,284" fill="#e9eff7" stroke="#94a3b8" stroke-width="1.2"/>
+  <polygon points="1130,284 1139,275 1139,322 1130,331" fill="#b9bec5" stroke="#94a3b8" stroke-width="1.2"/>
+  <rect x="970" y="284" width="160" height="47" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="450" text-anchor="middle"><tspan x="1050" y="310.65">页框 2：空闲/其他</tspan></text>
+  <polygon points="970,334 979,325 1139,325 1130,334" fill="#e3ffee" stroke="#16a34a" stroke-width="1.2"/>
+  <polygon points="1130,334 1139,325 1139,372 1130,381" fill="#b4cfbd" stroke="#16a34a" stroke-width="1.2"/>
+  <rect x="970" y="334" width="160" height="47" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="650" text-anchor="middle"><tspan x="1050" y="360.86">页框 3：虚拟页 1</tspan></text>
+  <polygon points="970,384 979,375 1139,375 1130,384" fill="#e9eff7" stroke="#94a3b8" stroke-width="1.2"/>
+  <polygon points="1130,384 1139,375 1139,422 1130,431" fill="#b9bec5" stroke="#94a3b8" stroke-width="1.2"/>
+  <rect x="970" y="384" width="160" height="47" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="450" text-anchor="middle"><tspan x="1050" y="410.65">页框 4：空闲/其他</tspan></text>
+  <polygon points="970,434 979,425 1139,425 1130,434" fill="#fff4db" stroke="#ea580c" stroke-width="1.2"/>
+  <polygon points="1130,434 1139,425 1139,472 1130,481" fill="#d1c2af" stroke="#ea580c" stroke-width="1.2"/>
+  <rect x="970" y="434" width="160" height="47" rx="3" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="650" text-anchor="middle"><tspan x="1050" y="460.86">页框 5：虚拟页 2</tspan></text>
+  <polygon points="970,484 979,475 1139,475 1130,484" fill="#e9eff7" stroke="#94a3b8" stroke-width="1.2"/>
+  <polygon points="1130,484 1139,475 1139,522 1130,531" fill="#b9bec5" stroke="#94a3b8" stroke-width="1.2"/>
+  <rect x="970" y="484" width="160" height="47" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="450" text-anchor="middle"><tspan x="1050" y="510.65">页框 6：空闲/其他</tspan></text>
+  <polygon points="970,534 979,525 1139,525 1130,534" fill="#faefff" stroke="#7e22ce" stroke-width="1.2"/>
+  <polygon points="1130,534 1139,525 1139,572 1130,581" fill="#c7bed1" stroke="#7e22ce" stroke-width="1.2"/>
+  <rect x="970" y="534" width="160" height="47" rx="3" fill="#f3e8ff" stroke="#7e22ce" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="650" text-anchor="middle"><tspan x="1050" y="560.86">页框 7：虚拟页 3</tspan></text>
+  <text fill="#475569" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="500" text-anchor="middle"><tspan x="1035" y="586.36">页框整体按 0～N−1 连续编号</tspan></text>
+  <polyline points="602,242 700,242 700,257.5 958,257.5" fill="none" stroke="#2563eb" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+  <polyline points="602,324 734,324 734,357.5 958,357.5" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+  <polyline points="602,406 768,406 768,457.5 958,457.5" fill="none" stroke="#ea580c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-orange)"/>
+  <polyline points="602,488 802,488 802,557.5 958,557.5" fill="none" stroke="#7e22ce" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-purple)"/>
+  <rect x="90" y="674" width="1100" height="58" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" opacity="1"/>
+  <text fill="#172033" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="650" text-anchor="middle"><tspan x="640" y="707.2">关键：页框本身是连续空间；同一进程使用的多个页框可以互不相邻。</tspan></text>
+</svg>
