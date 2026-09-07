@@ -9,10 +9,10 @@ tags:
   - 系统架构师
   - 系统架构师/计算机系统基础知识/系统工程/生命周期方法
 created: 2026-07-30 星期四
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: 待评估
+review_level: 待评估
+priority_reason: "尚未完成教材与真题定位，暂不进入本章复习队列"
+priority_updated: 2026-09-07
 ---
 # 06_RUP
 
@@ -62,4 +62,3 @@ flowchart LR
 
 
 ---
-
