@@ -19,7 +19,7 @@ review_level: 了解
 priority_reason: "属于IP逐跳转发的基础机制；需要理解做题会用到的关键首部字段及其作用，但不要求背完整IPv4首部位图和低收益字段细节。"
 priority_updated: 2026-09-07
 quality_reviewed: 2026-09-07
-quality_status: 已补充IPv4数据报结构图，并按零基础问题驱动解释关键首部字段、MTU、分片与TTL
+quality_status: 已使用中英文IPv4首部结构图，并按零基础问题驱动解释关键首部字段、MTU、分片与TTL
 ---
 
 # IPv4 报文与分片：一个 IP 包为什么还要带一堆“说明信息”
@@ -52,27 +52,18 @@ flowchart LR
 
 ## IPv4 报文结构：关键字段到底放在哪里
 
-下面这张图按 IPv4 首部中的**先后顺序**排列字段，但为了阅读方便，**没有按真实 bit 宽度比例绘制**。
+先看这张中英文对照的 IPv4 首部结构图。重点不是背每个字段占几位，而是先建立“字段放在哪里、哪些字段属于同一组”的整体印象。
 
-```mermaid
-flowchart TB
-    R1[Version ｜ IHL ｜ DSCP/ECN ｜ Total Length]
-    R2[Identification ｜ Flags：DF / MF ｜ Fragment Offset]
-    R3[TTL ｜ Protocol ｜ Header Checksum]
-    R4[Source Address：源 IPv4 地址]
-    R5[Destination Address：目的 IPv4 地址]
-    R6[Options：可选字段，当前不深挖]
-    D[Data：真正承载的数据]
+![IPv4 首部结构图（中英文）](https://boxtsecond.github.io/zh-cn/dev/network_protocol/img/ipheader.png)
 
-    R1 --> R2 --> R3 --> R4 --> R5 --> R6 --> D
-```
+> 图源：[快速理解网络协议（二）TCP/IP 协议模型](https://boxtsecond.github.io/zh-cn/dev/tcp-ip-model/)。这里把图用于结构定位；考试复习仍按下文的关键字段解释学习。
 
-把它分成两部分看就很简单：
+看图时先分成两部分：
 
-- **上面这些字段 = IPv4 首部**；
-- **最后的 Data = 真正的数据**。
+- **上面的各个字段 = IPv4 首部**；
+- **首部后面才是 Data = 真正承载的上层数据**。
 
-其中 `DSCP/ECN`、`Options` 当前只需要知道它们存在，不作为本轮重点。
+图里还会看到 `DS/ECN`、`Options` 等字段，当前只需要知道它们存在，不作为本轮重点。
 
 真正需要理解的是下面这些字段。
 
