@@ -80,13 +80,17 @@ A 就可以直接用。
 同一广播域里的多台设备都可能看到这个请求，但只有拥有该 IP 的 B 应该作出对应应答。
 
 ```mermaid
-sequenceDiagram
-    participant A as 主机 A
-    participant LAN as 本地二层网络
-    participant B as 主机 B
-    A->>LAN: ARP 请求（广播）：谁是 192.168.10.90？
-    LAN->>B: 请求到达 B
-    B->>A: ARP 应答：这个 IP 对应我的 MAC
+flowchart LR
+    subgraph V["VLAN 10"]
+        direction LR
+
+        A["主机 A<br/>192.168.10.70"]
+        SW["交换机"]
+        B["主机 B<br/>192.168.10.90"]
+
+        A <-->|"① → ARP 请求：谁是 192.168.10.90？告诉我你的 MAC<br/>④ ← ARP 应答：单播转发给 A"| SW
+        SW <-->|"② → 收到广播帧后，在 VLAN 内泛洪<br/>目的 MAC = FF:FF:FF:FF:FF:FF<br/>③ ← B 的 ARP 应答：我的 MAC = BB:BB:BB:BB:BB:BB"| B
+    end
 ```
 
 A 得到 B 的 MAC 后，就能把真正的数据封装成目的 MAC 为 B 的以太网帧。
