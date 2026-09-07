@@ -15,6 +15,21 @@ const errors = [];
 const warnings = [];
 const aliases = new Map();
 
+// 提示词中的仓库文件引用属于执行前置条件；路径失效应阻断，而不只是运行时才发现。
+const instructionFiles = [path.join(root, 'AGENTS.md'), ...files.filter((p) => path.relative(root, p).startsWith('prompts/'))];
+const referencedInstructionPaths = new Set();
+for (const file of instructionFiles) {
+  const text = fs.readFileSync(file, 'utf8');
+  for (const match of text.matchAll(/`((?:AGENTS\.md|prompts\/|01_综合知识\/|官方教材\/|历年真题\/)[^`\n]*?\.md)`/g)) {
+    const target = match[1];
+    if (/[<*>]|\.\.\./.test(target)) continue;
+    referencedInstructionPaths.add(target);
+  }
+}
+for (const target of referencedInstructionPaths) {
+  if (!fs.existsSync(path.join(root, target))) errors.push(`提示词引用失效: ${target}`);
+}
+
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');
   const rel = path.relative(root, file);
