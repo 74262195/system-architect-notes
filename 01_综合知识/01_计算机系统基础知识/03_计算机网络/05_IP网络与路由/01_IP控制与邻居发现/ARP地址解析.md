@@ -124,9 +124,23 @@ A 根据自己的前缀判断：
 不是跨网段目标 C 的 MAC。
 
 ```mermaid
-flowchart LR
-    A[主机 A] -->|当前帧<br/>目的MAC=网关MAC<br/>目的IP=目标C| R[默认网关]
-    R -->|下一跳重新封装帧<br/>链路层MAC重新确定| C[跨网段目标 C]
+sequenceDiagram
+    participant A as 主机 A
+    participant SW as 交换机
+    participant GW as 默认网关
+    participant C as 跨网段目标 C
+
+    Note over A: 发现目标 C 不在本子网
+    A->>SW: ARP 请求（广播）<br/>“谁是网关 IP？告诉我你的 MAC”
+    SW->>GW: 泛洪 ARP 请求
+    GW-->>SW: ARP 应答（单播）<br/>“我是网关，我的 MAC = GW-MAC”
+    SW-->>A: 转发 ARP 应答
+
+    Note over A: 已知道网关 MAC
+    A->>SW: 发送数据帧<br/>目的 MAC = GW-MAC<br/>目的 IP = C 的 IP
+    SW->>GW: 按目的 MAC 转发给网关
+
+    Note over GW: 之后如何继续到 C<br/>属于路由章节
 ```
 
 这里是整个网络章节非常重要的一层关系：
