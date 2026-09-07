@@ -13,15 +13,21 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P0
-review_level: 必读
-priority_reason: "2026H1回忆题直接命中"
-priority_updated: 2026-09-01
-quality_reviewed: 2026-09-01
-quality_status: 已复核
+exam_priority: P1
+review_level: 重点
+priority_reason: "考试大纲明确列出 SSL/SET/HTTPS，2022 年真题资料有 HTTPS 直接考查"
+priority_updated: 2026-09-07
+quality_reviewed: 2026-09-07
+quality_status: 三轮审查通过
 ---
 
 # TLS 与 HTTPS：浏览器怎样建立可信的加密通道
+
+> [!summary] 快速复习卡片
+> **作用/定位**：HTTPS 用 TLS 为 HTTP 建立受保护的通信通道。
+> **核心结论**：证书用于验证服务器身份，握手协商参数并导出会话密钥，后续数据通常用对称加密高效保护。
+> **题干怎么认**：证书链、主机名校验、握手、会话密钥、443。
+> **易错点**：HTTPS 不等于网站业务一定可信；现代 TLS 也不等于“永远用服务器公钥直接加密会话密钥”。
 
 ## 先定位：HTTPS 是 HTTP 运行在 TLS 保护之上
 

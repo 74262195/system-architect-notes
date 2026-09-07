@@ -13,10 +13,10 @@ tags:
 priority: ⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 补充
+priority_reason: "属于网络防护与安全体系的必要机制，但现有近年题库证据弱于防火墙、VPN 与 HTTPS"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-修正旁路串联绝对化
 ---

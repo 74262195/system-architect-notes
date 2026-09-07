@@ -13,10 +13,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "访问控制属于 P1 主线；MAC 是 2014 案例和安全模型中的并列成员，保留标签与规则辨析"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-修正安全强度与标签管理绝对化
 ---
@@ -53,3 +53,4 @@ quality_status: 已复核-修正安全强度与标签管理绝对化
 ## 下一站
 - 上一篇：[[DAC自主访问控制]]
 - 下一篇：[[RBAC基于角色访问控制]]
+- 模型深化：[[安全模型]]

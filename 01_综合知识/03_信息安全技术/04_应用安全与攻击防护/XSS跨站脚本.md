@@ -13,10 +13,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 补充
+priority_reason: "属于软件脆弱性与应用安全范围，2020 年案例资料出现 XSS；综合知识直接证据有限"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-补快速复习卡并修正防御表述
 ---

@@ -13,10 +13,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "访问控制属于 P1 主线；DAC 是 2014 案例中出现的并列模型，保留最小辨析深度"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-修正ACL与权限传递绝对化
 ---
@@ -50,5 +50,5 @@ DAC 的主要风险是授权较分散，权限传播和治理更难统一；但�
 2. ACL 为什么只是 DAC 的常见表达机制，而不是 DAC 定义本身？
 
 ## 下一站
-- 上一篇：[[单点登录SSO]]
+- 上一篇：[[访问控制基础]]
 - 下一篇：[[MAC强制访问控制]]

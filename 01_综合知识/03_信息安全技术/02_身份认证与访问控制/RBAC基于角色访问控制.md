@@ -13,10 +13,10 @@ tags:
 priority: ⭐⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 了解
+priority_reason: "访问控制属于 P1 主线；RBAC 是 2014 案例和近年回忆题中的并列模型，重点只保留角色映射与职责分离"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-移除必答断言并修复图示
 ---

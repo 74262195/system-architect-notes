@@ -15,8 +15,8 @@ status: 学习中
 created: 2026-08-03 星期一
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "历年题反复考 CA、公钥可信绑定和证书用途，且是 HTTPS 与数字签名的关键前置"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-补齐证书验证条件
 ---
@@ -66,4 +66,5 @@ quality_status: 已复核-补齐证书验证条件
 
 ## 下一站
 - 上一篇：[[数字签名]]
-- 下一篇：[[身份认证]]
+- 下一篇：[[密钥管理]]
+- 后续应用：[[身份认证]]、[[TLS与HTTPS]]

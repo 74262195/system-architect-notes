@@ -13,10 +13,10 @@ tags:
 priority: ⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P3
+review_level: 暂不复习
+priority_reason: "用于连接 Kerberos 与现代身份系统的工程补充；当前大纲和可靠题库缺少独立稳定考法"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-修正OAuth与JWT定位
 ---
@@ -27,6 +27,7 @@ quality_status: 已复核-修正OAuth与JWT定位
 > **核心结论**：SSO 不等于某一种协议；常见实现包括 Kerberos、SAML、OIDC、CAS 等。
 > **题干怎么认**：一次登录、多系统免重复认证、统一身份提供方/认证中心。
 > **易错点**：OAuth 2.0 本身是授权框架；OIDC 才在 OAuth 2.0 之上定义身份认证。JWT 只是令牌格式，不等于 SSO 协议。
+> **复习边界**：当前 P3，先掌握 [[身份认证]] 与 [[Kerberos认证]]。
 
 ## SSO 解决的矛盾
 
@@ -52,4 +53,4 @@ SSO 也不强制后台一定使用 RBAC；认证回答“你是谁”，授权�
 
 ## 下一站
 - 上一篇：[[Kerberos认证]]
-- 下一篇：[[DAC自主访问控制]]
+- 下一篇：[[访问控制基础]]

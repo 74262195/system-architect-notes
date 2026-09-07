@@ -15,8 +15,8 @@ status: 学习中
 created: 2026-08-03 星期一
 exam_priority: P1
 review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+priority_reason: "2020 综合知识直接考 Kerberos 认证流程和防重放，保留票据主线，不扩展工程配置"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-补齐票据与防重放机制
 ---
@@ -58,5 +58,5 @@ Kerberos 常使用带时间信息的认证器、票据有效期以及重放检�
 2. 为什么“票据有过期时间”不足以完整解释 Kerberos 防重放？
 
 ## 下一站
-- 上一篇：[[身份认证]]
+- 前置：[[身份认证]]
 - 下一篇：[[单点登录SSO]]

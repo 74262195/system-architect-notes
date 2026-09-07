@@ -13,10 +13,10 @@ tags:
 priority: ⭐⭐
 status: 学习中
 created: 2026-08-03 星期一
-exam_priority: P1
-review_level: 重点
-priority_reason: "历年常考或核心前置"
-priority_updated: 2026-09-01
+exam_priority: P2
+review_level: 补充
+priority_reason: "作为 Web 应用脆弱性补充保留，用于和 XSS 区分；当前题库缺少稳定直接命中证据"
+priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已复核-修正攻击前提绝对化
 ---
