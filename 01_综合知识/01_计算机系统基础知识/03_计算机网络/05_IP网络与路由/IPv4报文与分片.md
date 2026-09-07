@@ -54,9 +54,9 @@ flowchart LR
 
 先看这张中英文对照的 IPv4 首部结构图。重点不是背每个字段占几位，而是先建立“字段放在哪里、哪些字段属于同一组”的整体印象。
 
-![IPv4 首部结构图（中英文）](https://boxtsecond.github.io/zh-cn/dev/network_protocol/img/ipheader.png)
+![IPv4 首部结构图（中英文）](https://images.openai.com/static-rsc-4/7ZUIUB8gEILd--b5sfUe8JnG0PYMnqX316n8TgRKUsq4o8dmfmtPNgSwkR1E5nseh2gPvdI67sYW6UflNzUnQRZUU-JHKgIhXwPdXD-fOaKyrE1BkE4HxZ8LCrw3Od3s4udGXd_kO0hRfjgav6FUawv3Wa50oqZa8pGFK85D9G-GIG5Ah4EJSVkgvBROlBuR?purpose=fullsize)
 
-> 图源：[快速理解网络协议（二）TCP/IP 协议模型](https://boxtsecond.github.io/zh-cn/dev/tcp-ip-model/)。这里把图用于结构定位；考试复习仍按下文的关键字段解释学习。
+> 这里使用的是本次会话中你确认的**第一张**中英文 IPv4 报文结构图；下文仍按软考需要解释关键字段，不要求死背整张位图。
 
 看图时先分成两部分：
 
