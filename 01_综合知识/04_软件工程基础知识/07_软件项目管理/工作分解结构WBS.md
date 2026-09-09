@@ -3,7 +3,9 @@ type: 考点
 subject: 系统架构设计师
 chapter: 软件工程基础知识
 topic: 工作分解结构WBS
-source: 官方教材工作稿
+source:
+  - 官方教材/系统架构第二版 大纲.pdf（PDF 45）
+  - 官方教材/系统架构设计师教程第二版可搜索.pdf（PDF 230）
 textbook_pages: "230"
 status: 学习中
 created: 2026-09-05
