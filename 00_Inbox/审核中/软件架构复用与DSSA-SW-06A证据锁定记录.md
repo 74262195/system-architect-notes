@@ -4,7 +4,7 @@ subject: 系统架构设计师
 status: SW-06A完成
 scope: ARCH-A026–A034
 updated: 2026-09-09
-baseline_commit: c59023edcff80f4d04c0da7970950c8529b2c0f6
+baseline_commit: 471e80b2a96c836a8b0fe9e9f64ab7235d8a2d18
 tags:
   - 软考/架构设计师
   - 审查/软件架构
