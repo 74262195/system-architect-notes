@@ -17,8 +17,8 @@ exam_priority: P3
 review_level: 暂不复习
 priority_reason: "用于连接 Kerberos 与现代身份系统的工程补充；当前大纲和可靠题库缺少独立稳定考法"
 priority_updated: 2026-09-07
-quality_reviewed: 2026-09-05
-quality_status: 已复核-修正OAuth与JWT定位
+quality_reviewed: 2026-09-09
+quality_status: 已补齐自测答案折叠，待模块三轮审查复查
 ---
 # 单点登录 SSO：为什么登录一次后多个系统可以共享认证结果
 
@@ -48,8 +48,18 @@ SSO 也不强制后台一定使用 RBAC；认证回答“你是谁”，授权�
 
 ## 自测
 
-1. 为什么 SSO 是目标，而 Kerberos/OIDC 是实现机制？
-2. OAuth 2.0 与 OIDC 为什么不能互换名称？
+> [!question] 自测
+> 1. 为什么 SSO 是目标，而 Kerberos/OIDC 是实现机制？
+>
+> > [!answer]- 第 1 题答案与解析
+> > **答案**：SSO 描述的是一次认证后多个受信任系统复用身份结果的能力；Kerberos、OIDC 等协议或方案提供实现这种能力的具体方式。
+> > **解析**：题干问“登录一次、多系统免重复认证”时先识别 SSO；题干给出票据、断言或令牌流程时再判断具体机制。
+>
+> 2. OAuth 2.0 与 OIDC 为什么不能互换名称？
+>
+> > [!answer]- 第 2 题答案与解析
+> > **答案**：OAuth 2.0 主要是授权框架；OIDC 在 OAuth 2.0 之上定义身份认证层。
+> > **解析**：两者可以配合，但“获得授权访问某资源”和“确认用户身份”是不同问题。
 
 ## 下一站
 - 上一篇：[[Kerberos认证]]
