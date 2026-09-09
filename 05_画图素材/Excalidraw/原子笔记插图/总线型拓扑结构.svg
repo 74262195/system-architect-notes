@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">总线型拓扑结构</title>
+  <desc id="desc">五个终端分别从上方和下方接入同一条横向公共主干。公共主干故障会影响全部终端通信。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity=".14"/></filter>
+    <style>
+      .title{font:700 30px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#172033}.sub{font:400 18px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#475569}.node{fill:#eef6ff;stroke:#2563eb;stroke-width:2}.screen{fill:#fff;stroke:#2563eb;stroke-width:2}.label{font:650 18px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#102a43}.bus{stroke:#c2410c;stroke-width:8;stroke-linecap:round}.tap{stroke:#334155;stroke-width:3;stroke-linecap:round}.note{font:650 18px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#7c2d12}.hint{font:500 17px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#475569}
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="#fff"/>
+  <text class="title" x="600" y="50" text-anchor="middle">总线型拓扑：所有节点共享一条公共主干</text>
+  <text class="sub" x="600" y="82" text-anchor="middle">关键不是“连到一个中心”，而是“接入同一条通信总线”</text>
+
+  <g filter="url(#shadow)"><rect class="node" x="108" y="130" width="144" height="78" rx="14"/><rect class="screen" x="151" y="146" width="58" height="35" rx="5"/><path d="M170 181v10m-17 0h34" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></g><text class="label" x="180" y="232" text-anchor="middle">终端 A</text>
+  <g filter="url(#shadow)"><rect class="node" x="398" y="130" width="144" height="78" rx="14"/><rect class="screen" x="441" y="146" width="58" height="35" rx="5"/><path d="M460 181v10m-17 0h34" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></g><text class="label" x="470" y="232" text-anchor="middle">终端 B</text>
+  <g filter="url(#shadow)"><rect class="node" x="928" y="130" width="144" height="78" rx="14"/><rect class="screen" x="971" y="146" width="58" height="35" rx="5"/><path d="M990 181v10m-17 0h34" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></g><text class="label" x="1000" y="232" text-anchor="middle">终端 C</text>
+  <g filter="url(#shadow)"><rect class="node" x="248" y="384" width="144" height="78" rx="14"/><rect class="screen" x="291" y="400" width="58" height="35" rx="5"/><path d="M310 435v10m-17 0h34" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></g><text class="label" x="320" y="486" text-anchor="middle">终端 D</text>
+  <g filter="url(#shadow)"><rect class="node" x="748" y="384" width="144" height="78" rx="14"/><rect class="screen" x="791" y="400" width="58" height="35" rx="5"/><path d="M810 435v10m-17 0h34" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></g><text class="label" x="820" y="486" text-anchor="middle">终端 E</text>
+
+  <path class="tap" d="M180 250V292M470 250V292M1000 250V292M320 350V384M820 350V384"/>
+  <path class="bus" d="M92 320H1108"/>
+  <circle cx="180" cy="320" r="7" fill="#c2410c"/><circle cx="470" cy="320" r="7" fill="#c2410c"/><circle cx="1000" cy="320" r="7" fill="#c2410c"/><circle cx="320" cy="320" r="7" fill="#c2410c"/><circle cx="820" cy="320" r="7" fill="#c2410c"/>
+  <rect x="410" y="520" width="380" height="48" rx="18" fill="#fff3e8" stroke="#c2410c" stroke-width="2"/>
+  <text class="note" x="600" y="550" text-anchor="middle">公共主干故障 → 所有终端通信受影响</text>
+  <text class="hint" x="600" y="600" text-anchor="middle">题干出现“共享主干”或“总线是通信枢纽”，优先判断为总线型</text>
+</svg>
