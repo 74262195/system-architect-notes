@@ -1,15 +1,15 @@
 ---
 type: 考点
 subject: 系统架构设计师
-chapter: 计算机系统基础
+chapter: 软件工程基础知识
 topic: UML活动图与状态机图
 status: 学习中
 difficulty: 3
 source:
   - 官方教材/系统架构设计师教程第二版可搜索.pdf（PDF 97–100）
-tags: [软考/架构设计师, 软考/综合知识, 软考/UML]
+tags: [软考/架构设计师, 软考/综合知识, 软考/软件工程, 软考/UML]
 exam_priority: 待评估
-quality_status: 批次3新建
+quality_status: UML主事实源迁入软件工程
 ---
 
 # UML 活动图与状态机图：是在看“流程怎么走”，还是看“一个订单怎么变”
