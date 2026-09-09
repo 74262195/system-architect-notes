@@ -3,7 +3,9 @@ type: 考点
 subject: 系统架构设计师
 chapter: 软件工程基础知识
 topic: RUP四加一视图
-source: 官方教材工作稿
+source:
+  - 官方教材/系统架构第二版 大纲.pdf（PDF 43）
+  - 官方教材/系统架构设计师教程第二版可搜索.pdf（PDF 200）
 textbook_pages: "200"
 status: 学习中
 created: 2026-09-05
@@ -12,7 +14,7 @@ tags:
   - 系统架构师
   - 系统架构师/软件工程
   - 系统架构师/软件工程/01_软件过程
-quality_status: SW-07F主事实源收敛
+quality_status: SW-07D教材证据复核；主事实源收敛
 ---
 
 # RUP四加一视图：在 RUP 里为什么要从多个视角看体系结构
