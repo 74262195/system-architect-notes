@@ -3,16 +3,18 @@ type: 考点
 subject: 系统架构设计师
 chapter: 软件工程基础知识
 topic: Scrum迭代管理
-source: 官方教材工作稿
+source:
+  - 官方教材/系统架构第二版 大纲.pdf（PDF 43）
+  - 官方教材/系统架构设计师教程第二版可搜索.pdf（PDF 197）
 textbook_pages: "197"
 status: 学习中
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 tags:
   - 系统架构师
   - 系统架构师/软件工程
   - 系统架构师/软件工程/01_软件过程
-quality_status: 工作稿恢复
+quality_status: SW-07D教材证据复核
 ---
 
 # Scrum迭代管理
