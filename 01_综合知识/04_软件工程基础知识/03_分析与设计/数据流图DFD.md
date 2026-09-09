@@ -3,7 +3,9 @@ type: 考点
 subject: 系统架构设计师
 chapter: 软件工程基础知识
 topic: 数据流图DFD
-source: 官方教材工作稿
+source:
+  - 官方教材/系统架构第二版 大纲.pdf（PDF 44）
+  - 官方教材/系统架构设计师教程第二版可搜索.pdf（PDF 209–210）
 textbook_pages: "209–210"
 status: 学习中
 created: 2026-09-05
@@ -14,7 +16,7 @@ tags:
   - 系统架构师
   - 系统架构师/软件工程
   - 系统架构师/软件工程/03_分析与设计
-quality_status: 审核通过
+quality_status: SW-07D教材证据复核
 ---
 
 # 数据流图DFD
