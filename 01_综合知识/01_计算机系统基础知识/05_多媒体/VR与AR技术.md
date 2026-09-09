@@ -11,6 +11,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "大纲将 VR/AR 列为多媒体主要关键技术；教材明确说明定义、分类与关键支撑技术。"
 priority_updated: 2026-09-09
+quality_reviewed: 2026-09-09
+quality_status: 已通过章节三轮审查
 ---
 
 # VR 与 AR：是进入虚拟世界，还是给现实叠加信息
