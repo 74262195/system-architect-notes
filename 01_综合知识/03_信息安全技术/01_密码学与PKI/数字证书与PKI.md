@@ -19,8 +19,8 @@ exam_priority: P1
 review_level: 重点
 priority_reason: "历年题反复考 CA、公钥可信绑定和证书用途，且是 HTTPS 与数字签名的关键前置"
 priority_updated: 2026-09-07
-quality_reviewed: 2026-09-05
-quality_status: 已按技术定位与自测答案规则完善
+quality_reviewed: 2026-09-09
+quality_status: 已核验证书、CA 与公钥分发边界及自测答案折叠
 ---
 # 数字证书与 PKI：拿到一个公钥，凭什么相信它真属于对方
 
