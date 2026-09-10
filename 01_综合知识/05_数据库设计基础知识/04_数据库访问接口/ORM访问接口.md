@@ -3,44 +3,44 @@ type: 考点
 subject: 系统架构设计师
 chapter: 数据库设计基础知识
 topic: ORM访问接口
+stable_atom_id: DB-A032
+coverage_status: link_only
+canonical_atom: SE-A031
+canonical_source: "[[对象持久化与ORM]]"
 source: 官方教材与大纲校准
-textbook_pages: "261–263"
+outline_section: 5.4.4 ORM访问接口
+textbook_pages: "261–262"
 status: 学习中
+review_status: 待复习
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-10
 exam_priority: P2
-review_level: 三轮审核通过
-priority_reason: "新版大纲明确 ORM 定义、作用和典型框架；当前主要掌握对象—关系映射定位。"
+review_level: 待复习
+priority_reason: "新版大纲明确 ORM 定义、作用和典型框架；当前跨章唯一完整主事实源固定为软件工程 SE-A031，本卡只保留数据库大纲定位与导航。"
 priority_updated: 2026-09-06
-quality_status: 三轮审核通过
+quality_status: G3-DB-CLOSE唯一主源收敛-待复习
 ---
 
 # ORM 访问接口
 
-> [!summary] 快速复习卡片
-> **作用/定位**：ORM 解决面向对象程序中的对象模型与关系数据库表模型之间的映射问题。
-> **核心结论**：通过映射元数据，把对象、属性、对象关系与表、列、外键等对应起来，实现对象持久化。
-> **题干怎么认**：对象持久化、对象—关系映射、Hibernate/MyBatis/JPA → ORM 语境。
-> **易错点**：ORM 不是数据库本身，也不意味着数据库不再使用 SQL/关系模型。
+> [!summary] 快速复习入口
+> **数据库大纲定位**：新版大纲 5.4.4 要求理解 ORM 的定义、作用及典型框架。
+> **唯一完整主事实源**：[[对象持久化与ORM]]（软件工程稳定 Atom `SE-A031`）。
+> **本卡职责**：只负责数据库章节中的定位、边界与导航，不复制第二套 ORM 完整机制。
 
-应用程序常按“对象”思考，例如一个 `User` 对象包含 id、name、orders；关系数据库则按表、行、列和外键组织数据。两种模型之间存在表达差异。
+ORM（Object Relational Mapping，对象关系映射）位于应用对象模型与关系数据库之间。考试看到“对象—关系映射、对象持久化、Hibernate/MyBatis/JPA”等关键词时，应进入 ORM 语境。
 
-ORM（Object Relational Mapping，对象关系映射）通过映射信息把二者关联：
+本仓库已经在软件工程主线用 [[对象持久化与ORM]] 完整讲解对象持久化、ORM 与 SQL/JDBC 的层次边界，因此这里不再重复维护同一套正文。
 
-- 类/实体对象 ↔ 表；
-- 对象属性 ↔ 列；
-- 对象之间的关联 ↔ 外键/关联表；
-- 对象的保存、查询、更新 ↔ 相应数据库操作。
+> [!important] 易混边界
+> - ORM **不是 DBMS**；数据库的存储、事务、约束、索引等核心机制仍由数据库系统承担。
+> - ORM **不等于不需要 SQL**；它可以封装或生成部分访问操作，但底层关系数据库仍执行相应数据库操作。
+> - ODBC/JDBC 更偏“怎样访问数据库”；ORM 更偏“对象模型怎样映射到关系模型”。
 
-它的主要价值是让业务代码更多按对象模型组织，减少大量重复的数据转换代码。
+> [!tip] 软考怎么考
+> 题干强调“对象属性对应表字段、对象关系对应外键/关联关系” → 先想到 **ORM**。  
+> 需要继续区分 SQL、JDBC、ORM、Hibernate、iBatis/JDO 等层次时，直接进入 [[对象持久化与ORM]]。
 
-新版大纲列出的典型 ORM 框架/规范包括 Hibernate、MyBatis、JPA。复习时以“ORM 的定位和作用”优先，不必把某个框架 API 细节扩成编程教程。
+## 下一站
 
-## 和 ODBC 的区别
-
-ODBC 重点是“统一地连接/访问不同数据库”；ORM 重点是“对象模型与关系模型之间怎样映射”。
-
-## 自测
-
-> [!question]- “将 Java 实体对象的属性自动对应到数据库表字段”主要属于哪类技术？
-> ORM。
+完成访问接口定位后，继续到 [[NoSQL分类与特点]]，从关系数据库访问方式转向不同数据模型与存储取向的边界。

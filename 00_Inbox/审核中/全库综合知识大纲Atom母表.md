@@ -5,8 +5,8 @@ status: 全局范围控制中
 scope: 综合知识-官方大纲1到13
 source: 官方教材/系统架构第二版 大纲.pdf
 updated: 2026-09-10
-baseline_commit: b27b1eb4f02989066c1068a27ad1b944f2073446
-last_batch: G4-COVERAGE-FINAL统一验收
+baseline_commit: 941f9a16e3ac1b020e63c9120baf1b167095a813
+last_batch: G3-DB-CLOSE
 current_phase: G3-EXISTING-GAP
 tags: [软考/架构设计师, 审查/大纲覆盖, 审查/全库补全]
 ---
@@ -20,18 +20,19 @@ tags: [软考/架构设计师, 审查/大纲覆盖, 审查/全库补全]
 
 - `G4-08-BUILD ~ G4-13-BUILD` 已全部完成首次建设。
 - 08～13 共 **90 个稳定 Atom，90 covered，partial/unmapped/link_only/blocked 均为 0**。
-- 01～13 全局覆盖门禁 **未通过**：05 仍有 4 个 `partial`；01、07 尚缺当前顶层稳定联合契约。
-- 当前阶段切换为 `G3-EXISTING-GAP`。
+- `G3-DB-CLOSE` 已关闭 05 数据库覆盖阻断：**34/34 coverage satisfied = 33 covered + 1 合法 link_only；partial/unmapped/blocked=0**。
+- 01～13 全局覆盖门禁 **仍未通过**：01、07 尚缺当前顶层稳定联合契约。
+- 当前阶段继续为 `G3-EXISTING-GAP`，下一批固定 `G3-CS-CONTRACT`。
 
 ## 二、全局一级范围母表
 
 | Scope Key | 官方大纲范围 | 当前仓库主承接 | 当前控制状态 | 当前动作 |
 | --- | --- | --- | --- | --- |
-| SYL-01 | 1 计算机系统基本知识 | `01_综合知识/01_计算机系统基础知识/` | `contract_pending / mixed` | `G3-CS-CONTRACT` |
+| SYL-01 | 1 计算机系统基本知识 | `01_综合知识/01_计算机系统基础知识/` | `contract_pending / mixed` | **`G3-CS-CONTRACT`** |
 | SYL-02 | 2 信息系统基础知识 | `01_综合知识/02_信息系统基础知识/` | `coverage_complete / review_pending`；30/30 | 继续 review，不回退 coverage |
 | SYL-03 | 3 信息安全技术基础知识 | `01_综合知识/03_信息安全技术/` | `coverage_complete / review_complete`；34 张原子卡三轮通过 | 正常维护 |
 | SYL-04 | 4 软件工程基础知识 | `01_综合知识/04_软件工程基础知识/` | `coverage_complete / third_round_complete`；45=44 covered+1 合法 link_only | 共享 FINAL 后置 |
-| SYL-05 | 5 数据库设计基础知识 | `01_综合知识/05_数据库设计基础知识/` | **`coverage_incomplete`；34=30 covered+4 partial** | **`G3-DB-CLOSE`** |
+| SYL-05 | 5 数据库设计基础知识 | `01_综合知识/05_数据库设计基础知识/` | **`coverage_complete / quality_pending`；34=33 covered+1 合法 link_only；p/u/b=0** | 正常维护；见 `G3-DB-CLOSE` |
 | SYL-06 | 6 系统架构设计基础知识 | `01_综合知识/06_软件架构设计/` | `coverage_complete / third_round_complete`；34=32 covered+2 合法 link_only | 保持唯一主源 |
 | SYL-07 | 7 系统质量属性与架构评估 | `01_综合知识/07_系统质量属性与架构评估/` | `contract_pending` | `G3-QA-CONTRACT` |
 | SYL-08 | 8 软件可靠性技术 | `01_综合知识/08_软件可靠性技术/` | `coverage_complete / quality_pending`；15/15 | QUALITY-HARDENING |
@@ -62,7 +63,7 @@ tags: [软考/架构设计师, 审查/大纲覆盖, 审查/全库补全]
 - SYL-02：当前稳定契约 30/30 covered；所有 p/u/l=0；剩余任务是质量审查。
 - SYL-03：34 张原子卡已完成范围、机制边界、可用性三轮审查。
 - SYL-04：45 stable，44 covered + 1 合法 link_only；p/u=0。
-- SYL-05：34 stable，30 covered + 4 partial；联合覆盖门禁未过。
+- SYL-05：**34 stable，33 covered + 1 合法 link_only；partial/unmapped/blocked=0；数据库覆盖联合验收已通过。** `DB-A032` 唯一完整主事实源为软件工程 `SE-A031` → [[对象持久化与ORM]]。
 - SYL-06：34 stable，32 covered + 2 合法 link_only；p/u=0。
 - SYL-07：7.1 软件系统质量属性、7.2 系统架构评估、7.3 ATAM 方法架构评估实践均有正文候选，但当前顶层稳定联合契约待建立。
 
@@ -89,12 +90,12 @@ tags: [软考/架构设计师, 审查/大纲覆盖, 审查/全库补全]
 | `ARCH-Axxx` | A001～A034 | 34 | 32 | 0 | 0 | 2 |
 | **合计** |  | **101** | **90** | **0** | **0** | **11** |
 
-这些 `link_only` 为合法跨域唯一主事实源，不因 G4-FINAL 改号或复制正文。
+这些 `link_only` 为合法跨域唯一主事实源，不因后续批次改号或复制正文。数据库 A032 正是复用已有 `SE-A031` 主事实源，因此不新造第二篇完整 ORM 正文。
 
 ## 七、当前停点
 
-旧控制面中的“08～13 缺失候选 / NEW-DOMAIN-AUDIT”已被实际建设结果替代。
+`G3-DB-CLOSE` 已完成，05 不再阻断全局 coverage。
 
-> **当前唯一覆盖阶段：`G3-EXISTING-GAP`。先执行 `G3-DB-CLOSE`，再建立 01 与 07 的顶层稳定契约；完成后重跑 01～13 全局覆盖门禁。**
+> **当前唯一覆盖阶段仍为 `G3-EXISTING-GAP`；下一批固定 `G3-CS-CONTRACT`，随后 `G3-QA-CONTRACT`。01、07 两个顶层稳定契约完成并清零真实缺口后，才允许重跑 `G4-COVERAGE-FINAL-RERUN`。**
 
-详细验收见 [[综合知识01-13-G4-COVERAGE-FINAL统一验收记录]]。
+G4 历史验收见 [[综合知识01-13-G4-COVERAGE-FINAL统一验收记录]]；数据库最新验收见 [[数据库设计基础知识-G3-DB-CLOSE收口记录]]。
