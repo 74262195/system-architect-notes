@@ -6,7 +6,7 @@ stage: quality_hardening_in_progress
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
 start_head: cc83f997202a64288bafc198afbc13f057fd1177
-current_priority: QH-04-REL-EVO
+current_priority: QH-05-FUT-IPR
 updated: 2026-09-11
 tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 ---
@@ -19,13 +19,15 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 ## 1. 当前结论
 
 - coverage regression candidate：**0**
-- 当前开放质量债：**P0 = 0 / P1 = 4 / P2 = 2 / 合计 = 6**
-- 已收口质量债：**QH-SEC-001、QH-02-001、QH-05-001、QH-05-002、QH-07-001、QH-07-002**
+- 当前开放质量债：**P0 = 0 / P1 = 2 / P2 = 2 / 合计 = 4**
+- 已收口质量债：**QH-SEC-001、QH-02-001、QH-05-001、QH-05-002、QH-07-001、QH-07-002、QH-08-001、QH-09-001**
 - 当前质量控制状态：`quality_hardening_in_progress / debt_matrix_locked`
-- 当前下一批：**`QH-04-REL-EVO`**（尚未执行）
+- 当前下一批：**`QH-05-FUT-IPR`**（尚未执行）
 - 02：**30/30 covered / review_closed / normal_maintenance**
 - 05：**33 covered + 1 legal link_only / quality_hardened / normal_maintenance**
 - 07：**29/29 covered / quality_hardened / normal_maintenance**
+- 08：**15/15 covered / quality_hardened / normal_maintenance**
+- 09：**16/16 covered / quality_hardened / normal_maintenance**
 
 ## 2. 等级口径
 
@@ -42,9 +44,9 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 | 04 软件工程基础知识 | 44 covered + 1 legal link_only | 已有完整审查链 | 0 | 0 | 0 | 无当前开放债 | 后置维护 |
 | 05 数据库设计基础知识 | 33 covered + 1 legal link_only | quality_hardened / normal_maintenance | 0 | 0 | 0 | `QH-05-001 / QH-05-002` 已关闭 | 正常维护 |
 | 06 软件架构设计 | 32 covered + 2 legal link_only | third_round_complete | 0 | 0 | 0 | 无当前开放债 | 后置维护 |
-| 07 系统质量属性与架构评估 | 29/29 covered | **quality_hardened / normal_maintenance** | 0 | 0 | 0 | `QH-07-001 / QH-07-002` 已关闭；索引、路线、速记与最终 29-Atom 契约一致 | 正常维护 |
-| 08 软件可靠性技术 | 15/15 covered | quality_pending | 0 | 1 | 0 | 学习路线仍写“09 尚未建设” | QH-04-REL-EVO |
-| 09 软件架构的演化和维护 | 16/16 covered | quality_pending | 0 | 1 | 0 | 学习路线仍写“10 尚未建设” | QH-04-REL-EVO |
+| 07 系统质量属性与架构评估 | 29/29 covered | quality_hardened / normal_maintenance | 0 | 0 | 0 | `QH-07-001 / QH-07-002` 已关闭 | 正常维护 |
+| 08 软件可靠性技术 | 15/15 covered | **quality_hardened / normal_maintenance** | 0 | 0 | 0 | `QH-08-001` 已关闭；章级速记入口已建立 | 正常维护 |
+| 09 软件架构的演化和维护 | 16/16 covered | **quality_hardened / normal_maintenance** | 0 | 0 | 0 | `QH-09-001` 已关闭；章级速记入口已建立 | 正常维护 |
 | 10 未来信息综合技术 | 13/13 covered | quality_pending | 0 | 0 | 1 | 下一站仍为条件式施工文案 | QH-05-FUT-IPR |
 | 11 标准化与知识产权 | 15/15 covered | quality_pending | 0 | 1 | 0 | 学习路线仍称 12 尚未真实存在 | QH-05-FUT-IPR |
 | 12 应用数学 | 16/16 covered | quality_pending | 0 | 0 | 1 | 13 下一站缺物理 Wikilink | QH-06-MATH-ENG |
@@ -55,16 +57,14 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 | 严重度 | 数量 |
 | --- | ---: |
 | P0 | 0 |
-| P1 | 4 |
+| P1 | 2 |
 | P2 | 2 |
-| **合计** | **6** |
+| **合计** | **4** |
 
 ## 4. 文件级开放质量债
 
 | Debt ID | 章节 | 文件 | 问题 | 证据类型 | 严重度 | 推荐动作 | 是否涉及 coverage |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| QH-08-001 | 08 | `01_综合知识/08_软件可靠性技术/学习路线.md` | 仍写 09 尚未建设，但 09 已完成 coverage | 跨章导航假断点 | P1 | QH-04 改为真实 08→09 Wikilink | 否 |
-| QH-09-001 | 09 | `01_综合知识/09_软件架构的演化和维护/学习路线.md` | 仍写 10 尚未建设，但 10 已完成 coverage | 跨章导航假断点 | P1 | QH-04 改为真实 09→10 Wikilink | 否 |
 | QH-10-001 | 10 | `01_综合知识/10_未来信息综合技术/未来信息综合技术-学习路线.md` | 章末仍保留“下一大章若尚未建设”的施工期措辞 | 跨章导航弱化 | P2 | QH-05 直接指向 11 | 否 |
 | QH-11-001 | 11 | `01_综合知识/11_标准化与知识产权/标准化与知识产权-学习路线.md` | 仍写 12_应用数学尚未真实存在 | 跨章导航假断点 | P1 | QH-05 改为真实 11→12 Wikilink | 否 |
 | QH-12-001 | 12 | `01_综合知识/12_应用数学/应用数学-学习路线.md` | 下一站语义指向 13，但缺已存在 13 章物理 Wikilink | 跨章导航弱化 | P2 | QH-06 增加真实 12→13 入口 | 否 |
@@ -78,45 +78,35 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 | QH-02-001 | 02 | 30/30 covered，但索引仍把旧 G2 三轮施工写成当前动作 | QH-01-IS-REVIEW-CLOSE | 清除旧施工状态，转正常维护 | 不回退，30/30 PASS |
 | QH-05-001 | 05 | `G3-DB-CLOSE` 已完成，但数据库索引仍残留 4 partial / 待收口口径 | QH-02-DB-HARDEN | 索引同步为 34 stable = 33 covered + 1 legal link_only，旧施工状态清除 | 不回退，PASS |
 | QH-05-002 | 05 | 学习路线仍把 4 partial / 尚未联合验收写成下一动作 | QH-02-DB-HARDEN | 学习路线回归正常学习主线并清除旧 G3 导航 | 不回退，PASS |
-| QH-07-001 | 07 | 索引仍以旧“14 张 P0 原子卡”作为当前口径，未同步 29-Atom 最终契约 | **QH-03-QA-HARDEN** | 明确 `QA-A001~QA-A029`、29/29 covered，并说明 14 是主事实源文件数量而非 stable Atom 数 | 不回退，29/29 PASS |
-| QH-07-002 | 07 | 考前速记缺功能性、可变性、互操作性、ATAM 阶段/步骤等最终契约高价值入口 | **QH-03-QA-HARDEN** | 从既有主事实源提炼题眼、第一动作、ATAM 四阶段/7 步、风险/非风险等快速复习入口 | 不回退，29/29 PASS |
+| QH-07-001 | 07 | 索引仍以旧“14 张 P0 原子卡”作为当前口径，未同步 29-Atom 最终契约 | QH-03-QA-HARDEN | 同步 `QA-A001~QA-A029`、29/29 covered，并说明 14 是主事实源文件数量而非 stable Atom 数 | 不回退，29/29 PASS |
+| QH-07-002 | 07 | 考前速记缺最终契约高价值入口 | QH-03-QA-HARDEN | 补齐快速复习入口 | 不回退，29/29 PASS |
+| QH-08-001 | 08 | 学习路线仍写 09 尚未建设，但 09 已完成 coverage | **QH-04-REL-EVO** | 建立真实 08→09 Wikilink，并清理 `REL-A015` 同源旧施工文案 | 不回退，15/15 PASS |
+| QH-09-001 | 09 | 学习路线仍写 10 尚未建设，但 10 已完成 coverage | **QH-04-REL-EVO** | 建立真实 09→10 Wikilink，并清理 `EVO-A016` 同源旧施工文案 | 不回退，16/16 PASS |
 
 ## 5. coverage 回归检查
 
-QH-03 未发现：
+QH-04 未发现：stable Atom 主事实源消失、正文只剩标题/占位、新的 `partial / unmapped / blocked`、两章 legal link_only 目标失效或大纲有效范围被错误删除。
 
-- stable Atom 主事实源消失；
-- 已 covered Atom 只剩标题/占位；
-- 新的 `partial / unmapped / blocked`；
-- 失效的跨章事实源；
-- 大纲有效范围被错误删除。
+- 08：15 covered，link_only = 0，partial = 0，unmapped = 0，blocked = 0。
+- 09：16 covered，link_only = 0，partial = 0，unmapped = 0，blocked = 0。
 
-07 本身 `link_only = 0`；因此本轮不存在 legal link_only 失效风险。
+结论：**`coverage_regression_candidate = 0`，08/09 coverage gate 继续 PASS。**
 
-结论：**`coverage_regression_candidate = 0`，07 仍为 29/29 covered，coverage gate 继续 PASS。**
+## 6. QH-04 代表性抽查结论
 
-## 6. QH-03 代表性抽查结论
+- 08：`REL-A001 / A002 / A007 / A012 / A015` 已覆盖可靠性定义、指标、设计、测试、评价，均有题干信号与考试第一动作；正文无需批量重写。
+- 08 真实修复集中在：索引质量状态、章级速记入口、08→09 学习路线，以及 `REL-A015` 末尾同源旧施工文案。
+- 09：`EVO-A001 / A007 / A013 / A016` 已覆盖演化驱动、演化时期、维护知识、可维护性度量；正文无需批量重写。
+- 09 真实修复集中在：索引质量状态、章级速记入口、演化 vs 维护学习边界、09→10 学习路线，以及 `EVO-A016` 末尾同源旧施工文案。
+- 当前 EVO stable 契约不含漂移/腐化/侵蚀、恢复/重构/再工程等独立 Atom，本轮没有越界扩写。
 
-- [[质量属性-开发期与运行期]]：已经完整承担功能 vs 质量、功能性、可变性、互操作性和质量冲突主线；无需修改正文。
-- [[质量属性场景六要素]]：六要素的目的、关系和示例清楚；无需修改正文。
-- [[性能质量属性场景]]：响应时间、吞吐量、负载、期限等第一判断入口完整；无需修改正文。
-- [[可靠性与可用性]]：已明确“少故障 vs 需要服务时能用/快速恢复”；无需修改正文。
-- [[安全性质量属性场景]]：保持架构质量属性语境，没有复制信息安全章节；无需修改正文。
-- [[可修改性质量属性场景]]：变化范围、受影响构件、时间和成本闭环完整；无需修改正文。
-- [[架构评估-问卷场景与度量]]：已经解释评估目的、三类方法和利益相关者/场景；无需修改正文。
-- [[敏感点与权衡点]]：敏感点、权衡点、风险、非风险边界清楚；无需修改正文。
-- [[ATAM架构权衡分析]]：目的、角色、业务驱动、四阶段、7 步和输出完整；无需修改正文。
-- [[ATAM效用树]]、[[SAAM架构评估]]、[[CBAM成本效益分析]]：均具备稳定考试入口；无需修改正文。
-- 真正问题只落在 07 索引、学习路线和考前速记入口；均已定点修复。
-
-结论：**07 系统质量属性与架构评估进入 `coverage_complete / quality_hardened / normal_maintenance`。**
+结论：**08 软件可靠性技术与 09 软件架构的演化和维护均进入 `coverage_complete / quality_hardened / normal_maintenance`。**
 
 ## 7. 后续施工路线
 
-1. **QH-04-REL-EVO**：08 软件可靠性 + 09 软件架构演化维护（当前最高优先级，尚未执行）。
-2. **QH-05-FUT-IPR**：10 未来信息综合技术 + 11 标准化与知识产权。
-3. **QH-06-MATH-ENG**：12 应用数学 + 13 专业英语。
-4. 后置维护：03 / 04 / 05 / 06 / 07 只有出现新证据或真实 P0 时再进入专项处理。
+1. **QH-05-FUT-IPR**：10 未来信息综合技术 + 11 标准化与知识产权（当前最高优先级，尚未执行）。
+2. **QH-06-MATH-ENG**：12 应用数学 + 13 专业英语。
+3. 后置维护：03 / 04 / 05 / 06 / 07 / 08 / 09 只有出现新证据或真实 P0 时再进入专项处理。
 
 > [!important] 当前停点
-> `QH-03-QA-HARDEN` 已关闭；当前最高优先级切换为 **`QH-04-REL-EVO`**，本轮只登记，不自动执行。
+> `QH-04-REL-EVO` 已关闭；当前最高优先级切换为 **`QH-05-FUT-IPR`**，本轮只登记，不自动执行。
