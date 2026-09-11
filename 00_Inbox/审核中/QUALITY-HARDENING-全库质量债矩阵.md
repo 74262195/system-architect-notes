@@ -6,7 +6,7 @@ stage: quality_hardening_in_progress
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
 start_head: cc83f997202a64288bafc198afbc13f057fd1177
-current_priority: QH-SEC-01
+current_priority: QH-SEC-02
 updated: 2026-09-11
 tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 ---
@@ -22,8 +22,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 - 当前开放质量债：**P0 = 0 / P1 = 9 / P2 = 2**
 - 已收口质量债：**QH-SEC-001（P1）**
 - 当前质量控制状态：`quality_hardening_in_progress / debt_matrix_locked`
-- 用户学习主线下一建议批次：**`QH-SEC-01`**
-- `QH-SEC-01` 只作为密码学主链连续性增强建议，不新增 coverage debt，也尚未开始。
+- 用户学习主线下一建议批次：**`QH-SEC-02`**
+- `QH-SEC-01` 已完成密码学主链连续性增强；它是 quality 批次，不新增 coverage debt，也不改变开放债务计数。
 
 ## 2. 等级口径
 
@@ -32,14 +32,14 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 - **P2**：不阻塞学习的导航、措辞、排版和一致性优化。
 
 > [!important] 用户优先级覆盖规则
-> 严重度与施工优先级分离。用户正在实际学习的章节若出现明确学习阻塞，可获得 **USER-PRIORITY OVERRIDE**。`QH-SEC-001` 已完成该覆盖；若继续执行 `QH-SEC-01`，仍必须限定在教学连续性，不得借机重开 03 coverage。
+> 严重度与施工优先级分离。用户正在实际学习的章节若出现明确学习阻塞，可获得 **USER-PRIORITY OVERRIDE**。`QH-SEC-001` 已完成该覆盖；后续 `QH-SEC-*` 仍必须限定在教学连续性，不得借机重开 03 coverage。
 
 ## 3. 02～13 质量画像
 
 | 章 | 当前 coverage 状态 | 当前 quality/review 状态 | P0 | P1 | P2 | 主要质量债 | 推荐批次 |
 | ---: | --- | --- | ---: | ---: | ---: | --- | --- |
 | 02 信息系统基础知识 | 30/30 covered | review_pending | 0 | 1 | 0 | 章节索引仍保留旧 G2 三轮/固定下一批施工口径，和当前 QUALITY 综合验收阶段不一致 | QH-01-IS-REVIEW-CLOSE |
-| 03 信息安全技术 | coverage_complete | review_complete / teaching_entry_closed | 0 | 0 | 0 | `QH-SEC-001` 已收口：已建立零基础开篇、统一因果链、重构学习路线入口并增强首卡承接；后续代表正文事实与 coverage 无需重开 | `QH-SEC-01`（学习主线增强建议） |
+| 03 信息安全技术 | coverage_complete | review_complete / teaching_entry_closed / crypto_chain_closed | 0 | 0 | 0 | QH-SEC-00 已收口入口层；QH-SEC-01 已收口密码学主链跨卡断点；coverage 与既有事实主源保持不变 | `QH-SEC-02`（学习主线增强建议） |
 | 04 软件工程基础知识 | 44 covered + 1 legal link_only | 已有完整审查链 | 0 | 0 | 0 | 未发现需插队的真实 P0；历史旧缺口不得复活 | 后置维护 |
 | 05 数据库设计基础知识 | 33 covered + 1 legal link_only | quality_pending | 0 | 2 | 0 | 索引、学习路线仍残留“4 partial/尚未联合验收”的旧阶段描述 | QH-02-DB-HARDEN |
 | 06 软件架构设计 | 32 covered + 2 legal link_only | third_round_complete | 0 | 0 | 0 | 最新第三轮/DSSA 专项收口未发现需重新打开的真实 P0 | 后置维护 |
@@ -47,7 +47,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 | 08 软件可靠性技术 | 15/15 covered | quality_pending | 0 | 1 | 0 | 学习路线仍写“09 尚未建设”，形成施工期遗留假断点 | QH-04-REL-EVO |
 | 09 软件架构的演化和维护 | 16/16 covered | quality_pending | 0 | 1 | 0 | 学习路线仍写“10 尚未建设”，形成施工期遗留假断点 | QH-04-REL-EVO |
 | 10 未来信息综合技术 | 13/13 covered | quality_pending | 0 | 0 | 1 | 章末仍保留“下一大章若尚未建设”的条件式施工文案，未收口为已存在的 11 章物理导航 | QH-05-FUT-IPR |
-| 11 标准化与知识产权 | 15/15 covered | quality_pending | 0 | 1 | 0 | 学习路线明确写“12_应用数学尚未真实存在”，与当前仓库事实冲突 | QH-05-FUT-IPR |
+| 11 标准化与知识产权 | 15/15 covered | quality_pending | 0 | 1 | 0 | 学习路线明确写“12_应用数学尚未真实存在”，与 12 已完成 16/16 coverage 的事实冲突 | QH-05-FUT-IPR |
 | 12 应用数学 | 16/16 covered | quality_pending | 0 | 0 | 1 | 下一站已正确语义指向 13，但仍缺已存在 13 章的物理 Wikilink，属于弱导航 | QH-06-MATH-ENG |
 | 13 专业英语 | 15/15 covered | quality_pending | 0 | 1 | 0 | 章末仍把“后续 01～13 coverage 统一验收”写成下一动作，而 FINAL-RERUN 已 PASS | QH-06-MATH-ENG |
 
@@ -94,12 +94,12 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 
 因此：**`coverage_regression_candidate = 0`，coverage gate 继续保持 PASS。**
 
-QH-SEC-00 修改的是教学入口层，不是 coverage 缺口；不得因此重新跑 03 coverage。
+QH-SEC-00 与 QH-SEC-01 修改的是教学入口与跨卡连续性，不是 coverage 缺口；不得因此重新跑 03 coverage。
 
-## 6. 代表性正文抽查与 QH-SEC-00 结论
+## 6. 代表性正文抽查与 QH-SEC-01 结论
 
 - 02：MIS、DSS 抽查具备快速复习、机制、边界、考试动作和下一站；主要债务仍是 review 路由陈旧，不是正文 coverage 缺失。
-- 03：QH-SEC-00 已补齐零基础入口层。抽查 [[对称加密]]、[[非对称加密]]、[[哈希算法]]、[[数字签名]]、[[数字证书与PKI]]、[[身份认证]]、[[访问控制基础]]、[[防火墙]]、[[TLS与HTTPS]]、[[SQL注入]]、[[安全架构设计]]，确认代表正文的事实、机制、考试动作和局部前后衔接总体稳定，不需要批量重写；仍可在下一批只处理密码学主链的跨卡因果桥。
+- 03：QH-SEC-01 检查 `对称加密 → 非对称加密 → 哈希算法 → 数字签名 → 数字证书与PKI → 密钥管理 → 身份认证`。仅修改 [[非对称加密]]、[[哈希算法]]、[[密钥管理]]、[[身份认证]]；[[对称加密]]、[[数字签名]]、[[数字证书与PKI]] 检查后无需修改。未发现事实主源失效或 coverage regression。范围外只读检查确认 [[访问控制基础]] 能承接认证，但 [[网络安全-从漏洞威胁到安全措施]] 尚未承接“身份权限之后为什么进入不可信通信路径”，因此 QH-SEC-02 有真实教学断点依据。
 - 05：DB/DBMS/DBS、关系代数代表正文未发现 P0；主要债务集中在 G3-DB-CLOSE 后入口状态未同步。
 - 07：质量属性分类、ATAM 代表正文未发现 P0；主要债务集中在索引/速记与 29-Atom 契约不同步。
 - 08：REL-A001 具备定义、易错边界、考试动作、快速复习；债务集中在跨章出口。
@@ -114,7 +114,7 @@ QH-SEC-00 修改的是教学入口层，不是 coverage 缺口；不得因此重
 
 排序原则继续为：**用户当前学习阻塞 / 明确最新决策 → P0 → P1 考试影响 → review 状态 → 学习主线影响 → 批次可控性**。
 
-1. **QH-SEC-01（建议下一批）**：03 信息安全密码学主链连续性定点增强；不重做 coverage，不批量重写事实正文。
+1. **QH-SEC-02（建议下一批）**：03 信息安全“身份认证 → 访问控制 → 网络通信安全”跨模块连续性定点增强；已有真实教学断点证据，不重做 coverage。
 2. **QH-01-IS-REVIEW-CLOSE**：02 信息系统基础知识最终质量收口。
 3. **QH-02-DB-HARDEN**：05 数据库设计基础知识质量强化。
 4. **QH-03-QA-HARDEN**：07 系统质量属性与架构评估质量强化。
@@ -124,4 +124,4 @@ QH-SEC-00 修改的是教学入口层，不是 coverage 缺口；不得因此重
 8. **后置复核**：03 除 `QH-SEC-*` 教学主线外，其余内容默认维护；04 / 06 仅在出现新证据或真实 P0 时插队。
 
 > [!warning] 路由锁
-> **`QH-SEC-00` 已完成，不得重复执行。`QH-SEC-01` 仅作为下一学习批次建议，当前尚未开始。** 若用户选择不继续 03，则恢复 `QH-01-IS-REVIEW-CLOSE`。
+> **`QH-SEC-00` 与 `QH-SEC-01` 已完成，不得重复执行。`QH-SEC-02` 仅作为下一学习批次建议，当前尚未开始。** 若用户选择不继续 03，则恢复 `QH-01-IS-REVIEW-CLOSE`。
