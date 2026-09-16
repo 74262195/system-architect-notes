@@ -3,9 +3,9 @@
   "dataview",
   "obsidian-excalidraw-plugin",
   "excalidraw-extras",
-  "obsidian-git",
   "obsidian-linter",
   "recent-files-obsidian",
   "commander",
-  "cmdr"
+  "cmdr",
+  "obsidian-git"
 ]
