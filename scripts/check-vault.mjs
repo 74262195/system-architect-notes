@@ -20,7 +20,7 @@ const instructionFiles = [path.join(root, 'AGENTS.md'), ...files.filter((p) => p
 const referencedInstructionPaths = new Set();
 for (const file of instructionFiles) {
   const text = fs.readFileSync(file, 'utf8');
-  for (const match of text.matchAll(/`((?:AGENTS\.md|prompts\/|01_综合知识\/|官方教材\/|历年真题\/)[^`\n]*?\.md)`/g)) {
+  for (const match of text.matchAll(/`((?:AGENTS\.md|prompts\/|01_综合知识\/|06_架构设计理论与实践\/|官方教材\/|历年真题\/)[^`\n]*?\.md)`/g)) {
     const target = match[1];
     if (/[<*>]|\.\.\./.test(target)) continue;
     referencedInstructionPaths.add(target);
@@ -33,7 +33,7 @@ for (const target of referencedInstructionPaths) {
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');
   const rel = path.relative(root, file);
-  if (/^(00_索引|01_综合知识|02_案例分析|03_论文素材|04_真题错题|05_画图素材)\//.test(rel) &&
+  if (/^(00_索引|01_综合知识|02_案例分析|03_论文素材|04_真题错题|05_画图素材|06_架构设计理论与实践)\//.test(rel) &&
       (!text.startsWith('---\n') ||
        !/^type:/m.test(text.slice(0, text.indexOf('\n---', 4))) ||
        !/^subject:/m.test(text.slice(0, text.indexOf('\n---', 4))))) {
