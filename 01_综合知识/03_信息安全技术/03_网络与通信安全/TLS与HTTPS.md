@@ -65,13 +65,24 @@ quality_status: QH-SEC-05已将抽象定位表改为零基础场景与直接答�
 
 ~~~mermaid
 sequenceDiagram
-    participant C as 客户端
+    participant B as 浏览器
     participant S as 服务器
-    C->>S: ClientHello：版本、算法、密钥协商参数
-    S->>C: ServerHello：选择结果、证书、协商参数与签名
-    C->>C: 验证信任链、主机名、有效期和签名
-    C->>S: 完成密钥协商并验证握手
-    C<->>S: 使用会话密钥保护 HTTP 数据
+
+    B->>S: ClientHello：TLS版本、算法、临时公钥
+    S-->>B: ServerHello：选择参数、临时公钥
+
+    Note over B,S: 双方通过ECDHE算出相同共享秘密
+    Note over B,S: 再通过HKDF派生握手密钥
+
+    S-->>B: Certificate：服务器证书
+    S-->>B: CertificateVerify：证明持有证书私钥
+    S-->>B: Finished：服务器确认握手
+    B->>S: Finished：浏览器确认握手
+
+    Note over B,S: 双方派生HTTP数据使用的会话密钥
+
+    B->>S: 加密后的HTTP请求
+    S-->>B: 加密后的HTTP响应
 ~~~
 
 1. 双方交换能力和密钥协商参数。
