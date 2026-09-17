@@ -13,6 +13,9 @@ tags: [软考/架构设计师, 架构设计理论与实践, coverage, ARCH]
 
 # ARCH 架构设计理论与实践预契约矩阵
 
+> [!note] 历史记录
+> 本文件保留当时事实；最终契约已由 [[OPT-01-CONTRACT收口记录]] 与 [[ARCH-架构设计理论与实践覆盖契约矩阵]] 取代。
+
 > [!success] 本文件已完成历史使命
 > 本文件是 `SYLLABUS-REALIGN-ARCH` 阶段用于登记八大 Domain Seed 的**预契约**。`ARCH-CONTRACT` 已完成正式 stable Atom 锁定，今后 coverage 与施工均以 [[ARCH-架构设计理论与实践覆盖契约矩阵]] 为唯一事实源。
 

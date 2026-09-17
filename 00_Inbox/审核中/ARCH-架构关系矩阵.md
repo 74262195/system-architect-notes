@@ -2,10 +2,10 @@
 type: 架构关系矩阵
 subject: 系统架构设计师
 status: contract_locked
-contract: ARCH-CONTRACT
-stable_atom_count: 68
+contract: OPT-01-CONTRACT
+stable_atom_count: 124
 source: ARCH正式覆盖契约 + 考试大纲 + 主教材
-updated: 2026-09-16
+updated: 2026-09-17
 tags: [软考/架构设计师, 架构关系, ARCH]
 ---
 
@@ -75,7 +75,7 @@ tags: [软考/架构设计师, 架构关系, ARCH]
 
 ## 五、关系建设门禁
 
-当前关系 ID 和唯一主事实源约束已经锁定，但大部分节点正文仍处于 `partial / unmapped`。后续：
+OPT-01 已锁定 124 个 Atom、22 个案例映射和唯一主事实源约束；大部分节点正文仍处于 `partial / unmapped`。后续：
 
 - 先把各域缺口做到可学习；
 - 再执行 `ARCH-CROSS-LINK` 统一检查前因后果、比较卡和下一站；
