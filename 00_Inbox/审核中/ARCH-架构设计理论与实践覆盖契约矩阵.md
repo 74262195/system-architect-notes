@@ -1,9 +1,10 @@
 ---
 type: 架构覆盖契约矩阵
 subject: 系统架构设计师
-status: contract_locked
-contract_status: locked
+status: revision_pending
+contract_status: revision_pending
 stable_atom_count: 68
+statistics_basis: pre_revision_ARCH_CONTRACT_snapshot
 covered_count: 0
 link_only_count: 10
 partial_count: 15
@@ -11,14 +12,17 @@ unmapped_count: 43
 blocked_count: 0
 start_head: 51156f22c40208a8e6c3d67b09add8cbd8ec5663
 source: 系统架构第二版考试大纲 + 系统架构设计师教程第二版 + 仓库现有正文逐项映射
-updated: 2026-09-16
+updated: 2026-09-17
 tags: [软考/架构设计师, 架构设计理论与实践, coverage, ARCH, 契约]
 ---
 
 # ARCH 架构设计理论与实践覆盖契约矩阵
 
-> [!important] 本文件是八大架构域的正式 stable Atom 契约
-> `ARCH-CONTRACT` 已将考试大纲的八大架构设计理论与实践知识域原子化并锁定为 **68 个 stable Atom**。后续文件拆分、移动或合并不得随意重编号；真正发现遗漏大纲项时只能追加新 ID。
+> [!important] 本文件是八大架构域覆盖契约的唯一维护位置
+> `ARCH-CONTRACT` 阶段曾登记并锁定 **68 个 stable Atom**，本轮审计后进入修订待执行状态。后续文件拆分、移动或合并不得随意重编号；真正发现遗漏大纲项时只能追加新 ID。
+
+> [!warning] 原契约待修订
+> 2026-09-17 审计确认漏项、27 项粒度拆分、10 项验收细化和复用风险。以下 68 行及统计保留追溯，不是最终原子全集或正文开工许可。执行 [[章节建设推进计划#四、定制优化计划]] 的 `OPT-01-CONTRACT` 后再更新有效范围和统计；当前未执行正式 Atom 拆分。
 
 ## 一、契约口径
 
@@ -179,6 +183,6 @@ tags: [软考/架构设计师, 架构设计理论与实践, coverage, ARCH, 契�
 
 ## 八、下一唯一批次
 
-> **`ARCH-01-IS-BUILD：信息系统架构 8 个 stable Atom 定点建设与验收`**
+> **`OPT-01-CONTRACT：八域契约补漏、原子化与复用复核`**
 
-该批先处理 ARCH-IS 的 `4 unmapped + 3 partial`，保留 `ARCH-IS-A007` 合法 link_only；不得顺手进入 ARCH-LAY。
+按 [[章节建设推进计划#四、定制优化计划]] 执行。旧覆盖状态在本次计划写入中不重算；风险详见 [[现有章节与八域任务覆盖原子性审计-2026-09-17]]，不能继续以旧 link_only 清单代替复核。
