@@ -15,6 +15,26 @@ const errors = [];
 const warnings = [];
 const aliases = new Map();
 
+const findConflictMarkers = (text) => {
+  const lines = text.split(/\r?\n/);
+  const markerLines = lines.flatMap((line, index) => {
+    if (/^<<<<<<<(?:[ \t].*)?$/.test(line)) return [{ line: index + 1, marker: '<<<<<<<' }];
+    if (/^>>>>>>>(?:[ \t].*)?$/.test(line)) return [{ line: index + 1, marker: '>>>>>>>' }];
+    return [];
+  });
+
+  // A bare row of equals signs is also valid Markdown (for example, a Setext
+  // heading underline), so only treat Git's separator as a conflict marker
+  // when this file also contains an opening or closing conflict marker.
+  if (markerLines.length) {
+    lines.forEach((line, index) => {
+      if (/^=======$/.test(line)) markerLines.push({ line: index + 1, marker: '=======' });
+    });
+  }
+
+  return markerLines.sort((a, b) => a.line - b.line);
+};
+
 // 提示词中的仓库文件引用属于执行前置条件；路径失效应阻断，而不只是运行时才发现。
 const instructionFiles = [path.join(root, 'AGENTS.md'), ...files.filter((p) => path.relative(root, p).startsWith('prompts/'))];
 const referencedInstructionPaths = new Set();
@@ -33,6 +53,9 @@ for (const target of referencedInstructionPaths) {
 for (const file of files) {
   const text = fs.readFileSync(file, 'utf8');
   const rel = path.relative(root, file);
+  for (const { line, marker } of findConflictMarkers(text)) {
+    errors.push(`${rel}:${line}: 检测到 Git 冲突标记 ${marker}`);
+  }
   if (/^(00_索引|01_综合知识|02_案例分析|03_论文素材|04_真题错题|05_画图素材|06_架构设计理论与实践)\//.test(rel) &&
       (!text.startsWith('---\n') ||
        !/^type:/m.test(text.slice(0, text.indexOf('\n---', 4))) ||

@@ -1,45 +1,45 @@
 ---
 type: 质量债矩阵
 subject: 系统架构设计师
-status: targeted_quality_reopened
-stage: qh_sec_04_priority_repair
+status: quality_hardening_closed
+stage: quality_hardening_closed
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
 start_head: 5eef91b26c7714e43529b84535d18ecd8ac26db1
-current_priority: QH-SEC-04A-INTEGRITY
+current_priority: none
 updated: 2026-09-17
 tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 ---
 
 # QUALITY-HARDENING · 全库质量债矩阵
 
-> [!warning] QUALITY-HARDENING 已定点重开
-> 本矩阵只管理 QUALITY / REVIEW 债务，不重新做 coverage。2026-09-17 发现信息安全两篇正文残留 Git 冲突标记及零基础机制桥接不足，用户明确要求优先修复，故登记 `QH-SEC-04`；既有 coverage PASS 继续有效。
+> [!success] QH-SEC-04 已定点收口
+> 本矩阵只管理 QUALITY / REVIEW 债务，不重新做 coverage。信息安全文件完整性与零基础机制桥接已经过 04A～04D 修复和联合验收；既有 coverage PASS 继续有效。
 
 ## 1. 当前结论
 
 - coverage regression candidate：**0**
-- 当前计划内开放质量债：**P0 = 1 / P1 = 0 / P2 = 0 / 合计 = 1**
-- 已收口质量债：**QH-SEC-001、QH-02-001、QH-05-001、QH-05-002、QH-07-001、QH-07-002、QH-08-001、QH-09-001、QH-10-001、QH-11-001、QH-12-001**
+- 当前计划内开放质量债：**P0 = 0 / P1 = 0 / P2 = 0 / 合计 = 0**
+- 已收口质量债：**QH-SEC-001、QH-SEC-04、QH-02-001、QH-05-001、QH-05-002、QH-07-001、QH-07-002、QH-08-001、QH-09-001、QH-10-001、QH-11-001、QH-12-001**
 - `QH-13-001`：**`out_of_scope_by_user / no_action_required`**，不计入开放债，也不伪装成“已修复关闭”
-- 当前质量控制状态：`targeted_quality_reopened / qh_sec_04_priority_repair`
-- 当前下一批：**QH-SEC-04A-INTEGRITY**。本专项预计 4 次任务；关闭后恢复 `ARCH-01-IS-BUILD`。
+- 当前质量控制状态：`quality_hardening_closed / normal_maintenance`
+- 当前下一批：**无 QUALITY 债务**。仓库主计划恢复 `ARCH-01-IS-BUILD`。
 
 ## 2. 最终章节质量状态
 
 | 章 | coverage 状态 | quality/review 状态 | 开放债 | 说明 |
 | ---: | --- | --- | ---: | --- |
 | 02 信息系统基础知识 | 30/30 covered | review_closed / normal_maintenance | 0 | `QH-02-001` 已关闭 |
-| 03 信息安全技术 | coverage_complete | qh_sec_04_priority_repair | 1 | QH-SEC-00/01/02/03 保留历史收口；QH-SEC-04 因新证据定点重开 |
+| 03 信息安全技术 | coverage_complete | security_quality_closed / normal_maintenance | 0 | QH-SEC-00/01/02/03/04 已收口 |
 
 ### QH-SEC-04：网络通信及后续章节零基础质量修复
 
 | 子任务 | 状态 | 验收重点 |
 | --- | --- | --- |
-| QH-SEC-04A-INTEGRITY | pending / current | 清除 2 个冲突文件并让检查脚本拦截冲突标记 |
-| QH-SEC-04B-SAMPLE | pending | VPN 机制样稿通过后锁定批量写法 |
-| QH-SEC-04C-BATCH | pending | IDS/IPS、TLS、OSI 服务、可信计算/零信任顺序及必要缩写桥接完成 |
-| QH-SEC-04D-ACCEPTANCE | pending | 27 个 Markdown 联合验收、导航同步及仓库校验通过 |
+| QH-SEC-04A-INTEGRITY | closed | 清除 2 个冲突文件并让检查脚本拦截冲突标记 |
+| QH-SEC-04B-SAMPLE | closed | VPN 机制样稿通过并锁定批量写法 |
+| QH-SEC-04C-BATCH | closed | IDS/IPS、TLS、OSI 服务、可信计算/零信任顺序及必要缩写桥接完成 |
+| QH-SEC-04D-ACCEPTANCE | closed | 27 个 Markdown 联合验收、导航同步及仓库校验通过 |
 
 本项是已完成 coverage 上的新质量证据，不推翻 QH-SEC-00/01/02/03 的历史工作。
 | 04 软件工程基础知识 | 44 covered + 1 legal link_only | 已有完整审查链 | 0 | 后置维护 |
@@ -84,14 +84,14 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量债, 审核]
 
 | 严重度 | 数量 |
 | --- | ---: |
-| P0 | 1 |
+| P0 | 0 |
 | P1 | 0 |
 | P2 | 0 |
-| **合计** | **1** |
+| **合计** | **0** |
 
-因此 QUALITY-HARDENING 当前定点进入：
+因此 QUALITY-HARDENING 恢复：
 
-> **`targeted_quality_reopened / qh_sec_04_priority_repair`**
+> **`quality_hardening_closed / normal_maintenance`**
 
 后续原则：
 
