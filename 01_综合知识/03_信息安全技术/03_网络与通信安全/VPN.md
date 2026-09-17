@@ -5,8 +5,9 @@ chapter: 信息安全技术
 topic: VPN
 difficulty: 2
 source:
-  - 官方教材/系统架构第二版 大纲.pdf（PDF 第45页）
-updated: 2026-08-28
+  - 官方教材/系统架构第二版 大纲.pdf（PDF 第42页）
+updated: 2026-09-17
+review_status: 待复习
 tags:
   - 系统架构师
   - 系统架构师/信息安全
@@ -16,7 +17,7 @@ status: 学习中
 created: 2026-08-03 星期一
 exam_priority: P1
 review_level: 重点
-priority_reason: "考试大纲明确列出 VPN 及 IPSec、GRE、MPLS、VPDN，历年资料有 IPSec 直接考查"
+priority_reason: "考试大纲明确列出 SSL、PGP、IPSec 等安全协议；本卡聚焦 VPN/IPSec，历年资料有 IPSec 直接考查"
 priority_updated: 2026-09-07
 quality_reviewed: 2026-09-05
 quality_status: 已按技术定位与自测答案规则完善
@@ -55,6 +56,9 @@ quality_status: 已按技术定位与自测答案规则完善
 教材/经典题常把 IPsec VPN 与 SSL VPN 按层次和使用场景对比：IPsec 更接近网络层透明保护，SSL/TLS VPN 更接近基于 TLS 的远程应用/接入。
 
 工程实现中 SSL/TLS VPN 既可能是浏览器门户，也可能需要客户端建立全隧道，因此不要把“SSL VPN 一定免客户端”当定义。
+
+> [!note] 范围边界
+> 当前已核验大纲在安全协议处明确列出 SSL、PGP、IPSec。本卡继续把 VPN/IPsec 作为主问题；未在该大纲证据中明确列出的其他 VPN 承载或运营商技术，不因为旧元数据曾提及就扩写进本卡。
 
 > [!question] 自测
 > 1. AH 与 ESP 最稳定的区分点是什么？
