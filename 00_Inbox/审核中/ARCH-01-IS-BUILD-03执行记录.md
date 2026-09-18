@@ -1,10 +1,11 @@
 ---
 type: 架构建设记录
 subject: 系统架构设计师
-status: pending_control_sync
+status: closed
 batch: ARCH-01-IS-BUILD-03
 start_head: 8f128259be7ec6b32a3e131d483730c3ec155677
 atoms: [ARCH-IS-A005, ARCH-IS-A009, ARCH-IS-A006]
+control_close_start_head: 60c3645e7189152cc1b429bf991da5609759ae74
 updated: 2026-09-18
 tags: [软考/架构设计师, 审查/全库补全, ARCH, 信息系统架构]
 ---
@@ -49,19 +50,24 @@ START_HEAD：`8f128259be7ec6b32a3e131d483730c3ec155677`。
 
 正文明确说明两者粒度不同，避免把两套阶段机械混排。
 
-## 未完成的控制面同步
+## 控制面正式收口
 
-本轮 GitHub 连接器的 `update_file` 只能提交**完整文件替换**。`ARCH-架构设计理论与实践覆盖契约矩阵.md` 含 124 Atom，当前返回内容被工具截断，无法取得完整全文；在这种情况下拼接或覆盖矩阵会有删除未读取行的风险。
+本次恢复收口最初读取到 `6b46aa4aa81b1b1b2f25e6584a027fae45e02601`，写入前发现远端新增并发提交；比较确认并发只修改 `OSI安全体系结构.md`。因此未覆盖旧 HEAD，而是重新基于最新 `60c3645e7189152cc1b429bf991da5609759ae74` 读取全部目标控制文件后再执行。
 
-因此本轮选择安全停止控制面写入，**没有伪造 coverage 变化，也没有把 BUILD-03 标为 CLOSED**。
+同时确认 GitHub 工具内部能够取得完整的 124 Atom 矩阵全文：矩阵长度超过 3 万字符，A005/A009/A006 与末尾 `ARCH-BIG-A006` 均存在，整文件回写风险已解除。
 
-当前正式矩阵仍保持：
+逐篇复核三篇正文后，正式状态更新为：
 
-- ARCH-IS：`4 covered + 1 link_only + 2 partial + 3 unmapped`
-- ARCH 全局：`4 covered + 9 link_only + 14 partial + 97 unmapped`
+- `ARCH-IS-A005`：`partial → covered`
+- `ARCH-IS-A009`：`unmapped → covered`
+- `ARCH-IS-A006`：`partial → covered`
 
-预期在下一次可安全完整编辑矩阵的运行中，重新从最新 main 复核三篇正文后，再决定 A005/A009/A006 是否全部达到 `covered`，同步总控和总索引并正式收口 BUILD-03。
+收口后统计：
 
+- ARCH-IS：`7 covered + 1 link_only + 0 partial + 2 unmapped`
+- ARCH 全局：`7 covered + 9 link_only + 12 partial + 96 unmapped`
+
+同步范围包括正式矩阵、信息系统架构索引、ARCH 总索引和全库总控。案例映射与 QUALITY 状态不变。
 ## 检查
 
 当前连接器环境不能执行本地仓库命令：
@@ -73,6 +79,10 @@ START_HEAD：`8f128259be7ec6b32a3e131d483730c3ec155677`。
 
 ## 下一步
 
-下一轮仍应优先完成 `ARCH-01-IS-BUILD-03` 的控制面同步与验收，不能提前切换 BUILD-04。
+下一轮唯一候选切换为 `ARCH-01-IS-BUILD-04`：
 
-只有 BUILD-03 正式收口后，下下轮候选才是 `ARCH-01-IS-BUILD-04`：A007 复用核验 + A008 信息化资源管理 + A010 信息化标准/法律/规定的架构约束。
+- `ARCH-IS-A007`：核验 CSF/SST/BSP 的 `link_only` 唯一主事实源；
+- `ARCH-IS-A008`：建设信息化资源管理；
+- `ARCH-IS-A010`：建设信息化标准、法律与规定的架构约束。
+
+BUILD-04 完成后，再按运行时最新控制面判断是否进入信息系统架构章节联合验收。
