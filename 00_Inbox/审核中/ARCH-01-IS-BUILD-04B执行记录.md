@@ -1,11 +1,11 @@
 ---
 type: 架构建设记录
 subject: 系统架构设计师
-status: pending_control_sync
+status: closed
 batch: ARCH-01-IS-BUILD-04B
 start_head: da0e753fbea65a2fc4a2dea5f6f5bc7a5c8ce5e8
 atoms: [ARCH-IS-A008, ARCH-IS-A010]
-updated: 2026-09-18
+updated: 2026-09-20
 tags: [软考/架构设计师, 审查/全库补全, ARCH, 信息系统架构]
 ---
 
@@ -34,7 +34,7 @@ START_HEAD：`da0e753fbea65a2fc4a2dea5f6f5bc7a5c8ce5e8`。
 
 - 大纲：第二版大纲 PDF 63 明确要求“国际和国内有关信息化的标准、法律和规定”。
 - 主教材：PDF 422 明确把法律需求列为企业软件需求来源；PDF 445–447 的 ADM 实施治理要求实施项目符合规定架构并执行架构合规审查，可作为“外部规则必须进入架构约束”的机制支撑。
-- 真题趋势：2009–2018 题目映射中“知识产权/标准法规”历史题数 30、覆盖 10 个历史年份；2019–2024 仍检测到趋势信号。因此 A010 的正文学习深度按 P1 处理，但不改写 stable Atom 范围。
+- 真题与优先级复核：2009–2018 题目映射中“知识产权/标准法规”历史题数 30、覆盖 10 个历史年份，2019–2024 仍有趋势信号；但这些题主要证明具体权利/标准规则有题频，不能直接证明“把外部规则转成架构约束”这一 Atom 达到 P1。因此 A010 保持 P2，不把上位题类优先级机械下放。
 - 复用边界：具体标准层级、编号、机构以及著作权/专利/商标/商业秘密规则继续由 `01_综合知识/11_标准化与知识产权` 的 15/15 covered 主事实源承担；ARCH 卡只增加“适用规则 → 架构约束 → 合规筛选”的设计动作。
 
 ## 实际正文
@@ -46,28 +46,25 @@ START_HEAD：`da0e753fbea65a2fc4a2dea5f6f5bc7a5c8ce5e8`。
 
 两篇均设置 `review_status: 待复习`，并更新 `信息系统架构索引.md` 接入学习链。
 
-## 当前正式状态
+## 正文复核与正式状态
 
-正文已建，但正式覆盖矩阵尚未同步，因此本轮不提前宣称 A008/A010 已 `covered`。
+- `ARCH-IS-A008`：正文在“先从‘信息资源’说起”“从架构视角看三类资源”“为什么这是‘架构问题’而不只是运维问题”“考试动作”形成定义、对象、边界和判断动作闭环，达到最小考试深度。
+- `ARCH-IS-A010`：正文在“它们怎样变成架构约束”“教材里为什么能找到这个架构思想”“和综合知识第 11 章怎样分工”“考试动作”形成规则到约束的转换机制，并保持唯一主事实源边界，达到最小考试深度。
+- 两篇均无新增独立子机制，不需要新增 stable Atom；自测答案均为一级折叠 callout，Wikilink 目标存在。
+- 124 Atom 正式矩阵已将 A008/A010 从 `unmapped` 提升为 `covered`，同时同步 ARCH 总索引、信息系统架构索引和全库总控。
 
-正式统计暂仍保持：
+正式统计更新为：
 
-- ARCH-IS：`7 covered + 1 link_only + 0 partial + 2 unmapped`
-- ARCH 全局：`7 covered + 9 link_only + 12 partial + 96 unmapped`
+- ARCH-IS：`9 covered + 1 link_only + 0 partial + 0 unmapped`
+- ARCH 全局：`9 covered + 9 link_only + 12 partial + 94 unmapped`
 
-下一次运行必须先从最新 main 复核两篇正文，再安全更新完整 124 Atom 矩阵、ARCH 总索引和全库总控；完成后才可把 BUILD-04B 标为 CLOSED，并进入信息系统架构联合验收。
+本状态只表示 BUILD-04B 施工关闭、信息系统架构具备联合验收条件；章节是否完成仍由下一批 `ARCH-01-IS-ACCEPT-01` 按 `prompts/66` 裁决。
 
 ## 检查
 
-当前 GitHub 连接器环境不能执行本地仓库命令：
-
-- `node scripts/check-vault.mjs`：**未执行**
-- `git diff --check`：**未执行**
-
-不得视为通过。
+- `node scripts/check-vault.mjs`：**通过**，1008 个 Markdown 文件通过检查；另有 66 个历史资料 warning，均不在本轮改动文件中，未阻断提交。
+- `git diff --check`：**通过**。
 
 ## 下一步
 
-下一轮：`ARCH-01-IS-BUILD-04B-CLOSE`，只做 A008/A010 正文复核、正式矩阵与控制面同步。
-
-下下轮：若 ARCH-IS 达到 `9 covered + 1 legal link_only` 且无 partial/unmapped/blocked，则按 `prompts/66` 执行信息系统架构章节联合验收；通过后再切换下一架构域。
+下一轮：`ARCH-01-IS-ACCEPT-01`。按 `prompts/66` 执行信息系统架构一次联合验收；通过后再切换下一架构域。
