@@ -277,6 +277,6 @@ coverage contract：**PASS**。正文 coverage：**未完成**，必须从 `part
 
 ## 八、当前下一批
 
-> **`ARCH-01-IS-ACCEPT-01：信息系统架构一次联合验收`**
+> **`ARCH-02-LAY-SAMPLE-GATE：层次式架构代表样稿门禁`**
 
-`ARCH-IS-A008/A010` 已完成正文复核并正式写入矩阵；信息系统架构当前为 `9 covered + 1 link_only + 0 partial + 0 unmapped`。下一批按 `prompts/66-章节三轮审查.md` 执行本章一次联合验收；仍以运行时最新 `main` 为事实基线。
+信息系统架构已完成 `ARCH-01-IS-ACCEPT-01` 一次联合验收，正式状态为 `9 covered + 1 legal link_only + 0 partial + 0 unmapped`，章节 PASS。下一批从 `ARCH-LAY` 矩阵真实缺口选择代表样稿，不跨域拼批；仍以运行时最新 `main` 为事实基线。
