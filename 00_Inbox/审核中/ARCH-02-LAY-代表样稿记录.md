@@ -1,7 +1,7 @@
 ---
 type: 架构建设记录
 subject: 系统架构设计师
-status: awaiting_user_review
+status: sample_gate_passed
 batch: ARCH-02-LAY-SAMPLE-GATE
 start_head: 177ff996
 atom: ARCH-LAY-A002
@@ -58,13 +58,13 @@ tags: [软考/架构设计师, 审查/全库补全, ARCH, 层次式架构]
 - `ARCH-LAY-A002` 回填正文文件与具体标题落点，提升为 `covered`。
 - ARCH-LAY 变为 `1 covered + 0 link_only + 1 partial + 16 unmapped`。
 - 全库 ARCH 变为 `10 covered + 9 link_only + 12 partial + 93 unmapped`；stable Atom 仍为 124，范围与案例映射不变。
-- ARCH 总索引、全库总控与新建章节索引均停在 `ARCH-02-LAY-SAMPLE-GATE / awaiting_user_review`。
+- ARCH 总索引、全库总控与新建章节索引在样稿审核期间停在 `ARCH-02-LAY-SAMPLE-GATE / awaiting_user_review`。
 
 ## 明确确认点
 
-**USER-GATE：待用户审核。**
+**USER-GATE：PASS。**
 
-只需确认这篇样稿是否可作为层次式架构后续 Atom 的写作基准。在得到“通过”或具体 minor fix 意见前，不执行其余批量生成。
+重写版已由用户明确确认“验收通过”，可作为层次式架构后续 Atom 的写作基准。
 
 ## USER-GATE 第一轮反馈与重写
 
@@ -79,4 +79,10 @@ tags: [软考/架构设计师, 审查/全库补全, ARCH, 层次式架构]
 5. 删除 `IView`、“抽象接口”、“响应式更新”等不影响本 Atom 核心判断的前置术语；
 6. 把 04B 改为文末可选回看，明确它不是读懂本篇的前置条件。
 
-USER-GATE 仍为 `awaiting_user_review`，需用户审核重写版；未解锁后续批量。
+USER-GATE 在重写后由用户明确验收通过。
+
+## 门禁收口
+
+- `ARCH-02-LAY-SAMPLE-GATE`：**PASS**。
+- 样稿基准：先建立无前置的具体问题，再用人话说出协作关系，最后引入必要术语和考试动作。
+- 下一批：`ARCH-02-LAY-BUILD-02`，只处理 `ARCH-LAY-A001/A003/A009/A010`，建设分层职责与依赖基线，再收齐表现层剩余三个 Atom；不跨到业务逻辑层、数据访问层或其他架构域。
