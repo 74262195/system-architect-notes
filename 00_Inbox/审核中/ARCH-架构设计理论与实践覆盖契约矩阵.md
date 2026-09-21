@@ -252,16 +252,16 @@ coverage contract：**PASS**。正文 coverage：**未完成**，必须从 `part
 | ARCH-COM-A008 | ARCH-COM-A008 | 保留 |
 | ARCH-COM-A009 | ARCH-COM-A009、ARCH-COM-A014、ARCH-COM-A015 | 拆分 |
 | ARCH-COM-A010 | ARCH-COM-A010、ARCH-COM-A016、ARCH-COM-A017、ARCH-COM-A018、ARCH-COM-A019 | 拆分 |
-| ARCH-SEC-A001 | ARCH-SEC-A001、ARCH-SEC-A011、ARCH-SEC-A012 | 拆分 |  |  |  |  | 06_架构设计理论与实践/07_安全架构/安全架构基础：为什么安全设计要从威胁和资产开始.md | covered |
+| ARCH-SEC-A001 | ARCH-SEC-A001、ARCH-SEC-A011、ARCH-SEC-A012 | 拆分 |
 | ARCH-SEC-A002 | ARCH-SEC-A002 | 保留 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/安全模型.md | covered |
 | ARCH-SEC-A003 | ARCH-SEC-A003 | 细化 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/安全架构设计.md（三体系） | covered |
 | ARCH-SEC-A004 | ARCH-SEC-A004 | 保留 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/安全架构设计.md（WPDRRC） | covered |
-| ARCH-SEC-A005 | ARCH-SEC-A005、ARCH-SEC-A013 | 拆分 |  |  |  |  | 06_架构设计理论与实践/07_安全架构/分层安全体系与企业安全控制：怎样把多层防线组织成可运营的整体.md | covered |
-| ARCH-SEC-A006 | ARCH-SEC-A006、ARCH-SEC-A014、ARCH-SEC-A015、ARCH-SEC-A016、ARCH-SEC-A017、ARCH-SEC-A018 | 拆分 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/OSI安全体系结构.md | covered |
-| ARCH-SEC-A007 | ARCH-SEC-A007、ARCH-SEC-A019 | 拆分 |  |  |  |  | 06_架构设计理论与实践/07_安全架构/数据库安全评估标准：TCSEC 与 TDI 怎样判断数据库安全等级.md | covered |
-| ARCH-SEC-A008 | ARCH-SEC-A008 | 细化 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/软件脆弱性分析.md | link_only |
-| ARCH-SEC-A009 | ARCH-SEC-A009 | 细化 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/软件脆弱性分析.md | link_only |
-| ARCH-SEC-A010 | ARCH-SEC-A010 | 保留 |  |  |  |  | 01_综合知识/03_信息安全技术/05_安全架构治理与可信/软件脆弱性分析.md（仅一般方法） | partial |
+| ARCH-SEC-A005 | ARCH-SEC-A005、ARCH-SEC-A013 | 拆分 |
+| ARCH-SEC-A006 | ARCH-SEC-A006、ARCH-SEC-A014、ARCH-SEC-A015、ARCH-SEC-A016、ARCH-SEC-A017、ARCH-SEC-A018 | 拆分 |
+| ARCH-SEC-A007 | ARCH-SEC-A007、ARCH-SEC-A019 | 拆分 |
+| ARCH-SEC-A008 | ARCH-SEC-A008 | 细化 |
+| ARCH-SEC-A009 | ARCH-SEC-A009 | 细化 |
+| ARCH-SEC-A010 | ARCH-SEC-A010 | 保留 |
 | ARCH-BIG-A001 | ARCH-BIG-A001、ARCH-BIG-A005 | 拆分 |
 | ARCH-BIG-A002 | ARCH-BIG-A002 | 保留 |
 | ARCH-BIG-A003 | ARCH-BIG-A003、ARCH-BIG-A006 | 拆分 |
