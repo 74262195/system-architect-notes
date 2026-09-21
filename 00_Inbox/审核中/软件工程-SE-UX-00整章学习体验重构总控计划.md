@@ -5,9 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
-current_batch: SE-UX-06-TEST
-last_completed: SE-UX-05-OO-UML
-last_batch_commit: 0b4d179702ebd15243abc6a683fc5194143c7a09
+current_batch: SE-UX-07-CLEAN-CBSE
+last_completed: SE-UX-06-TEST
+last_batch_commit: 4ae0d4bc3a2d0c57bbd0e3dc4fb08700a6b65c99
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -81,8 +81,8 @@ tags:
 | SE-UX-03-REQ | 02_需求工程 6 张卡 | 已完成：开发需求 → 管理需求连续主线 |
 | SE-UX-04-STRUCT | 结构化分析设计组 | 已完成：结构化分析、模块设计、详细设计连续主线 |
 | **SE-UX-05-OO-UML** | OO / UML / 持久化 / 逆向 / 形式化 | **已完成**：方法阶段 vs 表达语言 vs 编码实现；补齐前后链 |
-| **SE-UX-06-TEST** | 04_软件测试 13 张卡 | **当前批次**：建立测试分类坐标，避免静动态、黑白盒、测试层次、V&V、专门测试串层 |
-| SE-UX-07-CLEAN-CBSE | 净室 2 张 + CBSE 4 张 | 保留高质量净室正文；核验 CBSE 旧工作稿来源、机制与前后链 |
+| **SE-UX-06-TEST** | 04_软件测试 13 张卡 | **已完成**：建立测试分类坐标，避免不同分类轴串层 |
+| **SE-UX-07-CLEAN-CBSE** | 净室 2 张 + CBSE 4 张 | **当前批次**：保留高质量净室正文；核验 CBSE 旧工作稿来源、机制与前后链 |
 | SE-UX-08-PM | 项目管理 7 张卡 | 建立“拆工作 → 排进度 → 控版本配置 → 保质量 → 管风险”连续链 |
 | SE-UX-09-NAV | 索引、学习路线、优先级、链接、frontmatter | 同步真实学习顺序；清理死链、旧 quality/source 和元数据 |
 | SE-UX-10-ACCEPT | 全章一次联合验收 | 核验学习链、样例门槛、主事实源、链接和历史 coverage |
