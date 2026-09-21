@@ -5,9 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
-current_batch: SE-UX-02B-AGILE-CMMI
-last_completed: SE-UX-02A-RUP
-last_batch_commit: 76754d4c3fd389bdadee892f703f4ab745e11cef
+current_batch: SE-UX-03-REQ
+last_completed: SE-UX-02B-AGILE-CMMI
+last_batch_commit: 93dbc6ebec5e4b00fcd5a3207c63d96592ccfd8c
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -372,3 +372,48 @@ SE-UX 收口后，**恢复执行运行时最新 [[全库补全总控计划]] 的
 - 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
 - 下一轮：`SE-UX-02B-AGILE-CMMI`（XP、Scrum、水晶、FDD、CMMI；先建立敏捷总坐标，再把 CMMI 从“项目开发方法”切回“组织过程成熟度”）。
 - 下下轮：`SE-UX-03-REQ`。
+
+
+### SE-UX-02B-AGILE-CMMI（已完成）
+
+- 日期：2026-09-21
+- START_HEAD：`4d77bc78e2ac91f54d3244ff7772a13acb6c746b`
+- 正文提交：
+  - `1d7ae026bebfed048476c8ffd435fbb8bf187f1a`：[[极限编程XP]]
+  - `1020c78cb1d7b9c11859e50a7864c1d6b285db95`：[[Scrum迭代管理]]
+  - `97966d7002805627a472135dd5e573883cd1fc1b`：[[水晶系列方法]]
+  - `2b12ad7267965d8c6915368a3e156c68b660ec8c`：[[特征驱动开发FDD]]
+  - `93dbc6ebec5e4b00fcd5a3207c63d96592ccfd8c`：[[CMMI成熟度等级]]
+- 修改：
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/极限编程XP.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/Scrum迭代管理.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/水晶系列方法.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/特征驱动开发FDD.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/CMMI成熟度等级.md`
+- 结果：
+  - 以 [[极限编程XP]] 作为敏捷家族入口，先建立“适应型而非预设型、以人为本而非以过程为本、迭代增量式开发”三个共同坐标，并用 2021-H2-综合知识-27 作为近期考法证据；
+  - XP 明确识别点为“交流、朴素、反馈、勇气”，并纠正“轻量 = 随意开发”的误解；
+  - [[Scrum迭代管理]] 重建为“Product Backlog → 选择高优先级需求 → Sprint Backlog → Sprint → 潜在可交付产品增量”的教材稳定主链，明确 Scrum 偏项目管理骨架；
+  - [[水晶系列方法]] 明确“方法家族 + 以人为中心 + 按项目和环境选择成员”，避免与 XP / Scrum 共性词混淆；
+  - [[特征驱动开发FDD]] 明确“整体对象模型 → 特征列表 → 计划特征 → 特征设计 → 特征构建”，并把“特征”解释为客户可理解的有意义小能力；
+  - 敏捷学习链固定为：[[极限编程XP]] → [[Scrum迭代管理]] → [[水晶系列方法]] → [[特征驱动开发FDD]]；
+  - [[CMMI成熟度等级]] 明确切换观察层级：前述方法回答“一个项目怎样开发”，CMMI 回答“组织的软件过程能力成熟到什么程度”；
+  - CMMI 五级主链收敛为“1 靠人 → 2 管项目 → 3 立组织标准 → 4 用数据预测 → 5 持续优化”，重点强化 2/3 与 3/4 边界；
+  - 明确 Scrum/敏捷与 CMMI 不互斥，因为二者不在同一分类轴；
+  - CMMI 下一站修正为真正的需求工程入口 [[需求层次与非功能需求]]，不再跳过需求层次；
+  - 五篇均补齐 `difficulty`、`review_status: 待复习`、优先级元数据及本批质量状态。
+- 证据：
+  - 主教材 PDF 195–197：敏捷共同特点/核心思想，以及 XP、水晶、Scrum、FDD 的教材识别点；
+  - 2021-H2-综合知识-27：直接考敏捷“适应型 / 以人为本 / 迭代增量”共同思想；
+  - 主教材 PDF 200–201：CMMI 五级成熟度及各级能力变化；
+  - 2021-H2-综合知识-22、2022-H2-综合知识-23：确认 CMMI 仍为实际考试主题；对 OCR 损坏选项不作为事实源。
+- Atom / coverage：
+  - 本批未发现需要把历史 covered 退回 partial 的事实缺口；
+  - 全章历史 `44 covered + 1 legal link_only` 不变。
+- 导航：
+  - 现有章节索引/学习路线本来已经按“XP、Scrum、水晶、FDD → CMMI → 需求工程”组织，无需额外修改；
+  - 本批正文已补齐连续上一站 / 下一站。
+- 并发：五次正文写入前和批次关键提交之间均复核远端 HEAD；未发现覆盖型并发修改。
+- 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
+- 下一轮：`SE-UX-03-REQ`（需求层次、需求开发/管理、获取、规格与确认验证、变更控制、双向追踪；把“先把需求弄清楚 → 再把已形成需求管住”串成完整主线）。
+- 下下轮：`SE-UX-04-STRUCT`。
