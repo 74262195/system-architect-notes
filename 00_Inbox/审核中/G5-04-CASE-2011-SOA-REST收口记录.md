@@ -6,7 +6,7 @@ batch: G5-04-CASE-2011-SOA-REST
 status: closed
 start_head: a341fea539dfefb9d33f08599400e8f90a6577d7
 updated: 2026-09-21
-next_batch: G5-05-CASE-NEXT
+next_batch: G5-05-CASE-RELIABILITY-NEXT
 tags: [软考/架构设计师, G5, 案例分析, SOA, REST, 收口]
 ---
 
@@ -75,4 +75,4 @@ GitHub 连接环境不能执行本地 `node scripts/check-vault.mjs` 与 `git di
 
 下一唯一批次：
 
-> **G5-05-CASE-NEXT**：重新从最新 main 启动，优先寻找可靠性/高可用、嵌入式实时约束、系统集成治理或其他尚未形成代表样本且文本证据完整的案例。继续 G5，不进入论文阶段。
+> **G5-05-CASE-RELIABILITY-NEXT**：重新从最新 main 启动，优先核验可靠性/高可用候选案例，选择文本证据完整且能形成独立答题动作的题目；已有软件可靠性理论只回链，不复制正文。继续 G5，不进入论文阶段。
