@@ -5,9 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
-current_batch: SE-UX-09-NAV
-last_completed: SE-UX-08-PM
-last_batch_commit: cf9ad2121b25764903df091261d79398e697e366
+current_batch: SE-UX-10-REVIEW
+last_completed: SE-UX-09-NAV
+last_batch_commit: f1b961b64673349d899a124b84e75707c2f17e37
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
