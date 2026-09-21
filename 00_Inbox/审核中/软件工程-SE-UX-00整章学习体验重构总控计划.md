@@ -5,9 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
-current_batch: SE-UX-01C-PROT-COMP
-last_completed: SE-UX-01B-ITER-SPIRAL
-last_batch_commit: 5ecc96d0a7a181a8d32237fe098d7dfb1d0a2473
+current_batch: SE-UX-02A-RUP
+last_completed: SE-UX-01C-PROT-COMP
+last_batch_commit: d71ffa7c5721fc1cf6afd2805e0f27a38388f1b7
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -303,3 +303,36 @@ SE-UX 收口后，**恢复执行运行时最新 [[全库补全总控计划]] 的
 - 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
 - 下一轮：`SE-UX-01C-PROT-COMP`（原型 + 构件组装，并核验疑似幽灵链接 `[[原型法]]`）。
 - 下下轮：`SE-UX-02A-RUP`。
+
+
+### SE-UX-01C-PROT-COMP（已完成）
+
+- 日期：2026-09-21
+- START_HEAD：`00ba2708a875cda361a7ae71ac50cd88193f092c`
+- 正文提交：
+  - `2947819dde859baa264ddb5f98e4da0454f327c0`：[[原型的去留与目标系统]]
+  - `d71ffa7c5721fc1cf6afd2805e0f27a38388f1b7`：[[构件组装模型]]
+- 修改：
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/原型的去留与目标系统.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/构件组装模型.md`
+- 结果：
+  - [[原型的去留与目标系统]] 从“依赖不存在的 [[原型法]]”改为可独立阅读入口，围绕“用户需求说不清 → 快速做可见样品 → 反馈使需求收敛”重建；
+  - 分清抛弃型与演化型：前者保留被澄清的需求、原型可废弃；后者让原型持续完善直至成为产品；
+  - 明确原型、迭代、螺旋虽然都可能反复修改，但驱动力分别是“澄清需求 / 改进或增加能力 / 风险分析”；
+  - [[构件组装模型]] 重建为“已有成熟能力 → 寻找候选构件 → 评估 → 必要时适配 → 组装/集成 → 验证”的过程模型入口；
+  - 明确构件复用会把工程重点从“全部实现”转向“选择、集成和验证”，并说明可获得构件有时会反向影响需求；
+  - 与第 06 节 CBSE 严格分层：本篇只讲“为什么采用构件式过程”；[[构件模型与容器]]、[[CBSE开发过程]]、[[构件组装方式]]、[[构件接口适配]] 保持后续唯一细节事实源；
+  - 两篇均补齐 `difficulty`、`review_status: 待复习`、`exam_priority`、`review_level`、`priority_reason`、`priority_updated` 与本批质量状态。
+- 幽灵链接：
+  - 启动时对 `[[原型法]]` 做远端代码搜索和同名文件搜索，均无命中；确认当前 main 无对应主事实源；
+  - 已从原型正文移除该幽灵前置，不新建同义重复卡。
+- 证据：
+  - 原型：大纲 PDF 42–43；主教材 PDF 193–194；
+  - 构件：大纲明确列构件组装模型；主教材 CBSE PDF 226–228 解释“购买/复用而非重新构造”及候选构件、需求调整、适配与组装；
+  - 2020-H2-综合知识-40 直接以“通过重用提高可靠性和易维护性”识别构件模型。
+- Atom：相关历史 Atom 继续 `covered`，全章历史 `44 covered + 1 legal link_only` 不变。
+- 导航：现有索引/学习路线原本已按“螺旋 → 原型 → 构件组装 → RUP”排列，无需额外修改；两篇正文已补齐真实上一站 / 下一站。
+- 并发：写入前及两次正文提交之间均复核远端 HEAD；未发现覆盖型并发修改。
+- 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
+- 下一轮：`SE-UX-02A-RUP`（RUP、RUP 九类工作流、RUP 四加一视图，严格分清阶段 / 工作流 / 架构视图三个维度）。
+- 下下轮：`SE-UX-02B-AGILE-CMMI`。
