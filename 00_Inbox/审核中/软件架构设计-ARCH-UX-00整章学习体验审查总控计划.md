@@ -5,11 +5,11 @@ chapter: 软件架构设计
 topic: 整章学习体验审查与必要优化
 task_id: ARCH-UX
 status: active
-current_batch: ARCH-UX-03-REUSE-DSSA
-last_completed: ARCH-UX-02-STYLE
+current_batch: ARCH-UX-04-NAV
+last_completed: ARCH-UX-03-REUSE-DSSA
 baseline_commit: 5630e6b455c7e91de7b29b795fcdceb7db5243a0
 last_batch_start: 43199e99e59d60e36ff3bce67f12328ddf630f10
-last_batch_commit: 01bf759c58b8db11ad46c228b725d92f083517b4
+last_batch_commit: 25f181df012f7df6820408229dd4e53658011146
 historical_coverage: "34 = 32 covered + 2 legal link_only（ARCH-A005 / ARCH-A008）"
 created: 2026-09-21
 updated: 2026-09-21
