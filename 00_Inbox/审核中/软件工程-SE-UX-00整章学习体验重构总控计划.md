@@ -4,10 +4,10 @@ subject: 系统架构设计师
 chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
-status: active
-current_batch: SE-UX-10-REVIEW
-last_completed: SE-UX-09-NAV
-last_batch_commit: f1b961b64673349d899a124b84e75707c2f17e37
+status: closed
+current_batch: CLOSED
+last_completed: SE-UX-10-REVIEW
+last_batch_commit: 4c9ed14b45a12c47c55a0aeeaa3db38dcc3a4a49
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -84,8 +84,8 @@ tags:
 | **SE-UX-06-TEST** | 04_软件测试 13 张卡 | **已完成**：建立测试分类坐标，避免不同分类轴串层 |
 | **SE-UX-07-CLEAN-CBSE** | 净室 2 张 + CBSE 4 张 | **已完成**：保留净室机制正文，补齐净室 → 盒子结构 → CBSE 构件/过程/组装/适配连续链 |
 | **SE-UX-08-PM** | 项目管理 7 张卡 | **已完成**：建立“管理范围 → WBS → 进度 → SCM/版本/基线 → SQA → 风险”连续链 |
-| SE-UX-09-NAV | 索引、学习路线、优先级、链接、frontmatter | 同步真实学习顺序；清理死链、旧 quality/source 和元数据 |
-| SE-UX-10-ACCEPT | 全章一次联合验收 | 核验学习链、样例门槛、主事实源、链接和历史 coverage |
+| **SE-UX-09-NAV** | 索引、学习路线、优先级、链接、frontmatter | **已完成**：同步零基础学习顺序与复习/覆盖入口 |
+| **SE-UX-10-REVIEW** | 全章一次联合验收 | **已完成**：零基础学习链、考试闭环、唯一事实源与历史 coverage 联合验收通过 |
 
 ## 四、每轮固定执行规则
 
@@ -167,6 +167,17 @@ tags:
 - 检查：远端回读完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
 - 下一轮：`SE-UX-06-TEST`。
 - 下下轮：`SE-UX-07-CLEAN-CBSE`。
+
+
+### SE-UX-10-REVIEW（已完成）
+
+- START_HEAD：`3e68263ea1375955bc45bcf57b994d93181b1511`。
+- 第一轮（零基础学习体验）：索引与学习路线已形成“定位 → 过程 → 需求 → 分析设计/UML/OOP → 测试 → 净室 → CBSE → 项目管理”的连续主链；代表入口、测试分类坐标、RUP 三维边界与项目管理收口均可顺读。
+- 第二轮（考试闭环与事实源）：历史 `SE-A001–SE-A045 = 44 covered + 1 legal link_only（SE-A009）` 保持；RUP 4+1 继续只做语境定位并链接软件架构主事实源，没有复制第二套完整正文。
+- 第三轮（结构/元数据）：发现导航仍残留“原有 62 张卡 / P0 17 + P1 20 + P2 25”历史统计，容易与当前 45 Atom 和目录文件数混淆；已改为统一引用 [[软件工程基础知识-复习优先级]]，不再把旧卡片统计写成当前事实。
+- 本轮没有发现需要把 covered 退回 partial 的事实缺口；未新增 Atom。
+- 检查：当前 GitHub 连接器无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**；采用远端文件回读和控制面交叉核验，不把未执行写成通过。
+- SE-UX 退出条件满足，任务关闭。下一任务恢复运行时最新 [[全库补全总控计划]] 的 `current_priority`。
 
 ## 六、最终退出条件
 
