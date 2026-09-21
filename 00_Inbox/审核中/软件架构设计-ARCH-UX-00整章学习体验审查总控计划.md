@@ -4,12 +4,12 @@ subject: 系统架构设计师
 chapter: 软件架构设计
 topic: 整章学习体验审查与必要优化
 task_id: ARCH-UX
-status: active
-current_batch: ARCH-UX-06-ACCEPT
-last_completed: ARCH-UX-05-STRUCTURE
+status: closed
+current_batch: CLOSED
+last_completed: ARCH-UX-06-ACCEPT
 baseline_commit: 5630e6b455c7e91de7b29b795fcdceb7db5243a0
-last_batch_start: 43199e99e59d60e36ff3bce67f12328ddf630f10
-last_batch_commit: 9133639ebf2683c9bc7fca053b807bcb9ecfd2b3
+last_batch_start: 57225673542be7cfdabb0e1110485eeb29a353c3
+last_batch_commit: c9c096f45179a8c4b7884870361e883306cd4443
 historical_coverage: "34 = 32 covered + 2 legal link_only（ARCH-A005 / ARCH-A008）"
 created: 2026-09-21
 updated: 2026-09-21
@@ -121,6 +121,62 @@ START_HEAD：`d4f45531e3ccbb478789d438076663dc4b78c3fe`。
 - Atom / coverage 不变：`34 = 32 covered + 2 legal link_only + 0 partial + 0 unmapped`。
 - 所有发生内容调整的学习笔记保持 `review_status: 待复习`。
 - 当前 GitHub 连接器无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` 未执行；最终联合验收仍需做远端结构、链接和正文抽查。
+
+
+## ARCH-UX-06 最终联合验收
+
+START_HEAD：`57225673542be7cfdabb0e1110485eeb29a353c3`。
+
+### 覆盖与结构
+
+- 当前核心目录为连续 `01～08`：软件架构是什么 → 生命周期 → 架构描述 → 4+1 → ABSD → 软件架构风格 → 架构复用 → DSSA。
+- `06_软件架构风格/` 为独立子目录：`00` 总览 + `01～05` 五类并列风格；不再使用 `04A～04E` 施工编号。
+- `09_扩展/` 只保留设计模式、SOA 与 REST 两张扩展骨架，不进入第一次学习主线。
+- 联合覆盖矩阵保持 `ARCH-A001～ARCH-A034 = 32 covered + 2 legal link_only + 0 partial + 0 unmapped`。
+- 两条合法 link_only 继续成立：`ARCH-A005 → UML用例图`；`ARCH-A008 → UML总览等 UML 主事实源`。
+- 所有核心 P0/P1/P2 Atom 均存在可独立阅读正文；本轮目录重排未新增 stable Atom，也未制造重复主事实源。
+
+### 正向 / 反向核验
+
+- Atom → 主事实源：联合覆盖矩阵中的 34 条 ARCH 映射均能落到当前物理文件或合法跨章主源。
+- 主事实源 → Atom：核心 01～08 与 06 风格子卡均仍服务于既有 ARCH Atom；09 扩展明确不计入核心 Atom。
+- 学习主线逐站回读通过：
+  `01 → 02 → 03 → 04 → 05 → 06 风格 → 07 → 08 → 下一章质量属性与架构评估`。
+- 06 风格内部导航通过：总览 → 数据流 → 调用-返回 → 数据中心 → 虚拟机 → 独立构件 → 回总览 → 07 架构复用。
+
+### 本轮发现并修复的问题
+
+最终验收过程中发现目录重排后的跨章旧链接残留：
+
+- [[RUP四加一视图]] 原先仍指向旧 `02_软件架构视图...`，已修为 [[04_软件架构视图：为什么同一系统需要多个观察视角]]；提交 `57225673542be7cfdabb0e1110485eeb29a353c3`。
+- [[RUP]] 也残留同一旧链接，已修复；提交 `e290d0d466a47ed1496ebc10f7c616e9b025b106`。
+- 独立构件风格页的“04 总览”旧显示文字已改为“风格总览”；提交 `1f512318a773f924f5bfada8c7e8ae5e49feb3b8`。
+- 3 份历史控制文档中的旧架构 wikilink 已同步新名称；只调整导航引用，不改变历史事实语义。末次提交 `c9c096f45179a8c4b7884870361e883306cd4443`。
+
+### 软考可用性与学习体验
+
+- 本章开头能先回答“为什么需要架构层”，再进入生命周期、描述、多视图与 ABSD，不再从术语堆砌起步。
+- 4+1 保持软件架构章节唯一主事实源；RUP 章节只保留 RUP 语境定位与 link_only。
+- 架构风格五类明确为并列分类，不会因目录编号产生“按阶段演化”的误读。
+- 05/06 原有胖卡已经减负：一般复用与 DSSA 都保留考试闭环，同时显著缩短重复场景、重复总结和低价值展开。
+- 索引只承担学习入口职责，不再混入 SW-09C 等历史施工状态。
+- 所有本轮发生正文/导航修改的学习笔记保持 `review_status: 待复习`；09 扩展仍为 `status: 待生成` 的扩展骨架，不进入复习队列。
+
+### 检查与限制
+
+- 已做远端目录树回读、核心正文导航回读、软件工程 RUP 跨章链接检查、关键覆盖矩阵和相关控制面旧链接检查。
+- GitHub 代码搜索对本私有仓库未返回可靠内容结果，因此不能把它当作“全库文本 grep 已通过”。本轮用已知跨章入口、软件工程 RUP、ARCH 相关控制面、案例正文和核心章节进行定点反向检查。
+- 当前 GitHub 连接器无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**，不得记为通过。
+
+### 最终结论
+
+`01_综合知识/06_软件架构设计/` 本次 ARCH-UX 学习体验审查、减负、目录重排与联合验收 **CLOSED**。
+
+coverage 最终保持：
+
+`34 stable = 32 covered + 2 legal link_only + 0 partial + 0 unmapped`。
+
+本任务不再覆盖全局主线。运行时 [[全库补全总控计划]] 的 `current_priority` 仍为 `G5-03-CASE-NEXT`；该值可能落后于实际案例建设历史，下一次恢复全局任务时必须重新从最新 main 建立事实，不能直接按旧优先级执行。
 
 ## 执行规则
 
