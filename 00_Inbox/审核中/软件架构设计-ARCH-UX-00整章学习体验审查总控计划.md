@@ -5,11 +5,11 @@ chapter: 软件架构设计
 topic: 整章学习体验审查与必要优化
 task_id: ARCH-UX
 status: active
-current_batch: ARCH-UX-04-NAV
-last_completed: ARCH-UX-03-REUSE-DSSA
+current_batch: ARCH-UX-05-ACCEPT
+last_completed: ARCH-UX-04-NAV
 baseline_commit: 5630e6b455c7e91de7b29b795fcdceb7db5243a0
 last_batch_start: 43199e99e59d60e36ff3bce67f12328ddf630f10
-last_batch_commit: 25f181df012f7df6820408229dd4e53658011146
+last_batch_commit: dfa7a4603625103f089d3f464d714177d187a969
 historical_coverage: "34 = 32 covered + 2 legal link_only（ARCH-A005 / ARCH-A008）"
 created: 2026-09-21
 updated: 2026-09-21
@@ -62,8 +62,8 @@ coverage：`34 stable = 32 covered + 2 legal link_only + 0 partial + 0 unmapped`
 | ARCH-UX-01-FOUNDATION | 01 / 01A / 01B / 02 / 03 | **已完成**：01～01B 无真实问题不机械改；02、03完成主线修复和减负 |
 | **ARCH-UX-02-STYLE** | 04 + 04A～04E | **当前**：明确五类并列关系；继续按“考试闭环后尽量短”审查；修复 04B / 04E 过时跨章状态 |
 | ARCH-UX-03-REUSE-DSSA | 05 / 06 | 复核“风格 → 复用 → DSSA → 质量属性评估”，并检查是否存在胖卡；无问题不改 |
-| ARCH-UX-04-NAV | 软件架构设计索引 | 清理历史施工状态，统一主线与扩展骨架边界 |
-| ARCH-UX-05-ACCEPT | 全章 | 一次联合验收 |
+| ARCH-UX-04-NAV | 软件架构设计索引 | **已完成**：学习入口减负、清理历史施工状态、统一核心主线与扩展骨架边界 |
+| **ARCH-UX-05-ACCEPT** | 全章 | **当前批次**：一次联合验收 |
 
 ## ARCH-UX-01 执行记录
 
@@ -76,6 +76,20 @@ START_HEAD：`43199e99e59d60e36ff3bce67f12328ddf630f10`。
 - 导航：02 → 03、03 → 04 已同步；未新增主事实源。
 - 并发：START_HEAD 后未发现外部并发提交；本批次 HEAD 变化来自本批次自身写入。
 - `node scripts/check-vault.mjs`、`git diff --check`：当前连接器环境无法执行，明确记为**未执行**。
+
+
+## ARCH-UX-04 执行记录
+
+START_HEAD：`b3344d42fe8083598bfaa7f936c022d79cbe1d0d`。
+
+- [[软件架构设计索引]] 从约 5913 字符 / 145 行缩减为约 2674 字符 / 105 行，删除历史 SW-09C 施工状态、逐卡旧审查记录和重复控制面信息。
+- 索引现在只承担学习入口职责：第一次学习主线、每站主问题、04A～04E 并列关系、三组易混边界、扩展骨架边界、考试第一动作与证据入口。
+- 核心下一站明确为 [[01_综合知识/07_系统质量属性与架构评估/系统质量属性与架构评估索引|系统质量属性与架构评估]]；07/08 明确为可跳过的扩展骨架。
+- UML / Use Case 与根级架构理论继续保持唯一主事实源，不复制第二套正文。
+- Atom / coverage：无变化，仍为 `34 = 32 covered + 2 legal link_only + 0 partial + 0 unmapped`。
+- 修改索引保持 `review_status: 待复习`。
+- 检查：当前 GitHub 连接器无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` 未执行；已做远端回读，不把回读冒充本地检查通过。
+- 本批正文提交：`dfa7a4603625103f089d3f464d714177d187a969`。
 
 ## 执行规则
 
