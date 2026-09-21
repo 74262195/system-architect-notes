@@ -4,12 +4,19 @@ subject: 系统架构设计师
 chapter: 大数据架构
 topic: Lambda架构
 atom_id: ARCH-BIG-A002
-exam_priority: 待评估
+exam_priority: P0
+review_level: 重点
+priority_reason: "正式 ARCH 契约将 Lambda 架构列为 P0；本卡承担批处理层、速度层、服务层及其协作边界"
+priority_updated: 2026-09-21
 build_level: P1
 status: coverage_complete
 difficulty: 核心
 review_status: 待复习
 updated: 2026-09-21
+source:
+  - 系统架构第二版考试大纲 PDF 71
+  - 系统架构设计师教程（第2版）PDF 697-701
+tags: [软考/架构设计师, 大数据架构, Lambda, 批处理, 流处理]
 ---
 
 # Lambda 架构：为什么同时保留批处理层和速度层
@@ -47,6 +54,9 @@ flowchart LR
 ### 批处理层
 
 保存完整、不可随意丢失的历史数据，并周期性对全量数据重新计算。它的优势是：历史逻辑可以重放，错误结果可以通过重新计算修正。
+
+> [!note] 批处理层的主数据集
+> 教材强调主数据集应尽量保持**原始、不可变、真实**。这样算法或程序出错后，可以回到原始事实重新计算，而不是在已经被覆盖的数据上继续修补。
 
 ### 速度层
 
