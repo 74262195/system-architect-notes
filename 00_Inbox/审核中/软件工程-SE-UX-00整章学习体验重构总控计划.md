@@ -5,9 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
-current_batch: SE-UX-01B-ITER-SPIRAL
-last_completed: SE-UX-01A-WATERFALL
-last_batch_commit: b98360619d663ab1070fdeb07a45d069e829e80f
+current_batch: SE-UX-01C-PROT-COMP
+last_completed: SE-UX-01B-ITER-SPIRAL
+last_batch_commit: 5ecc96d0a7a181a8d32237fe098d7dfb1d0a2473
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -273,3 +273,33 @@ SE-UX 收口后，**恢复执行运行时最新 [[全库补全总控计划]] 的
 - 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
 - 下一轮：`SE-UX-01B-ITER-SPIRAL`。
 - 下下轮：`SE-UX-01C-PROT-COMP`。
+
+
+### SE-UX-01B-ITER-SPIRAL（已完成）
+
+- 日期：2026-09-21
+- START_HEAD：`e5499829bebab19101f80bd4fcce8b344b7f2975`
+- 正文提交：
+  - `583b321d983467b75559df288ae5a18796b0c88d`：[[迭代与增量模型]]
+  - `5ecc96d0a7a181a8d32237fe098d7dfb1d0a2473`：[[螺旋模型]]
+- 修改：
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/迭代与增量模型.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/螺旋模型.md`
+- 结果：
+  - 将“迭代 = 反复修正/细化已有结果”“增量 = 增加新的可用能力”拆成两个观察角度，并明确二者可以同时存在；
+  - 明确“多轮开发 ≠ 螺旋”，螺旋的核心是每轮按“目标设定 → 风险分析 → 开发和有效性验证 → 评审”推进；
+  - 明确普通风险管理不等于螺旋，只有风险分析成为每轮核心驱动力时才构成稳定题眼；
+  - 主动说明教材顺序为“原型 → 螺旋”，本库采用“迭代/增量 → 螺旋 → 原型”只是教学辨析顺序，不伪装成教材编排；
+  - 两篇均补齐 `difficulty`、`review_status: 待复习`、`review_level`、`priority_updated` 与当前批次质量状态。
+- 证据：
+  - 大纲明确列出增量模型、螺旋模型；
+  - 主教材 PDF 197/200 明确展开迭代增量机制；
+  - 主教材 PDF 194–195 明确螺旋四项活动；
+  - 2022-H2-综合知识-22 直接考增量式开发的早交付/早反馈；
+  - 2020-H2-综合知识-39 直接以四项活动识别螺旋模型。
+- Atom：相关历史 Atom 继续 `covered`，全章历史 `44 covered + 1 legal link_only` 不变。
+- 导航：现有学习路线和索引本来已按“瀑布 → 迭代/增量 → 螺旋 → 原型”排列，无需额外修改；两篇正文已补齐真实上一站 / 下一站。
+- 并发：写入前和两次正文提交之间均复核远端 HEAD；未发现覆盖型并发修改。
+- 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
+- 下一轮：`SE-UX-01C-PROT-COMP`（原型 + 构件组装，并核验疑似幽灵链接 `[[原型法]]`）。
+- 下下轮：`SE-UX-02A-RUP`。
