@@ -3,6 +3,7 @@ type: 考点
 subject: 系统架构设计师
 chapter: 安全架构
 topic: 数据库安全设计评估标准
+atom: ARCH-SEC-A007
 status: 学习中
 review_status: 待复习
 difficulty: 2
