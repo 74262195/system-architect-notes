@@ -5,9 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
-current_batch: SE-UX-02A-RUP
-last_completed: SE-UX-01C-PROT-COMP
-last_batch_commit: d71ffa7c5721fc1cf6afd2805e0f27a38388f1b7
+current_batch: SE-UX-02B-AGILE-CMMI
+last_completed: SE-UX-02A-RUP
+last_batch_commit: 76754d4c3fd389bdadee892f703f4ab745e11cef
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -336,3 +336,39 @@ SE-UX 收口后，**恢复执行运行时最新 [[全库补全总控计划]] 的
 - 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
 - 下一轮：`SE-UX-02A-RUP`（RUP、RUP 九类工作流、RUP 四加一视图，严格分清阶段 / 工作流 / 架构视图三个维度）。
 - 下下轮：`SE-UX-02B-AGILE-CMMI`。
+
+
+### SE-UX-02A-RUP（已完成）
+
+- 日期：2026-09-21
+- START_HEAD：`6ae5e29c783d142f671fe1c57e418807f5737778`
+- 正文提交：
+  - `b3b9d65691cadaa30d4655d24968499dd814c0c9`：[[RUP]]
+  - `bb2e14118b9fe3864d69650f3197e71f63a6637b`：[[RUP九类工作流]]
+  - `76754d4c3fd389bdadee892f703f4ab745e11cef`：[[RUP四加一视图]]
+- 修改：
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/RUP.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/RUP九类工作流.md`
+  - `01_综合知识/04_软件工程基础知识/01_软件过程/RUP四加一视图.md`
+- 结果：
+  - [[RUP]] 重建“二维生命周期”坐标：横向四阶段负责时间推进，纵向九类工作流负责工作种类；明确 4+1 不是第三个生命周期轴；
+  - 四阶段按目标解释为“初始定范围 → 细化定架构 → 构造做产品 → 移交给用户”，并明确细化阶段也可以实现和测试、构造阶段也可以继续需求活动；
+  - 补齐 RUP 三个核心特点：用例驱动、以体系结构为中心、迭代和增量；里程碑用于判断阶段目标是否达到；
+  - [[RUP九类工作流]] 重新分为“六类工程工作流 + 三类支持工作流”，并用 2021-H2-综合知识-28 核验“成本管理不是独立核心工作流”；
+  - 明确工作流可以跨阶段出现，阶段只改变各工作流的投入比例与重点；
+  - [[RUP四加一视图]] 继续保持 legal link_only，只解释“为什么 4+1 在 RUP 中出现”，完整视图职责仍由软件架构主事实源 [[02_软件架构视图：为什么同一系统需要多个观察视角]] 维护；
+  - 修复原来的学习链回绕，当前顺序为：[[RUP]] → [[RUP九类工作流]] → [[RUP四加一视图]] → [[极限编程XP]]；
+  - 三篇均补齐 `difficulty`、`review_status: 待复习`、优先级元数据与本批质量状态。
+- 证据：
+  - 主教材 PDF 198–200：RUP 二维生命周期、九类工作流、四阶段、里程碑、角色/活动/制品/工作流、三大特点、4+1 与迭代增量；
+  - 2021-H2-综合知识-28：直接考 RUP 九类工作流；
+  - 2021-H2-综合知识-46–47：直接考 4+1 视图职责，用于证明跨章主事实源的考试价值。
+- Atom / coverage：
+  - 本批未发现需要把 covered 退回 partial 的事实缺口；
+  - `SE-A009` 的 4+1 继续保持 legal link_only，不复制第二套完整正文；
+  - 全章历史 `44 covered + 1 legal link_only` 不变。
+- 导航：现有章节索引与学习路线原本已按“RUP → RUP九类工作流 → RUP四加一视图”排列，无需额外修改；正文上一站 / 下一站已与其一致。
+- 并发：启动、三次正文写入之间均复核远端 HEAD；未发现覆盖型并发修改。
+- 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
+- 下一轮：`SE-UX-02B-AGILE-CMMI`（XP、Scrum、水晶、FDD、CMMI；先建立敏捷总坐标，再把 CMMI 从“项目开发方法”切回“组织过程成熟度”）。
+- 下下轮：`SE-UX-03-REQ`。
