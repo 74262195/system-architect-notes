@@ -2,17 +2,25 @@
 type: 考点
 subject: 系统架构设计师
 chapter: 软件工程基础知识
-topic: 面向对象设计 OOD
-source: 官方考试大纲；系统架构设计师教程（第2版）
+topic: 面向对象设计OOD
+difficulty: 基础
+source:
+  - 官方教材/系统架构第二版 大纲.pdf（PDF 44）
+  - 官方教材/系统架构设计师教程第二版可搜索.pdf（PDF 218–219）
+textbook_pages: "218–219"
 status: 学习中
+review_status: 待复习
 created: 2026-09-06
-updated: 2026-09-09
+updated: 2026-09-21
+exam_priority: P2
+review_level: 了解
+priority_reason: "现行大纲明确面向对象设计；核心价值是区分 OOA 的问题域理解、OOD 的职责/接口/协作设计与 OOP 的编码实现"
+priority_updated: 2026-09-21
 tags:
-  - 软考
-  - 系统架构设计师
-  - 软件工程
-  - 面向对象
-quality_status: 审核补齐
+  - 系统架构师
+  - 系统架构师/软件工程
+  - 系统架构师/软件工程/03_分析与设计
+quality_status: SE-UX-05-OO-UML
 ---
 
 # 面向对象设计OOD
@@ -92,3 +100,9 @@ OOD 已经想清楚：有用户、订单、支付接口；订单服务会调用�
 > > [!answer]- 第 2 题答案与解析
 > > **答案**：OOD 负责设计内容，UML 负责统一表达这些内容。
 > > **解析**：UML 是建模语言，不是额外的开发阶段或 OOD 本身。
+
+
+## 上一站 / 下一站
+
+- **上一站**：[[面向对象分析OOA]] —— 已经识别问题域中的对象和关系；本篇把分析结果进一步组织成软件职责、接口和协作。
+- **下一站**：[[UML总览]] —— OOD 负责“设计什么”，UML 负责“怎样按统一规则表达这些分析和设计结果”；UML 不是额外开发阶段。
