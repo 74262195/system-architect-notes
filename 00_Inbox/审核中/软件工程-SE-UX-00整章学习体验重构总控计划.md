@@ -5,6 +5,9 @@ chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
 status: active
+current_batch: SE-UX-01B-ITER-SPIRAL
+last_completed: SE-UX-01A-WATERFALL
+last_batch_commit: b98360619d663ab1070fdeb07a45d069e829e80f
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
@@ -254,3 +257,19 @@ SE-UX 只有在以下条件同时满足时才收口：
 - 历史 coverage 若无事实退回，仍保持 `44 covered + 1 legal link_only`。
 
 SE-UX 收口后，**恢复执行运行时最新 [[全库补全总控计划]] 的 `current_priority`**。不得继续沿用启动 SE-UX 前某个旧自动任务里写死的“安全架构/案例”等文字。
+
+
+## 十、执行进度
+
+### SE-UX-01A-WATERFALL（已完成）
+
+- 日期：2026-09-21
+- START_HEAD：`aee7401448bc3d68edfa47ff44c2a487141d4422`
+- 正文提交：`b98360619d663ab1070fdeb07a45d069e829e80f`
+- 修改：`01_综合知识/04_软件工程基础知识/01_软件过程/瀑布模型.md`
+- 结果：补齐“过程模型上位坐标 → 瀑布阶段依赖 → 晚期返工原因 → 生命周期术语边界 → 迭代/增量下一站”；新增 `review_status: 待复习` 与必要 frontmatter。
+- Atom：`SE-A002` 继续 `covered`，历史 coverage 不变。
+- 导航：章节索引原本已按“瀑布 → 迭代/增量 → 螺旋”排列，无需额外修改；正文下一站已纠正为 [[迭代与增量模型]]。
+- 检查：远端回读已完成；当前 GitHub 连接器环境无本地工作树，`node scripts/check-vault.mjs` 与 `git diff --check` **未执行**。
+- 下一轮：`SE-UX-01B-ITER-SPIRAL`。
+- 下下轮：`SE-UX-01C-PROT-COMP`。
