@@ -4,12 +4,19 @@ subject: 系统架构设计师
 chapter: 大数据架构
 topic: Lambda与Kappa选择
 atom_id: ARCH-BIG-A004
-exam_priority: 待评估
+exam_priority: P0
+review_level: 重点
+priority_reason: "正式 ARCH 契约将 Lambda/Kappa 对比与设计选择列为 P0；主教材单列特性对比与设计选择"
+priority_updated: 2026-09-21
 build_level: P1
 status: coverage_complete
 difficulty: 核心
 review_status: 待复习
 updated: 2026-09-21
+source:
+  - 系统架构第二版考试大纲 PDF 71
+  - 系统架构设计师教程（第2版）PDF 706-708
+tags: [软考/架构设计师, 大数据架构, Lambda, Kappa, 架构选型]
 ---
 
 # Lambda 与 Kappa：怎样根据重算和实时需求做选择
@@ -54,6 +61,20 @@ updated: 2026-09-21
 ### 4. 团队能否承受双链路复杂度？
 
 Lambda 的问题不只是机器多，而是同一业务含义可能在批、流两套实现中漂移。团队若更看重统一逻辑，Kappa 的吸引力更大。
+
+## 教材选型时重点看哪四类因素
+
+主教材把设计选择归纳为四类主要因素：
+
+1. **业务需求与技术要求**：如果场景天然依赖离线批处理能力，Lambda 更直接；如果主要是流式数据并希望统一流处理逻辑，Kappa 更合适。
+2. **系统复杂度**：算法或模型经常变化时，Lambda 可能需要同时修改批、流两套实现；Kappa 一套处理逻辑更容易保持一致。
+3. **开发维护成本**：Lambda 要开发、部署、测试和维护两套处理链；Kappa 通常只维护一套主链。
+4. **历史数据处理能力**：频繁对超大规模历史数据做全量分析，更偏向 Lambda；历史回放规模可控时，Kappa 更有优势。
+
+教材还特别给出一种边界：如果业务必须“**先离线批量训练模型，再把模型交给实时流做验证/预测**”，批处理与流处理职责无法简单合并，这类场景更适合保留 Lambda 的两条路径。
+
+> [!warning]
+> “两者都支持实时”不能作为选型依据；教材也没有把“计算开销”作为最主要的设计选择因素。
 
 ## 题干决策链
 
