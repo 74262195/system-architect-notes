@@ -18,7 +18,7 @@ tags: [软考/架构设计师, ARCH, 案例, OPT-01]
 | --- | --- | --- | --- | --- | --- | --- |
 | CASE-IS-01 | 信息系统架构 | 价值驱动的体系结构 | ARCH-IS-A001、ARCH-IS-A003、ARCH-IS-A004 | 从业务价值定位总体架构决策 | [[06_架构设计理论与实践/01_信息系统架构/信息系统架构索引|信息系统架构]]；G5 正文训练待最终 gate 后恢复 | mapped / theory_ready / content_pending |
 | CASE-IS-02 | 信息系统架构 | Web 服务在 HL7 上的应用 | ARCH-IS-A002、ARCH-SOA-A004、ARCH-SOA-A006 | 识别标准接口、消息与集成职责 | [[06_架构设计理论与实践/01_信息系统架构/信息系统架构索引|信息系统架构]] / [[06_架构设计理论与实践/04_面向服务架构_SOA/面向服务架构索引|SOA]]；G5 正文训练待最终 gate 后恢复 | mapped / theory_ready / content_pending |
-| CASE-IS-03 | 信息系统架构 | 以服务为中心的企业整合 | ARCH-IS-A002、ARCH-SOA-A001、ARCH-SOA-A006 | 从信息孤岛选择服务化与 ESB | [[06_架构设计理论与实践/01_信息系统架构/信息系统架构索引|信息系统架构]] / [[06_架构设计理论与实践/04_面向服务架构_SOA/面向服务架构索引|SOA]]；G5 正文训练待最终 gate 后恢复 | mapped / theory_ready / content_pending |
+| CASE-IS-03 | 信息系统架构 | 以服务为中心的企业整合 | ARCH-IS-A002、ARCH-SOA-A001、ARCH-SOA-A006 | 从信息孤岛选择服务化与 ESB | [[06_架构设计理论与实践/01_信息系统架构/信息系统架构索引|信息系统架构]] / [[06_架构设计理论与实践/04_面向服务架构_SOA/面向服务架构索引|SOA]]；代表训练：[[02_案例分析/2018年下半年/试题五-异构银行系统SOA与ESB集成|2018 试题五]] | mapped / theory_ready / representative_case_linked |
 | CASE-LAY-01 | 层次式架构 | 电子商务网站 | ARCH-LAY-A001、ARCH-LAY-A002、ARCH-LAY-A004、ARCH-LAY-A005 | 把表示、业务、访问和数据职责分层 | [[06_架构设计理论与实践/02_层次式架构/层次式架构索引|层次式架构]]；G5 正文训练待最终 gate 后恢复 | mapped / theory_ready / content_pending |
 | CASE-LAY-02 | 层次式架构 | 基于物联网架构的电子小票服务系统 | ARCH-LAY-A008、ARCH-LAY-A001 | 识别物联网三层与应用分层关系 | [[06_架构设计理论与实践/02_层次式架构/层次式架构索引|层次式架构]]；G5 正文训练待最终 gate 后恢复 | mapped / theory_ready / content_pending |
 | CASE-CN-01 | 云原生架构 | 某旅行公司云原生改造 | ARCH-CN-A001、ARCH-CN-A002、ARCH-CN-A003、ARCH-CN-A004 | 从单体痛点选择服务化、容器与自动化 | [[06_架构设计理论与实践/03_云原生架构/云原生架构索引|云原生架构]]；G5 正文训练待最终 gate 后恢复 | mapped / theory_ready / content_pending |
