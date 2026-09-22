@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-12-MATH-02A
+current_priority: QH2-12-MATH-02B
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -80,7 +80,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 - [x] `QH2-09-EVO-02`：已为 16 篇补 1 道高价值自测及折叠答案解析，16 篇均已标 `review_status: 待复习`；不重写正文。
 - [x] `QH2-09-EVO-ACCEPT`：16 个 Atom 联合验收通过，约束修改边界已修正并复查；记录见 [[软件架构的演化和维护-QH2联合验收]]。
 - [x] `QH2-12-MATH-01`：16 篇逐篇复核完成，13 篇通过、3 篇有真实操作链缺口，见 [[应用数学-QH2逐篇质量矩阵]]。
-- [ ] `QH2-12-MATH-02A`：定点补 A011 顶点来源、A015 一轮模拟状态更新、A016 带数字建模验算，并修章节索引的专业英语下一站矛盾。
+- [x] `QH2-12-MATH-02A`：已定点补 A011 顶点来源、A015 一轮模拟状态更新、A016 带数字建模验算，并修章节索引与 A016 的专业英语下一站矛盾；复查见 [[应用数学-QH2逐篇质量矩阵]]。
 - [ ] `QH2-12-MATH-02B`：16 篇各补 1～2 道高价值自测与折叠答案解析，改动篇目同步待复习状态。
 - [ ] `QH2-12-MATH-ACCEPT`：完成联合验收。
 
@@ -101,6 +101,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-12-MATH-02A`：只修应用数学 3 篇真实操作链缺口与 1 处导航矛盾。**
+> **`QH2-12-MATH-02B`：只为应用数学 16 篇补高价值自测与折叠答案解析，保留已通过的机制正文。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
