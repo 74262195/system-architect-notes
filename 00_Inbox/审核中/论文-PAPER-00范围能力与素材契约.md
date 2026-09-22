@@ -3,6 +3,8 @@ type: 论文范围契约
 subject: 系统架构设计师
 stage: PAPER-00-SCOPE-GATE
 status: PASS_WITH_MATERIAL_BLOCKER
+priority: P3_DEFERRED_LOWEST
+execution_state: paused_by_user
 atom_count: 37
 theory_ready: 37
 material_ready: 0
@@ -16,6 +18,9 @@ tags: [软考/架构设计师, 论文, PAPER-00, 范围契约]
 
 > [!important] 门禁结论
 > 论文考试范围已经建立为 5 个能力域、37 个稳定 Atom；现有综合知识与 ARCH 正文能够提供理论回链，但 `03_论文素材` 只有索引，没有可验证的真实项目背景、职责、决策、实施过程和效果证据。因此 `PAPER-00` 范围门禁通过，`PAPER-01-SAMPLE-GATE` 暂时被真实项目素材阻断。
+
+> [!note] 当前执行状态
+> 用户已要求论文暂不处理并调到最低优先级。本文继续作为未来恢复时的范围契约；`PAPER-01～PAPER-04` 当前均暂停，真实项目素材缺失不再阻断其他维护任务。
 
 ## 一、考试任务边界
 
