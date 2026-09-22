@@ -4,6 +4,8 @@ subject: 系统架构设计师
 chapter: 系统质量属性与架构评估
 topic: SAAM架构评估
 status: 学习中
+review_status: 待复习
+updated: 2026-09-22
 difficulty: 3
 source: 教材+历年真题
 aliases: [SAAM, Software Architecture Analysis Method]
@@ -41,6 +43,10 @@ flowchart LR
 ## 自测
 1. SAAM 中为什么要专门分析场景交互？
 2. SAAM 与 ATAM 的第一判断入口分别是什么？
+
+> [!answer]- 答案与解析
+> 1. 多个场景若修改同一构件或相互影响，架构支持一个场景的代价会影响其他场景，需要据此判断可修改性风险。
+> 2. SAAM 先看场景及其交互，尤其是可修改性；ATAM 先看多质量属性之间的权衡、敏感点和风险。
 
 ## 下一站
 - [[ATAM架构权衡分析]]

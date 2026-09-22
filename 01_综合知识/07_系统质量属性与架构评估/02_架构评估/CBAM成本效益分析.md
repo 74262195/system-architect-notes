@@ -4,6 +4,8 @@ subject: 系统架构设计师
 chapter: 系统质量属性与架构评估
 topic: CBAM成本效益分析
 status: 学习中
+review_status: 待复习
+updated: 2026-09-22
 difficulty: 4
 source: 教材+历年真题
 aliases: [CBAM, Cost Benefit Analysis Method]
@@ -51,6 +53,10 @@ flowchart LR
 ## 自测
 1. ROI 高为什么不等于绝对收益最大？
 2. CBAM 为什么通常建立在质量场景和架构策略分析基础上？
+
+> [!answer]- 答案与解析
+> 1. ROI 是收益相对成本的比率；小投入的小收益可能比大投入的大收益有更高比率。
+> 2. 先明确质量目标和候选策略，才能估计策略带来的效用、成本和投资回报，经济比较才有依据。
 
 ## 下一站
 - 前置：[[ATAM架构权衡分析]]

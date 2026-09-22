@@ -4,6 +4,8 @@ subject: 系统架构设计师
 chapter: 系统质量属性与架构评估
 topic: ATAM效用树
 status: 学习中
+review_status: 待复习
+updated: 2026-09-22
 difficulty: 3
 source: 教材+历年真题
 aliases: [效用树, Utility Tree]
@@ -40,6 +42,10 @@ flowchart LR
 ## 自测
 1. 为什么效用树不能用组件名称当叶子来理解？
 2. 效用树与 ATAM 的敏感点/权衡点分析是什么前后关系？
+
+> [!answer]- 答案与解析
+> 1. 叶子表示可分析、可排序的具体质量属性场景，不是实现组件清单。
+> 2. 效用树先选出重要场景和优先级；ATAM 再据此分析架构决策的敏感点、权衡点与风险。
 
 ## 下一站
 - [[CBAM成本效益分析]]
