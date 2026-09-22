@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-05-DB-03A
+current_priority: QH2-05-DB-03B
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-22
@@ -66,7 +66,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 - [x] `QH2-05-DB-01-SAMPLE`：以 MVC/MVP/MVVM 样例为门槛，重写 DB-A024 [[逻辑设计与完整性视图]]。
 - [x] `QH2-05-DB-02-AUDIT`：已在 [[数据库设计基础知识-QH2逐篇质量矩阵]] 完成 30 篇逐篇复核；14 篇通过、8 篇小修、7 篇正文补强、1 篇合法 `link_only`。
-- [ ] `QH2-05-DB-03-P0P1`：只修复 DB 审查中确认不合格的 P0/P1；每批保持同一主线，不把定义正确的卡机械拉长。
+- [ ] `QH2-05-DB-03-P0P1`：已完成 03A 的两篇 P2 代表补强；接下来只修复 DB 审查中确认不合格的数据库设计主线 03B，不把定义正确的卡机械拉长。
 - [ ] `QH2-05-DB-04-P2`：修复 P2 的旧自测格式、缺答案与必要的最小机制桥接；合法 `link_only` 只核验目标，不复制正文。
 - [ ] `QH2-05-DB-ACCEPT`：回填逐篇质量矩阵，并执行一次联合验收；未清零真实质量缺口前不得恢复 `quality_hardened`。
 - [ ] `QH2-07-QA-01`：先修复第 07 章 14 篇“自测无答案”的确定性缺陷，再检查 11 篇 `<80` 卡是否只剩摘要。
@@ -98,6 +98,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-05-DB-03A`：补强 [[数据模型三要素与分类]] 与 [[多值依赖与4NF]]，再进入数据库设计阶段的 03B。**
+> **`QH2-05-DB-03B`：按数据库设计主线补强 5 篇真实质量缺口，再处理 8 篇小修。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
