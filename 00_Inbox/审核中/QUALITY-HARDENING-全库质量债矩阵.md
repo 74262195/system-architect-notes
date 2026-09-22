@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-06-ARCH-FIX
+current_priority: QH2-06-ARCH-ACCEPT
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -87,7 +87,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 ### P2：以核验为主，不为了批次制造重写
 
 - [x] `QH2-06-ARCH-AUDIT`：13 篇逐篇核验完成；10 篇通过、2 篇旧式自测格式、1 篇坏锚点与重复句，见 [[软件架构设计-QH2逐篇质量矩阵]]。
-- [ ] `QH2-06-ARCH-FIX`：只修 04/05 两篇自测结构和风格 05 的导航/重复句，修后复查；不扩写机制正文。
+- [x] `QH2-06-ARCH-FIX`：04/05 共 6 题改为展开题干与题内二级折叠答案；风格 05 的坏锚点和重复句已修，复查见 [[软件架构设计-QH2逐篇质量矩阵]]。
 - [ ] `QH2-06-ARCH-ACCEPT`：修复后再做一次章节联合验收，不用本次审查代替验收。
 - [ ] `QH2-10-FUT-AUDIT`：核验未来技术的术语边界、闭环机制和自测；代表正文已接近样例，不预设大改。
 - [ ] `QH2-11-IPR-AUDIT`：核验标准化/知识产权的概念边界、法规时点和题干动作；只改经证据确认的内容。
@@ -103,6 +103,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-06-ARCH-FIX`：仅修软件架构设计 04/05 的题内折叠答案、风格 05 的坏锚点和重复句；其余 10 篇正文保留。**
+> **`QH2-06-ARCH-ACCEPT`：对软件架构设计做一次联合验收，重点复查本批 6 道自测的实际呈现风险、风格 05 回链及高风险事实，不重写已通过正文。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
