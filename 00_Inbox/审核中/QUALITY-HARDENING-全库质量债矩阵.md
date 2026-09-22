@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-08-REL-ACCEPT
+current_priority: QH2-09-EVO-01
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-22
@@ -75,7 +75,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 ### P1：后续章节按学习顺序复审
 
 - [x] `QH2-08-REL-01`：已逐篇审查 15 篇可靠性正文；机制无 `content_partial`，但 15 篇均缺自测解析，结论见 [[软件可靠性技术-QH2逐篇质量矩阵]]。
-- [ ] `QH2-08-REL-ACCEPT`：15 篇自测与状态已补齐，下一步完成联合验收。
+- [x] `QH2-08-REL-ACCEPT`：15 篇自测与状态已补齐，联合验收通过；记录见 [[软件可靠性技术-QH2联合验收]]。
 - [ ] `QH2-09-EVO-01`：检查 16 篇演化与维护正文的对象、消息、片段、约束、版本管理和度量主线；补主动回忆闭环。
 - [ ] `QH2-09-EVO-ACCEPT`：完成联合验收。
 - [ ] `QH2-12-MATH-01`：按“能否独立算完一次”审查 16 篇应用数学，逐篇核验适用条件、中间步骤、单位/变量、答案与验算。
@@ -98,6 +98,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-08-REL-ACCEPT`：依据 [[软件可靠性技术-QH2逐篇质量矩阵]] 完成一次章节联合验收。**
+> **`QH2-09-EVO-01`：审查软件架构演化和维护 16 篇正文的真实质量缺口，再决定是否施工。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
