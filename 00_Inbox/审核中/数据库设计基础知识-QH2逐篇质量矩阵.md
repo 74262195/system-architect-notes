@@ -3,9 +3,9 @@ type: 逐篇质量矩阵
 subject: 系统架构设计师
 chapter: 数据库设计基础知识
 batch: QH2-05-DB-02-AUDIT
-status: in_progress
+status: completed
 coverage_status: unchanged
-quality_status: repair_required
+quality_status: quality_pass
 updated: 2026-09-22
 tags: [软考/架构设计师, 数据库, 质量复审, QH2]
 ---
@@ -75,12 +75,12 @@ tags: [软考/架构设计师, 数据库, 质量复审, QH2]
 
 只处理自测答案、衔接和少量边界：[[数据库DB-DBMS-DBS]]、[[数据管理技术三个发展阶段]]、[[DBMS核心功能]]、[[数据库访问接口总览]]、[[嵌入式SQL与OCI]]、[[ODBC与JDBC]]、[[NoSQL分类与特点]]、[[NoSQL体系框架与适用场景]]。
 
-`quality_pass` 的 14 篇不为追求统一长度重复改写；`link_only_valid` 的 1 篇不复制完整机制。
+其余已通过正文不为追求统一长度重复改写；`link_only_valid` 的 1 篇不复制完整机制。
 
 ## 四、下一动作
 
 当前下一批：
 
-> **`QH2-05-DB-ACCEPT`：对本章执行一次联合验收，确认范围、教材事实和软考可用性。**
+> **`QH2-05-DB-ACCEPT`：已通过；一次联合验收记录见 [[数据库设计基础知识-QH2联合验收]]。**
 
-03A、03B、04 已分别校验；正文缺口和小修债已清零，进入一次联合验收。
+03A、03B、04 已分别校验；联合验收已通过，本章质量复审收口。

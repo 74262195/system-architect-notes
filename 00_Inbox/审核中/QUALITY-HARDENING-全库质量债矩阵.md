@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-05-DB-ACCEPT
+current_priority: QH2-07-QA
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-22
@@ -68,7 +68,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 - [x] `QH2-05-DB-02-AUDIT`：已在 [[数据库设计基础知识-QH2逐篇质量矩阵]] 完成 30 篇逐篇复核；14 篇通过、8 篇小修、7 篇正文补强、1 篇合法 `link_only`。
 - [x] `QH2-05-DB-03-P0P1`：已完成 03A 两篇与 03B 五篇正文补强；数据库设计主线的真实 `content_partial` 已清零。
 - [x] `QH2-05-DB-04-P2`：已修复 8 篇旧自测格式、缺答案与必要的最小机制桥接；合法 `link_only` 保持唯一事实源。
-- [ ] `QH2-05-DB-ACCEPT`：回填逐篇质量矩阵，并执行一次联合验收；未清零真实质量缺口前不得恢复 `quality_hardened`。
+- [x] `QH2-05-DB-ACCEPT`：已回填逐篇质量矩阵并完成一次联合验收；记录见 [[数据库设计基础知识-QH2联合验收]]。
 - [ ] `QH2-07-QA-01`：先修复第 07 章 14 篇“自测无答案”的确定性缺陷，再检查 11 篇 `<80` 卡是否只剩摘要。
 - [ ] `QH2-07-QA-ACCEPT`：抽查质量属性场景、ATAM/SAAM/CBAM 主线能否独立判断，并完成章节联合验收。
 
@@ -98,6 +98,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-05-DB-ACCEPT`：执行数据库基础知识一次联合验收，然后进入 QH2-07-QA。**
+> **`QH2-07-QA`：先修复第 07 章 14 篇“自测无答案”的确定性缺陷，再检查短卡是否只有摘要。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
