@@ -7,12 +7,13 @@ source: 官方教材与大纲校准
 textbook_pages: "262–264"
 status: 学习中
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-22
 exam_priority: P1
-review_level: 三轮审核通过
+review_level: 重点
 priority_reason: "新版大纲明确 NoSQL 四类与特点；近年数据库架构/NoSQL 仍有趋势信号。"
-priority_updated: 2026-09-06
-quality_status: 三轮审核通过
+priority_updated: 2026-09-22
+review_status: 待复习
+quality_status: DB-A018样例对齐-待复习
 ---
 
 # NoSQL 分类与特点
@@ -42,5 +43,8 @@ NoSQL 常被解释为 Non-Relational，也常理解为 Not Only SQL。考试中�
 
 ## 自测
 
-> [!question]- 业务最核心的问题是“查询两个人之间经过哪些关系节点可达”，哪类数据库模型最直观？
-> 图数据库。
+1. 业务最核心的问题是“查询两个人之间经过哪些关系节点可达”，哪类数据库模型最直观？
+
+> [!answer]- 第 1 题答案与解析
+> **答案**：图数据库。
+> **解析**：节点与边直接表达对象及其关系，适合路径和关联网络查询。

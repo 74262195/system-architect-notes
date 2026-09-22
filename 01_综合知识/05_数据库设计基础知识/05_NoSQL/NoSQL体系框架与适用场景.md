@@ -7,12 +7,13 @@ source: 官方教材与大纲校准
 textbook_pages: "263–264"
 status: 学习中
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-22
 exam_priority: P1
-review_level: 三轮审核通过
+review_level: 重点
 priority_reason: "新版大纲明确 NoSQL 体系框架与适应场景；用于从分类继续理解 NoSQL 系统分层。"
-priority_updated: 2026-09-06
-quality_status: 三轮审核通过
+priority_updated: 2026-09-22
+review_status: 待复习
+quality_status: DB-A018样例对齐-待复习
 ---
 
 # NoSQL 体系框架与适用场景
@@ -44,5 +45,8 @@ quality_status: 三轮审核通过
 
 ## 自测
 
-> [!question]- NoSQL 四层框架里，直接面向应用程序的一般是哪一层？
-> 接口层。
+1. NoSQL 四层框架里，直接面向应用程序的一般是哪一层？
+
+> [!answer]- 第 1 题答案与解析
+> **答案**：接口层。
+> **解析**：接口层向应用提供访问入口；底层持久化、分布和逻辑模型由它向下屏蔽。
