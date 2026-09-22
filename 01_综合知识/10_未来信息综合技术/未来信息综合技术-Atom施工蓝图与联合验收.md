@@ -4,7 +4,7 @@ subject: 系统架构设计师
 chapter: 未来信息综合技术
 topic: Atom施工蓝图与联合验收
 status: coverage_complete
-quality_status: quality_reaudit_pending_selftests
+quality_status: quality_reaudit_accept_pending
 source:
   - 系统架构设计师考试大纲（第二版）PDF 61
   - 系统架构设计师教程（第2版）PDF 385-418
@@ -14,7 +14,7 @@ tags: [未来信息综合技术, Atom蓝图, coverage]
 # 未来信息综合技术-Atom施工蓝图与联合验收
 
 > [!warning] QH2 当前状态（2026-09-23）
-> 下文 `G4-10-BUILD` 的 13/13 `covered` 是当时验收快照，不是 QH2 质量结论。QH2 曾据主教材 PDF 397～400 页将 `FUT-A007` 退回 `partial`；`QH2-10-FUT-FIX-01` 已定点补齐五项核心技术和两条分类轴并复查，当前恢复 `13 covered + 0 partial`。13 篇自测仍待 `QH2-10-FUT-FIX-02`，本轮章节联合验收未执行；逐篇记录见 [[未来信息综合技术-QH2逐篇质量矩阵]]。
+> 下文 `G4-10-BUILD` 的 13/13 `covered` 是当时验收快照，不是 QH2 质量结论。QH2 曾据主教材 PDF 397～400 页将 `FUT-A007` 退回 `partial`；`QH2-10-FUT-FIX-01` 已定点补齐五项核心技术和两条分类轴并复查，当前恢复 `13 covered + 0 partial`。`QH2-10-FUT-FIX-02` 已补齐 13 篇共 14 道自测；本轮章节联合验收仍未执行，逐篇记录见 [[未来信息综合技术-QH2逐篇质量矩阵]]。
 
 > [!info] 本轮身份
 > `G4-10-BUILD`：只建设 `01_综合知识/10_未来信息综合技术/**`，目标是先把正式大纲范围建设到 `coverage_complete / quality_pending`。共享控制面只读，不在本轮回填。
