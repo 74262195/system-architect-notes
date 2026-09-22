@@ -13,7 +13,7 @@ review_level: 重点
 priority_reason: "新版大纲明确 NoSQL 四类与特点；近年数据库架构/NoSQL 仍有趋势信号。"
 priority_updated: 2026-09-22
 review_status: 待复习
-quality_status: DB-A018样例对齐-待复习
+quality_status: QH2-05-DB-04-待复习
 ---
 
 # NoSQL 分类与特点
@@ -48,3 +48,11 @@ NoSQL 常被解释为 Non-Relational，也常理解为 Not Only SQL。考试中�
 > [!answer]- 第 1 题答案与解析
 > **答案**：图数据库。
 > **解析**：节点与边直接表达对象及其关系，适合路径和关联网络查询。
+
+2. 一份商品资料的字段经常变化，应用希望把一整个 JSON 对象取回，四类中优先考虑哪种模型？
+
+> [!answer]- 第 2 题答案与解析
+> **答案**：文档数据库。
+> **解析**：题干同时给出“整体 JSON”和“字段变化”，是文档模型的识别信号；不要只因数据量大就笼统选择 NoSQL。
+
+下一站：[[NoSQL体系框架与适用场景]]。

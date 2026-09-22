@@ -7,12 +7,13 @@ source: 官方教材与大纲校准
 textbook_pages: "237–239"
 status: 学习中
 created: 2026-09-06
-updated: 2026-09-10
+updated: 2026-09-22
 exam_priority: P2
 review_level: 迁移修复已校准
 priority_reason: "大纲明确 DBMS；以功能地图和对象识别为主，直接计算价值低于关系数据库核心计算链。"
 priority_updated: 2026-09-06
-quality_status: 已校准
+review_status: 待复习
+quality_status: QH2-05-DB-04-待复习
 tags:
   - 系统架构师
   - 系统架构师/数据库设计
@@ -84,3 +85,9 @@ tags:
 > > [!answer]- 第 2 题答案与解析
 > > **答案**：数据库运行管理中的并发控制。
 > > **解析**：题干关注共享数据运行期间的多用户协调，而不是建表或定义业务积分公式。
+
+> [!question] 3. 把历史会员资料转换并装入新库，主要对应哪类 DBMS 功能？
+>
+> > [!answer]- 第 3 题答案与解析
+> > **答案**：数据库建立和维护。
+> > **解析**：题干强调初建阶段的数据转换和加载；若强调在线并发、权限或故障恢复，才优先归入运行管理。

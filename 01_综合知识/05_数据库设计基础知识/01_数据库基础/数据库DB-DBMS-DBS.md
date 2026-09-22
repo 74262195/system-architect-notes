@@ -10,12 +10,12 @@ textbook_pages: "234–240"
 status: 学习中
 review_status: 待复习
 created: 2026-09-06
-updated: 2026-09-10
+updated: 2026-09-22
 exam_priority: P2
 review_level: 待复习
 priority_reason: "新版大纲明确基础定义；主要用于建立后续数据库知识坐标，直接计算/判断价值低于关系理论与设计主线。"
 priority_updated: 2026-09-06
-quality_status: G3-DB-CLOSE定点补强-待复习
+quality_status: QH2-05-DB-04-待复习
 ---
 
 # 数据库 DB、DBMS、DBS
@@ -61,8 +61,14 @@ quality_status: G3-DB-CLOSE定点补强-待复习
 
 ## 自测
 
-> [!question]- “负责数据定义、操纵和数据库运行管理的核心软件”指 DB、DBMS 还是 DBS？
-> DBMS。
+> [!question]- 第 1 题：“负责数据定义、操纵和数据库运行管理的核心软件”指 DB、DBMS 还是 DBS？
+>
+> > [!answer]- 答案与解析
+> > **答案**：DBMS。
+> > **解析**：题干问的是承担定义、操纵和运行管理的核心软件；DB 是数据集合，DBS 则包含 DB、DBMS、应用、人员和环境。
 
-> [!question]- 用 Navicat 连接 MySQL 时，Navicat 和 MySQL DBMS 是同一个角色吗？
-> 不是。Navicat 是客户端管理工具；MySQL 的数据库管理系统负责真正的数据管理与运行控制。
+> [!question]- 第 2 题：用 Navicat 连接 MySQL 时，Navicat 和 MySQL DBMS 是同一个角色吗？
+>
+> > [!answer]- 答案与解析
+> > **答案**：不是。
+> > **解析**：Navicat 是连接和管理的客户端工具；MySQL 的 DBMS 才负责真正的数据管理与运行控制。

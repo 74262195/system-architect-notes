@@ -7,12 +7,13 @@ source: 官方教材与大纲校准
 textbook_pages: "259–260"
 status: 学习中
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-22
 exam_priority: P2
 review_level: 三轮审核通过
 priority_reason: "新版大纲明确 OCI 与嵌入式 SQL；以访问机制与识别差异为主，当前真题直接信号较弱。"
 priority_updated: 2026-09-06
-quality_status: 三轮审核通过
+review_status: 待复习
+quality_status: QH2-05-DB-04-待复习
 ---
 
 # 嵌入式 SQL 与 OCI
@@ -39,5 +40,10 @@ OCI（Oracle Call Interface）是 Oracle 的库函数级访问接口。程序通
 
 ## 自测
 
-> [!question]- “先用专用预编译器把 SQL 转换成宿主语言函数调用”描述的是哪种方式？
-> 嵌入式 SQL。
+> [!question]- 第 1 题：“先用专用预编译器把 SQL 转换成宿主语言函数调用”描述的是哪种方式？
+>
+> > [!answer]- 答案与解析
+> > **答案**：嵌入式 SQL。
+> > **解析**：普通宿主语言编译器不直接认识 SQL，预编译器负责处理 SQL 与宿主语言的边界；OCI 的识别词则是 Oracle 的函数库调用。
+
+下一站：[[ODBC与JDBC]] 对比统一接口与 Java 数据库 API。

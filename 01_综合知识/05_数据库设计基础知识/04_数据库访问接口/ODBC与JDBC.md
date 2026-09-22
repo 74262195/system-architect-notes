@@ -7,12 +7,13 @@ source: 官方教材与大纲校准
 textbook_pages: "260–262"
 status: 学习中
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-22
 exam_priority: P2
 review_level: 三轮审核通过
 priority_reason: "大纲明确 ODBC；主教材补充 JDBC。当前以识别统一访问接口及二者定位为主。"
 priority_updated: 2026-09-06
-quality_status: 三轮审核通过
+review_status: 待复习
+quality_status: QH2-05-DB-04-待复习
 ---
 
 # ODBC 与 JDBC
@@ -39,5 +40,10 @@ JDBC 是 Java 语言访问数据库的一组标准类和接口。Java 程序可�
 
 ## 自测
 
-> [!question]- 某题问“由 Java 编写的一组类和接口，用于数据库访问”，更接近 ODBC 还是 JDBC？
-> JDBC。
+> [!question]- 第 1 题：某题问“由 Java 编写的一组类和接口，用于数据库访问”，更接近 ODBC 还是 JDBC？
+>
+> > [!answer]- 答案与解析
+> > **答案**：JDBC。
+> > **解析**：Java 的类和接口是 JDBC 的直接识别信号；ODBC 的核心线索是统一 API、数据源和驱动处理异构 DBMS 差异。
+
+下一站：[[ORM访问接口]]，理解对象与关系记录怎样建立映射。
