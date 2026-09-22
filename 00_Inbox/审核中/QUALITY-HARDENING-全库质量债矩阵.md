@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-07-QA-ACCEPT
+current_priority: QH2-08-REL-01
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-22
@@ -70,7 +70,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 - [x] `QH2-05-DB-04-P2`：已修复 8 篇旧自测格式、缺答案与必要的最小机制桥接；合法 `link_only` 保持唯一事实源。
 - [x] `QH2-05-DB-ACCEPT`：已回填逐篇质量矩阵并完成一次联合验收；记录见 [[数据库设计基础知识-QH2联合验收]]。
 - [x] `QH2-07-QA-01`：已为第 07 章 14 篇正文补齐折叠答案解析；下一步只审查 11 篇 `<80` 风险卡是否存在真实摘要化缺口。
-- [ ] `QH2-07-QA-ACCEPT`：短卡复查已确认无 `content_partial`，下一步抽查质量属性场景、ATAM/SAAM/CBAM 主线并完成章节联合验收。
+- [x] `QH2-07-QA-ACCEPT`：已完成质量属性场景、ATAM/SAAM/CBAM 主线抽查与章节联合验收；记录见 [[系统质量属性与架构评估-QH2联合验收]]。
 
 ### P1：后续章节按学习顺序复审
 
@@ -98,6 +98,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-07-QA-ACCEPT`：依据 [[系统质量属性与架构评估-QH2逐篇质量矩阵]] 做一次章节联合验收。**
+> **`QH2-08-REL-01`：审查软件可靠性 15 篇正文的真实质量缺口，再决定是否施工。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
