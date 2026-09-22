@@ -4,15 +4,15 @@ subject: 系统架构设计师
 chapter: 软件工程基础知识
 topic: 整章学习体验重构
 task_id: SE-UX
-status: closed
-current_batch: CLOSED
-last_completed: SE-UX-10-REVIEW
+status: maintenance_reopened
+current_batch: SE-MECH-01
+last_completed: SE-MECH-AUDIT
 last_batch_commit: 4c9ed14b45a12c47c55a0aeeaa3db38dcc3a4a49
 baseline_commit: 5e45340707ea3a97d4e79f5ff874a458f95e79bc
 sample_note: "[[软件工程的定位]]"
 historical_coverage: "45 = 44 covered + 1 legal link_only（SE-A009）"
 created: 2026-09-21
-updated: 2026-09-21
+updated: 2026-09-22
 tags:
   - 软考/架构设计师
   - 计划/软件工程
@@ -20,6 +20,28 @@ tags:
 ---
 
 # 软件工程 SE-UX 整章学习体验重构总控计划
+
+> [!warning] 2026-09-22 机制质量债重开
+> 用户复习 [[需求双向追踪矩阵]] 时发现：正文解释了为什么需要追踪，却没有说明矩阵如何从零建立。定点修复后继续审查软件工程 68 篇教学正文，确认还有 11 篇产出型/过程型卡存在同类或较轻问题。
+>
+> 原 `SE-UX-10-REVIEW` 的范围映射与唯一主事实源结论继续有效，但“整章体验已 CLOSED”不再代表机制教学永久无缺口。本计划进入 `SE-MECH` 维护批次。
+
+## 零、当前机制修复批次
+
+| 批次 | 目标正文 | 当前状态 | 完成门槛 |
+| --- | --- | --- | --- |
+| `SE-MECH-01` | [[数据流图DFD]]、[[数据字典]]、[[面向对象设计OOD]]、[[结构化详细设计工具]] | **当前最高优先级 / 待执行** | 同一告警场景完整走过输入、建立、判断、产物和校验；不能只增加定义或清单 |
+| `SE-MECH-02` | [[需求规格与确认验证]]、UML 五张子卡 | `queued` | 需求规格能从原始材料形成可评审基线；UML 能从业务材料推导最小模型，同时保留识图动作 |
+| `SE-MECH-03` | [[工作分解结构WBS]] | `queued` | 从交付范围逐层拆到工作包，并实际检查遗漏、重复和停止分解条件 |
+| `SE-MECH-ACCEPT-01` | 上述 11 张修复卡 | `queued` | 逐卡回答“零基础读者能否跟例子独立建立一次”；检查、提交并同步总控 |
+
+执行边界：
+
+- `SE-MECH` 不新增 Atom，不重排目录，不复制第二套事实源；
+- 正文修改必须设置 `review_status: 待复习`；
+- 连续三步以上或有判断分支时按 `prompts/40-Mermaid与Obsidian样式修复.md` 选择图示；
+- 既有 `SE-A001～SE-A045` 保留范围 coverage 状态，但不得再用 `covered` 代替机制质量验收；
+- 原链接债维护队列顺延，不与本批混合提交。
 
 > [!important] 本任务性质
 > 以 [[软件工程的定位]] 为零基础学习样例，把“04_软件工程基础知识”从一组正确考点卡提升为一条能顺着学下去的知识链。
