@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">告警平台数据流图建立示例</title>
+  <desc id="desc">上半部分是告警平台顶层数据流图，下半部分是第一层数据流图，展示从原始告警到通知内容的加工与存储关系。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 28px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#172033}.panel{font:700 21px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#1e3a8a}.label{font:650 18px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#102a43}.small{font:500 15px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#475569}.entity{fill:#f8fafc;stroke:#475569;stroke-width:2}.process{fill:#eef6ff;stroke:#2563eb;stroke-width:2}.store{fill:#fff7ed;stroke:#c2410c;stroke-width:2}.flow{fill:none;stroke:#334155;stroke-width:2.4;marker-end:url(#arrow)}.divider{stroke:#cbd5e1;stroke-width:2;stroke-dasharray:8 8}.note{fill:#f0fdf4;stroke:#15803d;stroke-width:1.5}.noteText{font:600 16px 'PingFang SC','Microsoft YaHei',sans-serif;fill:#166534}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text class="title" x="600" y="44" text-anchor="middle">告警平台 DFD：先定边界，再逐层打开加工</text>
+
+  <text class="panel" x="70" y="92">① 顶层图：整个系统先看成一个加工</text>
+  <rect class="entity" x="90" y="135" width="170" height="76" rx="8"/>
+  <text class="label" x="175" y="180" text-anchor="middle">监控设备</text>
+  <rect class="process" x="465" y="125" width="270" height="96" rx="22"/>
+  <text class="label" x="600" y="166" text-anchor="middle">P0 告警平台</text>
+  <text class="small" x="600" y="192" text-anchor="middle">系统边界内的整体加工</text>
+  <rect class="entity" x="940" y="135" width="170" height="76" rx="8"/>
+  <text class="label" x="1025" y="180" text-anchor="middle">值班人员</text>
+  <path class="flow" d="M260 173 H465"/>
+  <text class="small" x="362" y="158" text-anchor="middle">原始告警</text>
+  <path class="flow" d="M735 173 H940"/>
+  <text class="small" x="838" y="158" text-anchor="middle">通知内容</text>
+  <rect class="note" x="370" y="245" width="460" height="46" rx="14"/>
+  <text class="noteText" x="600" y="274" text-anchor="middle">顶层只确认：谁在外部，系统整体输入和输出什么</text>
+
+  <line class="divider" x1="70" y1="325" x2="1130" y2="325"/>
+  <text class="panel" x="70" y="375">② 第一层：把 P0 按数据变化拆成 P1、P2、P3</text>
+
+  <rect class="entity" x="55" y="465" width="145" height="72" rx="8"/>
+  <text class="label" x="128" y="507" text-anchor="middle">监控设备</text>
+  <rect class="process" x="280" y="450" width="185" height="92" rx="20"/>
+  <text class="label" x="373" y="487" text-anchor="middle">P1 校验告警</text>
+  <text class="small" x="373" y="515" text-anchor="middle">原始 → 合格</text>
+  <rect class="process" x="535" y="450" width="205" height="92" rx="20"/>
+  <text class="label" x="638" y="487" text-anchor="middle">P2 分级并保存</text>
+  <text class="small" x="638" y="515" text-anchor="middle">合格 → 告警记录</text>
+  <rect class="process" x="820" y="450" width="185" height="92" rx="20"/>
+  <text class="label" x="913" y="487" text-anchor="middle">P3 生成通知</text>
+  <text class="small" x="913" y="515" text-anchor="middle">记录 → 通知</text>
+  <rect class="entity" x="1030" y="465" width="145" height="72" rx="8"/>
+  <text class="label" x="1103" y="507" text-anchor="middle">值班人员</text>
+  <rect class="store" x="570" y="625" width="280" height="62" rx="4"/>
+  <line x1="590" y1="625" x2="590" y2="687" stroke="#c2410c" stroke-width="2"/>
+  <text class="label" x="710" y="663" text-anchor="middle">D1 告警记录库</text>
+
+  <path class="flow" d="M200 501 H280"/><text class="small" x="240" y="486" text-anchor="middle">原始告警</text>
+  <path class="flow" d="M465 496 H535"/><text class="small" x="500" y="481" text-anchor="middle">合格告警</text>
+  <path class="flow" d="M740 496 H820"/><text class="small" x="780" y="481" text-anchor="middle">分级结果</text>
+  <path class="flow" d="M1005 501 H1030"/><text class="small" x="1018" y="486" text-anchor="middle">通知</text>
+  <path class="flow" d="M638 542 V625"/><text class="small" x="650" y="588">告警记录</text>
+  <path class="flow" d="M850 655 H913 V542"/><text class="small" x="920" y="602">待通知告警</text>
+
+  <rect class="note" x="290" y="710" width="620" height="36" rx="12"/>
+  <text class="noteText" x="600" y="734" text-anchor="middle">父子平衡：顶层的“原始告警”和“通知内容”在第一层仍然存在</text>
+</svg>
