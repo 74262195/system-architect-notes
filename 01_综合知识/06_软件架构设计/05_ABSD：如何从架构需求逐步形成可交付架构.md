@@ -44,7 +44,7 @@ quality_status: ARCH-UX-01减负与主线修复
 
 > **项目开始后，怎样把架构需求一步步变成能说明、能评审、能实现、还能继续演化的架构？**
 
-ABSD（Architecture-Based Software Development，基于架构的软件开发）就是回答这个问题：
+ABSD（Architecture-Based Software Design，基于架构的软件设计）就是回答这个问题：
 
 > **不要把架构当成前期画完就结束的一张图，而要让它成为连接需求、设计、实现和后续变化的开发主线。**
 
