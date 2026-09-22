@@ -4,7 +4,7 @@ subject: 系统架构设计师
 chapter: 应用数学
 topic: Atom施工蓝图与联合验收
 status: coverage_complete
-quality_status: quality_pending
+quality_status: quality_pass
 source:
   - 系统架构设计师考试大纲（第二版）PDF 62
   - 系统架构设计师考试32小时通关（第二版，2023）第24小时应用数学
@@ -15,7 +15,7 @@ tags: [应用数学, Atom, 覆盖验收, 考试动作]
 # 应用数学-Atom施工蓝图与联合验收
 
 > [!success] 本轮结论
-> `G4-12-BUILD` 已按“考试给什么信息 → 识别什么模型 → 第一步做什么 → 用哪个最小公式/算法 → 怎样得到答案”完成首次建设。最终形成 `MATH-A001 ~ MATH-A016` 共 16 个稳定 Atom，全部有唯一正文、最小考试闭环、快速复习卡和上一站/下一站，状态为 `coverage_complete / quality_pending`。
+> `G4-12-BUILD` 按“题干信息 → 模型识别 → 最小公式/算法 → 逐步求解 → 检查边界”建立了 `MATH-A001 ~ MATH-A016` 共 16 个稳定 Atom。其后 `QH2-12-MATH` 修复 3 篇真实操作链缺口、补齐 16 篇自测并完成一次章节联合验收；当前为 `coverage_complete / quality_pass`，验收记录见 [[应用数学-QH2联合验收]]。
 
 ## 1. 大纲真实范围
 
@@ -132,10 +132,10 @@ tags: [应用数学, Atom, 覆盖验收, 考试动作]
 - [x] Atom → 正文正向映射无缺口
 - [x] 正文 → Atom 反向映射无孤岛
 - [x] fake covered = 0
-- [x] 章内 Wikilink 全部指向本轮实际创建文件；第 13 章只写语义下一站，不创建死链接
+- [x] 章内 Wikilink 全部指向实际文件；章后返回复习循环，专业英语不纳入后续施工
 - [x] Mermaid 均使用 fenced `mermaid`，未混入 ASCII 图
 - [x] 第 11 → 第 12 章语义承接成立
-- [x] 第 12 → 第 13 章语义承接成立
+- [x] 第 12 章 → [[应用数学-学习路线]] 的复习循环衔接成立
 
 ## 8. Coverage 快照
 
@@ -149,10 +149,11 @@ tags: [应用数学, Atom, 覆盖验收, 考试动作]
 | blocked | 0 |
 | 快速复习卡 | 16 |
 | 上一站/下一站 | 16 |
+| 自测题与折叠答案 | 16 / 16 |
 | 公式型 | 5 |
 | 算法/流程型 | 7 |
 | 判断型 | 4 |
 | 真题频率 | 待评估 |
-| 当前状态 | coverage_complete / quality_pending |
+| 当前状态 | coverage_complete / quality_pass |
 
-本轮到此只完成首次覆盖，不追求 `quality_complete`。
+首次覆盖建设只保证大纲落点；本次 QH2 正文质量结论与风险复查见 [[应用数学-QH2逐篇质量矩阵]]、[[应用数学-QH2联合验收]]。表中的 P0/P1 是建设深度 `build_level`，不是依据真题题频评出的 `exam_priority`；后者仍为 `待评估`。

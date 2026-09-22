@@ -2,7 +2,7 @@
 type: 逐篇质量矩阵
 subject: 系统架构设计师
 chapter: 应用数学
-status: self_tests_complete_pending_joint_acceptance
+status: accepted
 batch: QH2-12-MATH-01
 updated: 2026-09-23
 tags: [软考/架构设计师, 应用数学, 质量复审, 大纲任务]
@@ -86,3 +86,7 @@ tags: [软考/架构设计师, 应用数学, 质量复审, 大纲任务]
 | A016 | 建模变量条件与方案回代 | $x,y$ 为非负整数台；$(2,0)$ 对三条容量下界均不可行 |
 
 结构核对：16/16 篇各恰有 1 个展开题干、1 个紧随的折叠答案及解析，`review_status: 待复习` 也均恰有 1 处。数值答案已独立复算；本批未改机制正文、来源锚点或导航。当前尚未执行章节联合验收，故保持 `quality_pending`；下一步为 `QH2-12-MATH-ACCEPT`，只复查本次自测和既有高风险判断，不重复重写已通过正文。
+
+## QH2-12-MATH-ACCEPT 收口
+
+本章一次联合验收已完成，范围、机制、自测与导航的发现—修复—复查结果见 [[应用数学-QH2联合验收]]。上文 `01 / 02A / 02B` 各节保留当时的审查快照，不代表当前仍有 `content_partial` 或自测缺口；当前为 `covered=16 / partial=0 / unmapped=0 / quality_pass`。下一项是 `QH2-06-ARCH-AUDIT`。
