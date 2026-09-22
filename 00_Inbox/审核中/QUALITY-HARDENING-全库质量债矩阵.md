@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-09-EVO-ACCEPT
+current_priority: QH2-12-MATH-01
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -78,7 +78,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 - [x] `QH2-08-REL-ACCEPT`：15 篇自测与状态已补齐，联合验收通过；记录见 [[软件可靠性技术-QH2联合验收]]。
 - [x] `QH2-09-EVO-01`：已完成 16 篇演化与维护正文的逐篇审查；16 篇机制正文均通过，唯一共同缺口是自测闭环，见 [[软件架构的演化和维护-QH2逐篇质量矩阵]]。
 - [x] `QH2-09-EVO-02`：已为 16 篇补 1 道高价值自测及折叠答案解析，16 篇均已标 `review_status: 待复习`；不重写正文。
-- [ ] `QH2-09-EVO-ACCEPT`：完成联合验收。
+- [x] `QH2-09-EVO-ACCEPT`：16 个 Atom 联合验收通过，约束修改边界已修正并复查；记录见 [[软件架构的演化和维护-QH2联合验收]]。
 - [ ] `QH2-12-MATH-01`：按“能否独立算完一次”审查 16 篇应用数学，逐篇核验适用条件、中间步骤、单位/变量、答案与验算。
 - [ ] `QH2-12-MATH-ACCEPT`：完成联合验收。
 
@@ -99,6 +99,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-09-EVO-ACCEPT`：对软件架构演化和维护执行一次联合验收，只复查本次自测与高风险机制。**
+> **`QH2-12-MATH-01`：按能否独立算完一次，逐篇审查应用数学 16 篇正文的条件、步骤、变量、答案与验算。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
