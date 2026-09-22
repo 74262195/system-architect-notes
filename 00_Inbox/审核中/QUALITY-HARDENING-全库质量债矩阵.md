@@ -5,10 +5,10 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-09-EVO-01
+current_priority: QH2-09-EVO-02
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
-updated: 2026-09-22
+updated: 2026-09-23
 tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 ---
 
@@ -76,7 +76,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 - [x] `QH2-08-REL-01`：已逐篇审查 15 篇可靠性正文；机制无 `content_partial`，但 15 篇均缺自测解析，结论见 [[软件可靠性技术-QH2逐篇质量矩阵]]。
 - [x] `QH2-08-REL-ACCEPT`：15 篇自测与状态已补齐，联合验收通过；记录见 [[软件可靠性技术-QH2联合验收]]。
-- [ ] `QH2-09-EVO-01`：检查 16 篇演化与维护正文的对象、消息、片段、约束、版本管理和度量主线；补主动回忆闭环。
+- [x] `QH2-09-EVO-01`：已完成 16 篇演化与维护正文的逐篇审查；16 篇机制正文均通过，唯一共同缺口是自测闭环，见 [[软件架构的演化和维护-QH2逐篇质量矩阵]]。
+- [ ] `QH2-09-EVO-02`：为 16 篇补 1～2 道高价值自测及折叠答案解析，并同步 `review_status: 待复习`；不重写已通过正文。
 - [ ] `QH2-09-EVO-ACCEPT`：完成联合验收。
 - [ ] `QH2-12-MATH-01`：按“能否独立算完一次”审查 16 篇应用数学，逐篇核验适用条件、中间步骤、单位/变量、答案与验算。
 - [ ] `QH2-12-MATH-ACCEPT`：完成联合验收。
@@ -98,6 +99,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-09-EVO-01`：审查软件架构演化和维护 16 篇正文的真实质量缺口，再决定是否施工。**
+> **`QH2-09-EVO-02`：仅为软件架构演化和维护 16 篇补主动回忆闭环与复习状态，不重写已通过正文。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
