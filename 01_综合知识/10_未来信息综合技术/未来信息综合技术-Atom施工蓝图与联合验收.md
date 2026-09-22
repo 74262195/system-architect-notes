@@ -3,8 +3,8 @@ type: audit
 subject: 系统架构设计师
 chapter: 未来信息综合技术
 topic: Atom施工蓝图与联合验收
-status: coverage_complete
-quality_status: quality_pending
+status: coverage_partial
+quality_status: quality_reaudit_partial
 source:
   - 系统架构设计师考试大纲（第二版）PDF 61
   - 系统架构设计师教程（第2版）PDF 385-418
@@ -12,6 +12,9 @@ tags: [未来信息综合技术, Atom蓝图, coverage]
 ---
 
 # 未来信息综合技术-Atom施工蓝图与联合验收
+
+> [!warning] QH2 当前覆盖更正（2026-09-23）
+> 下文 `G4-10-BUILD` 的 13/13 `covered` 是当时验收快照，不是当前 QH2 结论。按主教材 PDF 397～400 页复核，`FUT-A007` 的 Robot 4.0 核心五项与两条机器人分类轴未在正文讲到最小考试闭环，现退回 `partial`；当前为 `12 covered + 1 partial`。逐篇证据和修复范围见 [[未来信息综合技术-QH2逐篇质量矩阵]]；修复复查前不得引用下文历史清单声称本轮质量已通过。
 
 > [!info] 本轮身份
 > `G4-10-BUILD`：只建设 `01_综合知识/10_未来信息综合技术/**`，目标是先把正式大纲范围建设到 `coverage_complete / quality_pending`。共享控制面只读，不在本轮回填。
