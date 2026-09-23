@@ -2,8 +2,8 @@
 type: 逐篇质量矩阵
 subject: 系统架构设计师
 chapter: 标准化与知识产权
-status: fix02_complete_accept_pending
-batch: QH2-11-IPR-FIX-02
+status: quality_hardened
+batch: QH2-11-IPR-ACCEPT
 updated: 2026-09-23
 tags: [软考/架构设计师, 标准化与知识产权, 质量复审, 大纲任务]
 ---
@@ -91,6 +91,10 @@ AUDIT 批只落审查结论与控制面，未修改 15 篇知识正文。论文�
 | A014 | 1 | 地域性/时间性与具体期限分层 | 同上 |
 | A015 | 1 | 同一场景标准化、著作权、商标、商业秘密分流 | 同上 |
 
-题目均为教学用自编情境，不冒充历年真题；沿各 Atom 原有的“考试动作”定点检验，没有增加新的算法、条文或法律结论。A010 数字与起算按[国家版权局《著作权法》](https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html)及[《计算机软件保护条例》](https://www.cac.gov.cn/2013-02/08/c_12648744.htm)复核；A011 外观设计期限按[现行《专利法》第 42 条](https://www.cnipa.gov.cn/art/2020/11/23/art_97_155167.html)复核；A012 现行 10 年与 12+6 按[2019 修正《商标法》](https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html)，施行时点按[国家知识产权局公告](https://www.cnipa.gov.cn/col/col3684/index.html)复核。下一项为 `QH2-11-IPR-ACCEPT`，本批不提前宣称联合验收通过。
+题目均为教学用自编情境，不冒充历年真题；沿各 Atom 原有的“考试动作”定点检验，没有增加新的算法、条文或法律结论。A010 数字与起算按[国家版权局《著作权法》](https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html)及[《计算机软件保护条例》](https://www.cac.gov.cn/2013-02/08/c_12648744.htm)复核；A011 外观设计期限按[现行《专利法》第 42 条](https://www.cnipa.gov.cn/art/2020/11/23/art_97_155167.html)复核；A012 现行 10 年与 12+6 按[2019 修正《商标法》](https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html)，施行时点按[国家知识产权局公告](https://www.cnipa.gov.cn/col/col3684/index.html)复核。`QH2-11-IPR-ACCEPT` 已通过，记录见 [[标准化与知识产权-QH2联合验收]]。
 
 结构复查：15 个 Atom 各有 1～2 道展开题干，合计 16 道题与 16 个紧随题后的一级折叠答案一一对应；15 篇均为 `review_status: 待复习`。`git diff --check` 通过；`node scripts/check-vault.mjs` 检查 1197 个 Markdown 文件通过，仍有 59 项既有非阻断警告。本批只完成文本结构检查，未做 Obsidian 实际渲染截图验收。
+
+## QH2-11-IPR-ACCEPT（2026-09-23）
+
+联合验收结论为 **通过**：`15 covered / 0 link_only / 0 partial / 0 unmapped`。正反向映射、自测一一对应、A010/A011/A012 版本敏感事实、A013/A015 的分流边界及导航已复查；未发现需改正文的新问题。实际 Obsidian 渲染本次无法安全读取，仅声明文本结构校验，完整记录见 [[标准化与知识产权-QH2联合验收]]。
