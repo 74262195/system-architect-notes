@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: TRUTH-INDEX-LINK-DEBT
+current_priority: ALIAS-OWNERSHIP-AUDIT
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -99,6 +99,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 - [x] `QH2-11-IPR-ACCEPT`：15 个 Atom 完成一次联合验收；范围、风险边界与 16 道自测均通过，记录见 [[标准化与知识产权-QH2联合验收]]。
 - [x] `QH2-06-10-11-ACCEPT`：06/10/11 分章记录抽查范围、发现、修复与不改理由，见 [[QH2-06-10-11-ACCEPT收口记录]]；未重写已验收正文。
 - [x] `LINK-DEBT-ACTIVE-NAV`：当前复扫发现的 4 条失效链接已全部修复；原分类登记第 5 项未能复现，处置说明见 [[LINK-DEBT-ACTIVE-NAV收口记录]]。
+- [x] `TRUTH-INDEX-LINK-DEBT`：33 项逐项核验完成；27 项修复到有证据的主事实源，6 项因 2010 年两题原题与旧主题标签冲突而标记待核验，不改答案/来源/历史判断，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。
 
 ### P3：保持暂停
 
@@ -110,8 +111,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`TRUTH-INDEX-LINK-DEBT`：核验已登记的 33 项真题 AI 映射与旧错题本链接；依据真实知识目标修复，不按标题或关键词猜测。**
+> **`ALIAS-OWNERSHIP-AUDIT`：逐项处理 22 个重复 alias，先确定主事实源和消歧策略。**
 
-本项已完成，记录见 [[LINK-DEBT-ACTIVE-NAV收口记录]]。当前下一项为 `TRUTH-INDEX-LINK-DEBT`：核验已登记的 33 项真题 AI 映射与旧错题本链接，不按标题或关键词猜测目标。
+`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记的 33 项中，27 项已修复为有证据的链接；6 项涉及 2010 年题目内容与旧主题标签冲突，映射目标仍待核验，不作猜测。当前下一项为 `ALIAS-OWNERSHIP-AUDIT`：逐项处理 22 个重复 alias，先确定主事实源和消歧策略。
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
