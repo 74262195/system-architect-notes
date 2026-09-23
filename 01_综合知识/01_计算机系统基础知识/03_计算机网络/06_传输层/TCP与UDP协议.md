@@ -5,7 +5,8 @@ chapter: 计算机网络
 topic: TCP 与 UDP 专题导航
 status: 学习中
 source: 大纲+教材+历年真题趋势
-aliases: [TCP与UDP协议, TCP, UDP]
+aliases: [TCP与UDP协议]
+review_status: 待复习
 tags:
   - 软考/架构设计师
   - 软考/索引

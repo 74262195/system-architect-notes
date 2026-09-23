@@ -5,7 +5,8 @@ chapter: 计算机网络
 topic: IP 编址与子网划分专题导航
 status: 学习中
 source: 教材+经典计算题
-aliases: [IP编址, 子网划分, IPv4编址, CIDR, VLSM]
+aliases: [IP编址, IPv4编址, VLSM]
+review_status: 待复习
 tags:
   - 软考/架构设计师
   - 软考/索引

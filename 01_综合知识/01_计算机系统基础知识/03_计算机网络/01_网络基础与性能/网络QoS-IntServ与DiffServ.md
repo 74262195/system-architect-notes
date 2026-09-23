@@ -8,7 +8,8 @@ difficulty: 2
 source:
   - 历年真题/AI题库/标准化题库/2014-下半年/综合知识.md（来源状态以题库文件为准）
   - 历年真题/AI题库/标准化题库/2016-下半年/综合知识.md（来源状态以题库文件为准）
-aliases: [QoS, IntServ, DiffServ, DSCP, 区分服务, 集成服务]
+aliases: [网络服务质量, IntServ, DiffServ, DSCP, 区分服务, 集成服务]
+review_status: 待复习
 tags:
   - 软考/架构设计师
   - 软考/计算机网络
