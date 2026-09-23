@@ -5,7 +5,7 @@ status: active
 stage: qh4_fresh_zero_basis_audit_active
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH4-08-FRESH-AUDIT
+current_priority: QH4-09-FRESH-AUDIT
 scope: 综合知识04软件测试起至章末及05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -120,7 +120,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 ### QH4 后续逐章零基础复审
 
 - [x] `QH4-07-FRESH-AUDIT`：第 07 章 14 篇已逐篇复核；14 篇首屏复习卡折叠，13 篇正文补场景桥接，另更正教材页码标注。逐篇证据和每篇处置见 [[系统质量属性与架构评估-QH4逐篇零基础复审矩阵]]；学习正文均保留 `review_status: 待复习`。
-- [ ] `QH4-08-FRESH-AUDIT`：开始第 08 章软件可靠性技术逐篇复核，之后按 09→12 顺序推进。
+- [x] `QH4-08-FRESH-AUDIT`：第 08 章 15 篇已逐篇复核；7 篇开篇情境原已足够，8 篇补了具体场景桥接，未改机制、自测和学习顺序。逐篇处置见 [[软件可靠性技术-QH4逐篇零基础复审矩阵]]；改动正文均待复习。
+- [ ] `QH4-09-FRESH-AUDIT`：开始第 09 章软件架构的演化和维护逐篇复核，之后按 10→12 顺序推进。
 
 ## 六、批次验收规则
 
@@ -128,7 +129,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH4-08-FRESH-AUDIT`：第 07 章 14 篇零基础复核和场景入口修复已完成，见 [[系统质量属性与架构评估-QH4逐篇零基础复审矩阵]]。现在复审第 08 章“软件可靠性技术”，之后按 09→12 顺序执行；场景先于结论，发现真实缺口才定点修改。`REVIEW-QUEUE-01` 独立等待用户复习；`review_status: 待复习` 只能在用户确认后更新。**
+> **`QH4-09-FRESH-AUDIT`：第 08 章 15 篇零基础复核已完成，8 篇开篇桥接修复见 [[软件可靠性技术-QH4逐篇零基础复审矩阵]]。现在复审第 09 章“软件架构的演化和维护”，之后按 10→12 顺序执行；场景先于结论，发现真实缺口才定点修改。`REVIEW-QUEUE-01` 独立等待用户复习；`review_status: 待复习` 只能在用户确认后更新。**
 
 `TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧。QH3/SE-UX 的 18 项最小补强和后续发现的 7 项风险修复均已回填；改动学习笔记仍为 `review_status: 待复习`。QH4 第 06 章、04 章测试链、05 章开篇回访和 07 章首屏场景修复均已完成，当前转入第 08 章逐篇复审，不是替用户执行 `REVIEW-QUEUE-01`。
 
