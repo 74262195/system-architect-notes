@@ -2,7 +2,7 @@
 type: 质量债矩阵
 subject: 系统架构设计师
 status: active
-stage: quality_second_pass
+stage: quality_second_pass_complete_zero_basis_reaudit_queued
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
 current_priority: REVIEW-QUEUE-01
@@ -106,7 +106,18 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 - [ ] `PAPER-01～04`：继续最低优先级暂停；本轮不审查、不补写论文。
 
-## 五、批次验收规则
+## 五、已确认的后续零基础核验
+
+### `QH3-05-12-ZB-AUDIT`（已列入计划，排队待开始）
+
+- **顺序**：排在总计划的 `REVIEW-QUEUE-01`（用户自行复习）之后；完成后再执行 [[软件工程-SE-UX-00整章学习体验重构总控计划#新增待办：测试后 13 篇零基础体验复审|SE-UX-04-POSTTEST-AUDIT]]。
+- **范围**：综合知识第 05～12 章：数据库设计基础知识、软件架构设计、系统质量属性与架构评估、软件可靠性技术、软件架构的演化和维护、未来信息综合技术、标准化与知识产权、应用数学。重新验证各章既有验收记录所覆盖的正文理解效果，不重开范围 coverage。
+- **依据**：以 [[MVC、MVP与MVVM：表现层如何隔离界面与业务数据]] 为样例；逐章核当前大纲、主教材、可靠真题和正文，不凭行数、摘要长度或标题推断质量。
+- **零基础检查**：读者能否形成具体场景、复述大白话直接答案、理解必要术语与层次、跟场景走完一次核心机制/判断/计算、识别适用条件与边界、完成题型对应的自测并知道学习衔接。计算检查完整中间步骤和验算；过程/产出题检查能否跟做一例；识别/比较题检查对照判据，不强行加入建立流程。
+- **交付和边界**：逐篇形成有证据锚点的质量矩阵，结论为通过/局部补强/机制补强并说明不改理由。该批只审查，不直接修改正文或宣称旧验收无效；仅对矩阵确认的缺口另排最小修复批次。正文若后续变更，按规则设置 `review_status: 待复习`。
+- **状态**：未开始；当前唯一执行优先级仍是 `REVIEW-QUEUE-01`。本任务由用户明确确认排队。
+
+## 六、批次验收规则
 
 每个章节批次必须留下：逐篇/逐 Atom 质量结论、真实缺口与不改理由、修改后的正文落点、`review_status: 待复习`、索引/路线同步情况、`git diff --check` 和 `node scripts/check-vault.mjs` 结果。
 
@@ -114,6 +125,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 > **`REVIEW-QUEUE-01`：用户复习本轮已修改的学习笔记；`review_status: 待复习` 只能在用户确认后更新。**
 
-`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧，记录见 [[ALIAS-OWNERSHIP-AUDIT处置表]]。当前下一项为 `REVIEW-QUEUE-01`：用户自行复习本轮被修改并标记为待复习的学习笔记；在用户确认前不更新其复习状态，也不由自动化代替。
+`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧，记录见 [[ALIAS-OWNERSHIP-AUDIT处置表]]。当前下一项为 `REVIEW-QUEUE-01`：用户自行复习本轮被修改并标记为待复习的学习笔记；在用户确认前不更新其复习状态，也不由自动化代替。之后依序执行已确认的 `QH3-05-12-ZB-AUDIT` 与 `SE-UX-04-POSTTEST-AUDIT`。
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
