@@ -7,7 +7,7 @@ source: 官方教材与大纲校准
 textbook_pages: "260–262"
 status: 学习中
 created: 2026-09-06
-updated: 2026-09-22
+updated: 2026-09-23
 exam_priority: P2
 review_level: 三轮审核通过
 priority_reason: "大纲明确 ODBC；主教材补充 JDBC。当前以识别统一访问接口及二者定位为主。"
@@ -26,9 +26,9 @@ quality_status: QH2-05-DB-04-待复习
 
 ## ODBC 是什么
 
-ODBC（Open Database Connectivity，开放数据库连接）要解决的是：应用不应该为每一种 DBMS 都重写一套访问代码。
+假设校务查询程序原来连接 Oracle，后来又要读取另一个部门的 MySQL 数据。如果程序直接依赖各厂商各自的连接函数，就要分别维护不同的连接方式。ODBC（Open Database Connectivity，开放数据库连接）提供统一 API，由对应数据库的 ODBC 驱动处理具体连接差异。
 
-应用面对统一的 ODBC API，真正与具体 DBMS 交互的差异由相应的 **ODBC 驱动程序**处理。数据源配置帮助 ODBC 找到数据库位置、类型和对应驱动。
+数据源配置帮助 ODBC 找到数据库位置、类型和对应驱动。这能减少应用适配不同 DBMS 连接接口的工作，但不代表不同数据库的 SQL 方言和功能差异自动消失。
 
 因此题干如果强调“统一方式访问不同关系数据库”“驱动程序”“数据源”，优先想到 ODBC。
 

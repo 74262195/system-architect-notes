@@ -5,7 +5,7 @@ status: active
 stage: qh4_fresh_zero_basis_audit_active
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH4-05-OPENING-RECHECK
+current_priority: QH4-07-FRESH-AUDIT
 scope: 综合知识04软件测试起至章末及05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -123,8 +123,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH4-05-OPENING-RECHECK`：QH4-04-POSTTEST-FRESH-AUDIT 与 FIX 均已完成，详见 [[软件工程-SE-UX-04测试后零基础复审矩阵]]。现在回访数据库第 05 章 30 篇的开篇场景、问题建立、结论出现时机与必要桥接；只处理真实阅读跳步，不重写已通过机制正文。之后恢复 07～12。`REVIEW-QUEUE-01` 独立等待用户复习；`review_status: 待复习` 只能在用户确认后更新。**
+> **`QH4-07-FRESH-AUDIT`：QH4-05 数据库 30 篇开篇回访已完成，仅两篇作场景桥接小修，见 [[数据库设计基础知识-QH4逐篇零基础复审矩阵]]。现在按零基础标准逐篇复审第 07 章“系统质量属性与架构评估”，再按 08→12 顺序执行；场景先于结论，发现真实缺口才定点修改。`REVIEW-QUEUE-01` 独立等待用户复习；`review_status: 待复习` 只能在用户确认后更新。**
 
-`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧。QH3/SE-UX 的 18 项最小补强和后续发现的 7 项风险修复均已回填；改动学习笔记仍为 `review_status: 待复习`。QH4 第 06 章新一轮逐篇审查只定点修开篇过渡和自测呈现；04 章测试后 13 篇的新审查和定点修复均已完成，当前为数据库开篇回访，不是替用户执行 `REVIEW-QUEUE-01`。
+`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧。QH3/SE-UX 的 18 项最小补强和后续发现的 7 项风险修复均已回填；改动学习笔记仍为 `review_status: 待复习`。QH4 第 06 章新一轮逐篇审查只定点修开篇过渡和自测呈现；04 章测试后 13 篇及第 05 章开篇回访均完成，当前转入第 07 章复审，不是替用户执行 `REVIEW-QUEUE-01`。
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
