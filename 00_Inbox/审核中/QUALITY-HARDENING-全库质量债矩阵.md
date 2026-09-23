@@ -2,10 +2,10 @@
 type: 质量债矩阵
 subject: 系统架构设计师
 status: active
-stage: quality_second_pass_complete_zero_basis_reaudit_queued
+stage: qh3_zero_basis_audit_in_progress
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: REVIEW-QUEUE-01
+current_priority: QH3-05-12-ZB-AUDIT
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -108,14 +108,14 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 ## 五、已确认的后续零基础核验
 
-### `QH3-05-12-ZB-AUDIT`（已列入计划，排队待开始）
+### `QH3-05-12-ZB-AUDIT`（当前执行）
 
-- **顺序**：排在总计划的 `REVIEW-QUEUE-01`（用户自行复习）之后；完成后再执行 [[软件工程-SE-UX-00整章学习体验重构总控计划#新增待办：测试后 13 篇零基础体验复审|SE-UX-04-POSTTEST-AUDIT]]。
+- **顺序**：当前执行；完成后再执行 [[软件工程-SE-UX-00整章学习体验重构总控计划#新增待办：测试后 13 篇零基础体验复审|SE-UX-04-POSTTEST-AUDIT]]。`REVIEW-QUEUE-01` 是用户复习反馈的独立闭环，不构成本任务前置门槛。
 - **范围**：综合知识第 05～12 章：数据库设计基础知识、软件架构设计、系统质量属性与架构评估、软件可靠性技术、软件架构的演化和维护、未来信息综合技术、标准化与知识产权、应用数学。重新验证各章既有验收记录所覆盖的正文理解效果，不重开范围 coverage。
 - **依据**：以 [[MVC、MVP与MVVM：表现层如何隔离界面与业务数据]] 为样例；逐章核当前大纲、主教材、可靠真题和正文，不凭行数、摘要长度或标题推断质量。
 - **零基础检查**：读者能否形成具体场景、复述大白话直接答案、理解必要术语与层次、跟场景走完一次核心机制/判断/计算、识别适用条件与边界、完成题型对应的自测并知道学习衔接。计算检查完整中间步骤和验算；过程/产出题检查能否跟做一例；识别/比较题检查对照判据，不强行加入建立流程。
 - **交付和边界**：逐篇形成有证据锚点的质量矩阵，结论为通过/局部补强/机制补强并说明不改理由。该批只审查，不直接修改正文或宣称旧验收无效；仅对矩阵确认的缺口另排最小修复批次。正文若后续变更，按规则设置 `review_status: 待复习`。
-- **状态**：未开始；当前唯一执行优先级仍是 `REVIEW-QUEUE-01`。本任务由用户明确确认排队。
+- **状态**：进行中；第 05 章“数据库设计基础知识”30 篇逐篇审查已完成：29 篇通过/合法复用，1 篇（关系代数基础运算）记录最小跟做样例缺口；详见 [[综合知识05-12-QH3零基础体验复审矩阵]]。当前转第 06 章。逐篇审查以大纲/主教材、实际正文和既有矩阵交叉取证，不按篇幅下结论；QH3 本身不改学习正文。
 
 ## 六、批次验收规则
 
@@ -123,8 +123,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`REVIEW-QUEUE-01`：用户复习本轮已修改的学习笔记；`review_status: 待复习` 只能在用户确认后更新。**
+> **`REVIEW-QUEUE-01`：用户自行复习本轮已修改的学习笔记并反馈问题；`review_status: 待复习` 只能在用户确认后更新。它不阻塞 `QH3-05-12-ZB-AUDIT`。**
 
-`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧，记录见 [[ALIAS-OWNERSHIP-AUDIT处置表]]。当前下一项为 `REVIEW-QUEUE-01`：用户自行复习本轮被修改并标记为待复习的学习笔记；在用户确认前不更新其复习状态，也不由自动化代替。之后依序执行已确认的 `QH3-05-12-ZB-AUDIT` 与 `SE-UX-04-POSTTEST-AUDIT`。
+`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧，记录见 [[ALIAS-OWNERSHIP-AUDIT处置表]]。当前执行 `QH3-05-12-ZB-AUDIT`；`REVIEW-QUEUE-01` 是用户复习后的问题反馈任务，独立保留，不由自动化代替，也不阻止已授权审查。之后执行 `SE-UX-04-POSTTEST-AUDIT`。
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
