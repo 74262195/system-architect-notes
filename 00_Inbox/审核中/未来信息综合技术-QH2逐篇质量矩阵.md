@@ -2,8 +2,8 @@
 type: 逐篇质量矩阵
 subject: 系统架构设计师
 chapter: 未来信息综合技术
-status: fix02_complete_accept_pending
-batch: QH2-10-FUT-FIX-02
+status: accepted_text_verified
+batch: QH2-10-FUT-ACCEPT
 updated: 2026-09-23
 tags: [软考/架构设计师, 未来信息综合技术, 质量复审, 大纲任务]
 ---
@@ -81,3 +81,7 @@ tags: [软考/架构设计师, 未来信息综合技术, 质量复审, 大纲任
 13 篇均已设置 `review_status: 待复习`（本批新补 10 篇，原有 3 篇保持）。未改动章节学习顺序、教材证据锚点或 13 篇既有机制讲解。`QH2-10-FUT-FIX-02` 完成不代表章节 QH2 联合验收通过；下一步固定为 `QH2-10-FUT-ACCEPT`，需再核范围、事实/机制、自测可用性和导航。
 
 文本结构定点检查：13/13 篇有 1～2 道自测，14/14 道题紧随一级折叠答案，13/13 篇带待复习状态；未检查 Obsidian 实际渲染。`git diff --check` 与 `node scripts/check-vault.mjs` 通过；后者检查 1195 个 Markdown 文件，仍有 59 项既有非阻断警告，本批未新增。
+
+## QH2-10-FUT-ACCEPT 一次联合验收（2026-09-23）
+
+沿上表 13 个 Atom 与六组大纲节点进行正反向核验；本次风险复查、发现与定点修复及最终结论集中记录在 [[未来信息综合技术-QH2联合验收]]。本轮结果为 `13 covered / 0 link_only / 0 partial / 0 unmapped`，文本结构与内容复查通过；Obsidian 实际渲染未核验。下一项 `QH2-11-IPR-AUDIT`。
