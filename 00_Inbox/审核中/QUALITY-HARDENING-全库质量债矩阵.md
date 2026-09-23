@@ -5,7 +5,7 @@ status: active
 stage: quality_second_pass
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH2-06-10-11-ACCEPT
+current_priority: LINK-DEBT-ACTIVE-NAV
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -97,7 +97,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 - [x] `QH2-11-IPR-FIX-01`：已定点补 A010 普通作品期限与可算例、小修 A012 现行/待施行《商标法》边界；其余 13 篇正文未改，复查见 [[标准化与知识产权-QH2逐篇质量矩阵]]。
 - [x] `QH2-11-IPR-FIX-02`：15 篇共补 16 道自编自测及题后折叠答案解析，15 篇均标待复习；正文主线未重写，复查见 [[标准化与知识产权-QH2逐篇质量矩阵]]。
 - [x] `QH2-11-IPR-ACCEPT`：15 个 Atom 完成一次联合验收；范围、风险边界与 16 道自测均通过，记录见 [[标准化与知识产权-QH2联合验收]]。
-- [ ] `QH2-06-10-11-ACCEPT`：分别记录抽查范围、发现、修复和不改理由，不合并成一句“都已通过”。
+- [x] `QH2-06-10-11-ACCEPT`：06/10/11 分章记录抽查范围、发现、修复与不改理由，见 [[QH2-06-10-11-ACCEPT收口记录]]；未重写已验收正文。
 
 ### P3：保持暂停
 
@@ -109,6 +109,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH2-06-10-11-ACCEPT`：分别回填 06、10、11 三章的抽查范围、发现、修复和不改理由；不把三章合并成一句“都已通过”，不重写已通过正文。**
+> **`LINK-DEBT-ACTIVE-NAV`：定点修复 5 项已登记的当前/历史学习资料链接；逐条核验目标，不按标题猜测。**
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
