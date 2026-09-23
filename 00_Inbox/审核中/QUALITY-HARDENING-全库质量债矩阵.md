@@ -5,7 +5,7 @@ status: active
 stage: qh4_fresh_zero_basis_audit_active
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: QH4-06-FRESH-AUDIT
+current_priority: QH4-07-FRESH-AUDIT
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -23,7 +23,7 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 1. **承接与定位**：读者知道上一站解决了什么，本篇为什么出现；
 2. **具体问题**：先让读者看到“不学这个会错在哪里”；
-3. **直接答案与机制**：问题后立即给结论，并用一个贯穿例子把对象、动作和结果走完；
+3. **自然引出结论与机制**：具体问题后先给读者看见对象、矛盾或需要取舍的场景，再适时给出清楚结论，用贯穿例子把动作和结果走完；避免“抛出问句→孤立的一句答案”造成跳步；
 4. **考试动作**：给出题干信号和第一步判断/计算动作；
 5. **边界与衔接**：说明它不能替代什么，以及下一站解决什么；
 6. **自测闭环**：题干展开，每题紧跟折叠的答案与简短解析。
@@ -123,8 +123,8 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 当前下一项固定为：
 
-> **`QH4-06-FRESH-AUDIT`：第 05 章的 30 篇已复审并定点修复，记录见 [[数据库设计基础知识-QH4逐篇零基础复审矩阵]]；下一章从软件架构设计开始，随后按 07→12 顺序推进。`REVIEW-QUEUE-01` 独立等待用户复习；`review_status: 待复习` 只能在用户确认后更新。**
+> **`QH4-07-FRESH-AUDIT`：第 05 章的 30 篇、第 06 章的 13 篇已复审并定点修复，分别见 [[数据库设计基础知识-QH4逐篇零基础复审矩阵]]、[[软件架构设计-QH4逐篇零基础复审矩阵]]；下一章为系统质量属性与架构评估，随后按 08→12 顺序推进。`REVIEW-QUEUE-01` 独立等待用户复习；`review_status: 待复习` 只能在用户确认后更新。**
 
-`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧。QH3/SE-UX 的 18 项最小补强和后续发现的 7 项风险修复均已回填；改动学习笔记仍为 `review_status: 待复习`。当前自动化下一批是 `QH4-06-FRESH-AUDIT`，不是替用户执行 `REVIEW-QUEUE-01`。
+`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧。QH3/SE-UX 的 18 项最小补强和后续发现的 7 项风险修复均已回填；改动学习笔记仍为 `review_status: 待复习`。QH4 第 06 章新一轮逐篇审查只定点修开篇过渡和自测呈现；当前自动化下一批是 `QH4-07-FRESH-AUDIT`，不是替用户执行 `REVIEW-QUEUE-01`。
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
