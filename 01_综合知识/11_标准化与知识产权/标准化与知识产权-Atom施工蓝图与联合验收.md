@@ -4,7 +4,7 @@ subject: 系统架构设计师
 chapter: 标准化与知识产权
 topic: Atom施工蓝图与联合验收
 status: coverage_complete
-quality_status: quality_reaudit_pending_selftests
+quality_status: quality_reaudit_accept_pending
 source:
   - 系统架构设计师考试大纲（第二版）PDF 61-62
   - 系统架构设计师教程（第2版）目录 PDF 10-12
@@ -23,7 +23,7 @@ tags: [标准化, 知识产权, Atom, 覆盖验收, 法律版本]
 # 标准化与知识产权-Atom施工蓝图与联合验收
 
 > [!success] 本轮结论
-> `G4-11-BUILD` 建立 `IPR-A001 ~ IPR-A015` 共 15 个稳定 Atom。下文 `15/15 covered` 是范围覆盖快照；QH2 发现的 A010 普通作品期限与 A012 法律时点缺口已在 FIX-01 修复。15 篇仍缺原子卡自测，当前为 `coverage_complete / quality_reaudit_pending_selftests`，本轮联合验收尚未进行；详见 [[标准化与知识产权-QH2逐篇质量矩阵]]。
+> `G4-11-BUILD` 建立 `IPR-A001 ~ IPR-A015` 共 15 个稳定 Atom。下文 `15/15 covered` 是范围覆盖快照；QH2 发现的 A010 普通作品期限与 A012 法律时点缺口已在 FIX-01 修复，FIX-02 已补全 15 篇共 16 道自测。当前为 `coverage_complete / quality_reaudit_accept_pending`，本轮联合验收尚未进行；详见 [[标准化与知识产权-QH2逐篇质量矩阵]]。
 
 ## 1. 官方范围锁定
 
