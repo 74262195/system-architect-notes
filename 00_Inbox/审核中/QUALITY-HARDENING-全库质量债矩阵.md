@@ -5,7 +5,7 @@ status: active
 stage: qh3_zero_basis_audit_in_progress
 coverage_status: syllabus_build_complete
 coverage_gate: PASS
-current_priority: SE-UX-04-POSTTEST-AUDIT
+current_priority: USER_DIRECTION_REQUIRED
 scope: 综合知识05-12
 excluded_scope: 专业英语与论文
 updated: 2026-09-23
@@ -108,9 +108,9 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 ## 五、已确认的后续零基础核验
 
-### `QH3-05-12-ZB-AUDIT`（当前执行）
+### `QH3-05-12-ZB-AUDIT`（已完成）
 
-- **顺序**：已完成；下一步执行 [[软件工程-SE-UX-00整章学习体验重构总控计划#新增待办：测试后 13 篇零基础体验复审|SE-UX-04-POSTTEST-AUDIT]]。`REVIEW-QUEUE-01` 是用户复习反馈的独立闭环，不构成审查前置门槛。
+- **顺序**：本项及后续 `SE-UX-04-POSTTEST-AUDIT` 均已完成。QH3 逐篇结果见 [[综合知识05-12-QH3零基础体验复审矩阵]]；SE-UX 逐篇结果见 [[软件工程-SE-UX-04测试后零基础复审矩阵]]。当前等待用户决定是否施工矩阵中的最小补强建议。`REVIEW-QUEUE-01` 仍是用户复习反馈的独立闭环，不构成审查前置门槛。
 - **范围**：综合知识第 05～12 章：数据库设计基础知识、软件架构设计、系统质量属性与架构评估、软件可靠性技术、软件架构的演化和维护、未来信息综合技术、标准化与知识产权、应用数学。重新验证各章既有验收记录所覆盖的正文理解效果，不重开范围 coverage。
 - **依据**：以 [[MVC、MVP与MVVM：表现层如何隔离界面与业务数据]] 为样例；逐章核当前大纲、主教材、可靠真题和正文，不凭行数、摘要长度或标题推断质量。
 - **零基础检查**：读者能否形成具体场景、复述大白话直接答案、理解必要术语与层次、跟场景走完一次核心机制/判断/计算、识别适用条件与边界、完成题型对应的自测并知道学习衔接。计算检查完整中间步骤和验算；过程/产出题检查能否跟做一例；识别/比较题检查对照判据，不强行加入建立流程。
@@ -125,6 +125,6 @@ tags: [软考/架构设计师, QUALITY-HARDENING, 质量复审, 大纲任务]
 
 > **`REVIEW-QUEUE-01`：用户自行复习本轮已修改的学习笔记并反馈问题；`review_status: 待复习` 只能在用户确认后更新。它不阻塞 `QH3-05-12-ZB-AUDIT`。**
 
-`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧，记录见 [[ALIAS-OWNERSHIP-AUDIT处置表]]。`QH3-05-12-ZB-AUDIT` 已完成；当前执行 `SE-UX-04-POSTTEST-AUDIT`。`REVIEW-QUEUE-01` 是用户复习后的问题反馈任务，独立保留，不由自动化代替，也不阻止已授权审查。
+`TRUTH-INDEX-LINK-DEBT` 已完成，记录见 [[TRUTH-INDEX-LINK-DEBT收口记录]]。原登记 33 项中，27 项修复到有证据的链接，6 项涉及 2010 年题目内容与旧主题标签冲突而待核验。`ALIAS-OWNERSHIP-AUDIT` 已完成，22 组重复 alias 均已逐项消歧，记录见 [[ALIAS-OWNERSHIP-AUDIT处置表]]。`QH3-05-12-ZB-AUDIT` 和 `SE-UX-04-POSTTEST-AUDIT` 均已完成；当前没有已批准的正文修复范围，等待用户指示。`REVIEW-QUEUE-01` 是用户复习后的问题反馈任务，独立保留，不由自动化代替。
 
 不得再用“coverage=PASS”“文件存在”或“行数足够”替代正文质量结论。
