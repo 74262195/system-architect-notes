@@ -16,6 +16,7 @@ priority_reason: "ARP 是 IP 与以太网之间的基础衔接知识；掌握作
 priority_updated: 2026-09-05
 quality_reviewed: 2026-09-07
 quality_status: 已与子网判断案例衔接并保留同网段与跨网段完整动作链
+review_status: 待复习
 ---
 
 # ARP 地址解析：已经知道目标 IP，为什么发以太网帧时还卡在“目的 MAC 不知道”
@@ -160,7 +161,7 @@ sequenceDiagram
 
 所以可以把跨网络通信理解成：
 
-> **IP 在较大范围里指方向，MAC 地址表示当前这个以太网帧要交给哪台设备
+> **IP 在较大范围里指方向，MAC 地址表示当前这个以太网帧要交给哪台设备。**
 
 ## ARP、交换机学习、DNS 为什么容易混
 
