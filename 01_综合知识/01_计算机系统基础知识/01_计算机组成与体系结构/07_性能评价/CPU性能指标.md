@@ -5,7 +5,9 @@ chapter: 计算机组成与体系结构
 topic: CPU性能指标
 status: 学习中
 difficulty: 3
-source: 教材+历年真题
+source:
+  - 系统架构设计师教程（第2版）PDF 117：计算机性能指标类别与主频等指标
+  - 系统架构设计师考试32小时通关（第2版，2023）PDF 53：MIPS 定义与计算式
 aliases: [主频, 时钟周期, CPI, MIPS, CPU执行时间, 外频, 倍频]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 exam_priority: P1
