@@ -6,6 +6,8 @@ topic: SRAM与DRAM
 status: 学习中
 difficulty: 2
 source: 教材
+review_status: 待复习
+updated: 2026-09-24
 aliases: [SRAM, DRAM, 静态RAM, 动态RAM]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 exam_priority: P2
@@ -69,8 +71,19 @@ DRAM 的电容会逐渐漏电，所以必须刷新；SRAM 只要持续供电，�
 ## 自测
 
 1. DRAM 为什么必须刷新？
+
+   > [!success]- 核对答案
+   > DRAM 用电容保存位，电荷会逐渐泄漏；刷新要周期性读出并恢复电荷，否则数据会丢失。
+
 2. SRAM 不刷新是否意味着它掉电不丢？
+
+   > [!success]- 核对答案
+   > 不意味着。SRAM 不需像 DRAM 那样周期刷新，但仍是易失性存储器，断电后内容会丢失。
+
 3. 为什么大容量主存更倾向 DRAM？
+
+   > [!success]- 核对答案
+   > DRAM 单位面积可集成更多存储位、成本通常更适合大容量；它需要刷新且速度较慢。SRAM 更快但面积和成本较高，常用于容量较小的 Cache。
 
 ## 下一站
 

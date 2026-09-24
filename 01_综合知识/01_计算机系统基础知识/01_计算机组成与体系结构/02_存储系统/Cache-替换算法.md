@@ -6,6 +6,8 @@ topic: Cache替换算法
 status: 学习中
 difficulty: 3
 source: 教材
+review_status: 待复习
+updated: 2026-09-24
 aliases: [Cache LRU, Cache LFU, Cache FIFO, Cache OPT, Cache替换]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 exam_priority: P2
@@ -73,8 +75,19 @@ B → A → C
 ## 自测
 
 1. “访问次数少”是 LRU 还是 LFU？
+
+   > [!success]- 核对答案
+   > LFU 看一段统计期内访问次数多少；LRU 看最近一次访问距现在多久。访问次数少对应 LFU。
+
 2. 为什么 OPT 只能作为理论基准？
+
+   > [!success]- 核对答案
+   > OPT 要淘汰未来最长时间内不会再访问的块，但运行时无法预知未来访问串，因此不能直接实现，只能在已知访问序列时用来比较算法效果。
+
 3. 组相联什么时候才需要替换算法？
+
+   > [!success]- 核对答案
+   > 新块映射到的组已满、没有空行时，才要在该组现有行中选择牺牲行；若组里有空行，直接放入即可。
 
 ## 下一站
 

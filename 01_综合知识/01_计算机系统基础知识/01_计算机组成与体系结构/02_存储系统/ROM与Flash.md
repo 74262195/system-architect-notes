@@ -6,6 +6,8 @@ topic: ROM与Flash
 status: 学习中
 difficulty: 2
 source: 教材
+review_status: 待复习
+updated: 2026-09-24
 aliases: [ROM, PROM, EPROM, EEPROM, Flash, 非易失性存储]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 exam_priority: P2
@@ -78,8 +80,19 @@ Flash 可以看作 EEPROM 技术路线中的重要发展形式，广泛用于固
 ## 自测
 
 1. 为什么设备开机不能只依赖 DRAM？
+
+   > [!success]- 核对答案
+   > DRAM 断电会丢失内容。开机时仍需读取固件等启动代码，因此这类内容要保存在断电后仍能保留的非易失性存储器中。
+
 2. EPROM 和 EEPROM 的核心区别是什么？
+
+   > [!success]- 核对答案
+   > EPROM 通常用紫外线擦除后再写入；EEPROM 可用电方式擦除和改写。关键区别是擦除手段。
+
 3. Flash 为什么不能简单理解为“完全只读”？
+
+   > [!success]- 核对答案
+   > Flash 属于可擦写的非易失性存储器，能在断电后保存数据，也能通过规定的擦除/编程操作更新内容；它不是只能读、永远不能改写。
 
 ## 下一站
 
