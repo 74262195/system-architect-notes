@@ -5,7 +5,8 @@ chapter: 计算机组成与体系结构
 topic: Amdahl定律
 status: 学习中
 difficulty: 3
-source: 教材
+source:
+  - 系统架构设计师教程（第2版）PDF 119：阿姆达尔定律、增强比例、增强加速比与总加速比公式
 aliases: [Amdahl, Amdahl加速比, 阿姆达尔定律]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
 exam_priority: P1
