@@ -5,7 +5,10 @@ chapter: 计算机组成与体系结构
 topic: IO控制技术
 status: 学习中
 difficulty: 3
-source: 教材
+source:
+  - 主教材中程序查询、DMA 与通道机制的直接页码待核验；当前可搜索抽取文本尚未定位到完整四方式比较
+  - 2009年下半年系统架构设计师综合知识（资料版，来源待核验）第3页第9题：中断用于对突发事件快速响应；仅支持本卡中断方式的该项考点
+review_status: 待复习
 last-reviewed:
 next-reviewed:
 aliases: [IO控制方式, 程序查询方式, DMA方式, 通道方式]
