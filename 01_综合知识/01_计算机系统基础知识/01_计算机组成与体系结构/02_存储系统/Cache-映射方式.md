@@ -5,7 +5,7 @@ chapter: 计算机组成与体系结构
 topic: Cache映射方式
 status: 学习中
 difficulty: 2
-source: 教材
+source: 映射分类的直接出处待核验；现有主教材抽取文本检索未定位到直接/全相联/组相联依据
 review_status: 待复习
 updated: 2026-09-24
 aliases: [直接映射, 全相联映射, 组相联映射]
