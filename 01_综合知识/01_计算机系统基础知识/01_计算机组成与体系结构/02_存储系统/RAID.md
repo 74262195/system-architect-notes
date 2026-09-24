@@ -5,7 +5,9 @@ chapter: 计算机组成与体系结构
 topic: RAID
 status: 学习中
 difficulty: 3
-source: 教材+历年真题
+source:
+  - 2015年下半年系统架构设计师综合知识（资料版，来源待核验）第4页第13–14题：RAID 5 同容量与不同容量硬盘的可用容量计算
+  - 2015年下半年系统架构设计师答案详解（解析资料，来源待核验）：RAID 5 校验分布及容量推算
 review_status: 待复习
 aliases: [RAID0, RAID1, RAID5, RAID10, 磁盘阵列]
 tags: [软考/架构设计师, 软考/考点, 软考/综合知识]
