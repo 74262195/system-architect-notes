@@ -4,7 +4,10 @@ subject: 系统架构设计师
 chapter: 标准化与知识产权
 topic: 标准代号识别
 atom_id: IPR-A004
-exam_priority: 待评估
+exam_priority: P1
+review_level: 重点
+priority_reason: "2012 第 68 题直接考标准代号"
+priority_updated: 2026-09-30
 build_level: P1
 status: coverage_complete
 review_status: 待复习

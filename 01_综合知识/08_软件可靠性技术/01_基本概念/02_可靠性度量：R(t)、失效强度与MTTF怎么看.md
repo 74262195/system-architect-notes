@@ -10,7 +10,10 @@ difficulty: 3
 source: 主教材第9章 9.1.2
 atom_id: REL-A002
 build_priority: P0
-exam_priority: 待评估
+exam_priority: P0
+review_level: 必读
+priority_reason: "2022 综合知识连考可靠度与 MTTF/MTBF 关系两题"
+priority_updated: 2026-09-30
 tags: [软考/架构设计师, 软考/考点, 软考/软件可靠性]
 ---
 

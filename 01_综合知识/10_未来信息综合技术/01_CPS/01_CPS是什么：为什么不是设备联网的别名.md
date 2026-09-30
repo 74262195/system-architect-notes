@@ -4,7 +4,10 @@ subject: 系统架构设计师
 chapter: 未来信息综合技术
 topic: CPS概念与边界
 atom_id: FUT-A001
-exam_priority: 待评估
+exam_priority: P2
+review_level: 了解
+priority_reason: "仅大纲+教材，2009-2018 映射零命中"
+priority_updated: 2026-09-30
 build_level: P0
 status: coverage_complete
 review_status: 待复习

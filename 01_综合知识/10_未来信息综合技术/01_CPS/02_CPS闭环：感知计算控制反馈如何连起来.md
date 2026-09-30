@@ -4,7 +4,10 @@ subject: 系统架构设计师
 chapter: 未来信息综合技术
 topic: CPS闭环与实现层次
 atom_id: FUT-A002
-exam_priority: 待评估
+exam_priority: P2
+review_level: 了解
+priority_reason: "仅大纲+教材，无直接真题"
+priority_updated: 2026-09-30
 build_level: P0
 status: coverage_complete
 review_status: 待复习
